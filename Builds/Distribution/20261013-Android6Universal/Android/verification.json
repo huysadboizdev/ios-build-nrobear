@@ -1,0 +1,36 @@
+{
+  "file": "C:\\Users\\Admin\\Downloads\\PRJ_2Tab_550K\\Builds\\Distribution\\20261013-Android6Universal\\Android\\NRO.apk",
+  "bytes": 84172500,
+  "sha256": "0e1e13509f889334e47a10de504b08f8b8e6185a1dc90d582b95f69178a793a5",
+  "minSDK": 23,
+  "targetSDK": 34,
+  "architectures": [
+    "armeabi-v7a",
+    "arm64-v8a"
+  ],
+  "backend": "IL2CPP",
+  "elf16KB": {
+    "lib/arm64-v8a/libil2cpp.so": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "lib/arm64-v8a/libmain.so": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "lib/arm64-v8a/libunity.so": [
+      16384,
+      16384,
+      16384,
+      16384
+    ]
+  },
+  "signatureVerified": true,
+  "zipAlignment16KB": true,
+  "uncompressedARM64Offsets": {},
+  "physicalDeviceTest": false
+}

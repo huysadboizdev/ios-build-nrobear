@@ -1,0 +1,6 @@
+Result=Succeeded
+Errors=0
+Warnings=64
+Bytes=303660904
+Server=NRO NGU:160.191.245.239:14445:0,0,0
+Scenes=Assets/Scenes/NROL.unity,Assets/Scenes/NROL1.unity

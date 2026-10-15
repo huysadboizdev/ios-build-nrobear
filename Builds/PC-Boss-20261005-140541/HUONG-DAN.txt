@@ -1,0 +1,6 @@
+﻿Bản PC có bảng thông báo boss và paste Ctrl+V/Shift+Insert.
+Giải nén toàn bộ, chạy NRO-Boss.exe.
+Trong game: Chức năng > Thông báo > Boss hiện tại hoặc Lịch sử boss.
+Chọn boss để xem bản đồ, giờ xuất hiện, người hạ, giờ hạ, thời gian đã trôi qua và dự kiến hồi sinh. Không báo khu.
+Boss hồi sinh theo điều kiện/lịch riêng sẽ hiện chờ điều kiện/lịch.
+Lịch sử 7 ngày, bắt đầu từ khi tính năng được cài; giữ lại sau khởi động lại server.

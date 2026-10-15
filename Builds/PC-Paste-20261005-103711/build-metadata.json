@@ -1,0 +1,22 @@
+{
+  "project": "C:\\Users\\Admin\\Downloads\\nroteam\\Teamobi2026\\.analysis\\client-paste-build-20261005-103711\\project",
+  "output": "C:\\Users\\Admin\\Downloads\\PRJ_2Tab_550K\\Builds\\PC-Paste-20261005-103711",
+  "log": "C:\\Users\\Admin\\Downloads\\nroteam\\Teamobi2026\\.analysis\\client-paste-build-20261005-103711\\unity-final-build.log",
+  "source_sha256": {
+    "Assets/Scripts/Assembly-CSharp/ClipboardText.cs": "9bceb19fb6dff9ba4d8b5c436167b41eb7bddc34f00a822be860b1fe65ff0a1c",
+    "Assets/Scripts/Assembly-CSharp/Game1/Main.cs": "017b4f5398bd52a1ae1a4ac4f874c115c1ec758492edabd843741b75c29751ee",
+    "Assets/Scripts/Assembly-CSharp/Game1/GameCanvas.cs": "37a94754de36c47d67fcaea38cd7bf147038bcc8deb3721bf6e27234ef53d343",
+    "Assets/Scripts/Assembly-CSharp/Game1/TField.cs": "7f922dfe975473662a56709b99981270d3240b489e94238e010de67ef6e08ab0",
+    "Assets/Scripts/Assembly-CSharp/Game2/Main.cs": "147c0468fb91d0fdef4dbc7da4cc47137a1c088176c2959f52808901d89aab62",
+    "Assets/Scripts/Assembly-CSharp/Game2/GameCanvas.cs": "0529ec530a5245623eaa5571393577e009df4c11609a0d609558a28f7988e191",
+    "Assets/Scripts/Assembly-CSharp/Game2/TField.cs": "aff961d4d5318c79adaa9a298793d8693ef6429abef6e5d3d26bc0b16a6e278d"
+  },
+  "exe_sha256": "5cc71bf032f440ac46a5d24bb4101050a37001dd8f1b8325aec1067ea0d1ff52",
+  "assembly_sha256": "9465484273c73c0e0116048f347d917130195398f7611552037ffc5070c56ae6",
+  "tests": "16 insertion cases + actual TField and chat/input-dialog/modal/login routes in both tabs",
+  "build_result": "Succeeded",
+  "build_errors": 0,
+  "manual_ui_test": false,
+  "zip": "C:\\Users\\Admin\\Downloads\\PRJ_2Tab_550K\\Builds\\PC-Paste-20261005-103711.zip",
+  "zip_sha256": "8cb90eb49dacf091e5e33a6954b08f56135c375af57396b0a8472228412a8a16"
+}

@@ -1,0 +1,4 @@
+Result=Succeeded
+Errors=0
+Warnings=66
+Tests=Actual Game1/Game2 Char/Controller/Service, fake monotonic clock and packet capture, speeds 1/2/5/10/20/50/100

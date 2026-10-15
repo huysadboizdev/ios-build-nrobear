@@ -1,0 +1,12 @@
+# Xcode build artifacts (root only)
+/build/
+/DerivedData/
+*.xcarchive
+
+# IPA packaging (root only)
+/Payload/
+*.ipa
+
+# macOS metadata
+.DS_Store
+*.xcuserdata/

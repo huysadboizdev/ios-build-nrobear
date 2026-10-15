@@ -1,0 +1,5 @@
+Result=Succeeded
+Errors=0
+Warnings=64
+Tests=16 pure insertion cases + both actual TField implementations
+BossTests=Model timing/state/privacy + actual Game1/Game2 packet/race/reset tests PASS

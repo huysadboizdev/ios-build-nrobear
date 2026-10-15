@@ -1,0 +1,17 @@
+﻿[
+    {
+        "File":  "NRO-SkillSpeed.exe",
+        "SHA256":  "5CC71BF032F440AC46A5D24BB4101050A37001DD8F1B8325AEC1067EA0D1FF52",
+        "Bytes":  666624
+    },
+    {
+        "File":  "NRO-SkillSpeed_Data/Managed/Assembly-CSharp.dll",
+        "SHA256":  "B42F1E5D145F118A6EAD3B6EE7A8C5C0B37D2CBC2DC871D676C10B2BB9F31BCF",
+        "Bytes":  1709056
+    },
+    {
+        "File":  "UnityPlayer.dll",
+        "SHA256":  "A8DCC8F6F4CBEE3DA56552A4ADBE56724228A0EFCC2FCD737B516933F0418081",
+        "Bytes":  31100840
+    }
+]

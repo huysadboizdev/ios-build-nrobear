@@ -1,0 +1,12 @@
+====================================================================
+  HƯỚNG DẪN XUẤT FILE .IPA CHO GAME: NRO BEAR
+====================================================================
+
+1. TỔNG QUAN:
+   - Mã nguồn dự án iOS: 'Xcode - NRO BEAR'.
+   - Ứng dụng có thể được đóng gói trực tiếp bằng máy chủ macOS.
+
+2. NẾU CÓ MÁY MAC HOẶC HACKINTOSH:
+   - Chép thư mục 'Xcode - NRO BEAR' sang máy Mac.
+   - Mở Terminal trong thư mục đó và chạy: bash ios-build/build-ipa.sh
+   - Script sẽ tự động đóng gói file .IPA trong vài phút.

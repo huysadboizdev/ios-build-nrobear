@@ -1,0 +1,116 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.unity3d.player" >
+5
+6    <uses-sdk android:minSdkVersion="23" />
+6-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml
+7
+8    <uses-permission android:name="android.permission.INTERNET" />
+8-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:3-65
+8-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:20-62
+9
+10    <uses-feature android:glEsVersion="0x00030000" />
+10-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:3-52
+10-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:17-49
+11    <uses-feature
+11-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:3-91
+12        android:name="android.hardware.vulkan.version"
+12-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:17-63
+13        android:required="false" />
+13-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:64-88
+14    <uses-feature
+14-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:3-88
+15        android:name="android.hardware.touchscreen"
+15-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:17-60
+16        android:required="false" />
+16-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:61-85
+17
+18    <application
+18-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:3-22:17
+19        android:enableOnBackInvokedCallback="true"
+19-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:16-58
+20        android:extractNativeLibs="true" >
+20-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:59-91
+21        <meta-data
+21-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:5-69
+22            android:name="unity.splash-mode"
+22-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:16-48
+23            android:value="0" />
+23-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:49-66
+24        <meta-data
+24-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:9:5-74
+25            android:name="unity.splash-enable"
+25-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:9:16-50
+26            android:value="True" />
+26-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:9:51-71
+27        <meta-data
+27-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:5-78
+28            android:name="unity.launch-fullscreen"
+28-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:16-54
+29            android:value="True" />
+29-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:55-75
+30        <meta-data
+30-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:5-84
+31            android:name="unity.render-outside-safearea"
+31-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:16-60
+32            android:value="True" />
+32-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:61-81
+33        <meta-data
+33-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:5-81
+34            android:name="notch.config"
+34-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:16-43
+35            android:value="portrait|landscape" />
+35-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:44-78
+36        <meta-data
+36-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:5-84
+37            android:name="unity.auto-report-fully-drawn"
+37-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:16-60
+38            android:value="true" />
+38-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:61-81
+39
+40        <activity
+40-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:5-21:16
+41            android:name="com.unity3d.player.UnityPlayerActivity"
+41-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:15-68
+42            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+42-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:181-362
+43            android:exported="true"
+43-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:434-457
+44            android:hardwareAccelerated="false"
+44-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:398-433
+45            android:launchMode="singleTask"
+45-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:149-180
+46            android:resizeableActivity="false"
+46-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:363-397
+47            android:screenOrientation="landscape"
+47-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:111-148
+48            android:theme="@style/UnityThemeSelector" >
+48-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:69-110
+49            <intent-filter>
+49-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:7-18:23
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:9-69
+50-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:19-66
+51
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:9-61
+52-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:17-58
+53            </intent-filter>
+54
+55            <meta-data
+55-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:7-82
+56                android:name="unityplayer.UnityActivity"
+56-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:18-58
+57                android:value="true" />
+57-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:59-79
+58            <meta-data
+58-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:7-70
+59                android:name="notch_support"
+59-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:18-46
+60                android:value="true" />
+60-->C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:47-67
+61        </activity>
+62    </application>
+63
+64</manifest>

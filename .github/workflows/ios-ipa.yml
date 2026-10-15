@@ -1,0 +1,62 @@
+name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+    inputs:
+      method:
+        description: "Signing method"
+        required: true
+        default: "unsigned"
+        type: choice
+        options:
+          - unsigned
+          - ad-hoc
+          - development
+          - app-store-connect
+      team_id:
+        description: "Apple Team ID (required for signed builds)"
+        required: false
+        default: ""
+
+jobs:
+  build-ipa:
+    runs-on: macos-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Pull LFS files
+        run: git lfs pull
+
+      - name: Verify IL2CPP libraries
+        run: |
+          echo "Checking Libraries..."
+          ls -lh Libraries/libiPhone-lib.a || echo "libiPhone-lib.a NOT FOUND"
+          ls -lh Libraries/libil2cpp.a || echo "libil2cpp.a NOT FOUND"
+
+      - name: Make build script executable
+        run: |
+          chmod +x ios-build/build-ipa.sh
+          if [ -d "Il2CppOutputProject/IL2CPP/build" ]; then
+            chmod -R +x Il2CppOutputProject/IL2CPP/build/ || true
+          fi
+
+      - name: Build IPA
+        env:
+          BUILD_NAME: "NRO BEAR"
+          BUNDLE_ID: "com.DefaultCompany.DragonBoy002"
+          METHOD: ${{ github.event.inputs.method }}
+          TEAM_ID: ${{ github.event.inputs.team_id }}
+        run: ios-build/build-ipa.sh
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: "NRO BEAR-ipa"
+          path: "*.ipa"
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,2171 @@
+{
+  "Nodes": [
+    {
+      "Annotation": "all_tundra_nodes",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "ToBuildDependencies": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 0
+    },
+    {
+      "Annotation": "WriteText Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.UnityAdditionalFile.txt",
+      "DisplayName": "Writing Assembly-CSharp.UnityAdditionalFile.txt",
+      "ActionType": "WriteFile",
+      "PayloadOffset": 99,
+      "PayloadLength": 18,
+      "PayloadDebugContentSnippet": "D:\\ZNNNNNNNNNNNNNN",
+      "Inputs": [],
+      "Outputs": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.UnityAdditionalFile.txt"
+      ],
+      "DebugActionIndex": 1
+    },
+    {
+      "Annotation": "WriteText Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.rsp",
+      "DisplayName": "Writing Assembly-CSharp.rsp",
+      "ActionType": "WriteFile",
+      "PayloadOffset": 202,
+      "PayloadLength": 38376,
+      "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
+      "Inputs": [],
+      "Outputs": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.rsp"
+      ],
+      "DebugActionIndex": 2
+    },
+    {
+      "Annotation": "WriteText Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.rsp2",
+      "DisplayName": "Writing Assembly-CSharp.rsp2",
+      "ActionType": "WriteFile",
+      "PayloadOffset": 38664,
+      "PayloadLength": 0,
+      "PayloadDebugContentSnippet": "",
+      "Inputs": [],
+      "Outputs": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.rsp2"
+      ],
+      "DebugActionIndex": 3
+    },
+    {
+      "Annotation": "Csc Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll (+2 others)",
+      "DisplayName": "Csc Assembly-CSharp",
+      "Action": "\"D:\\Unity\\Editor\\Data\\NetCoreRuntime\\dotnet.exe\" exec \"D:/Unity/Editor/Data/DotNetSdkRoslyn/csc.dll\" /nostdlib /noconfig /shared \"@Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.rsp\" \"@Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.rsp2\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Data.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Drawing.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.IO.Compression.FileSystem.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Net.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Numerics.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Runtime.Serialization.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ServiceModel.Web.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Transactions.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Web.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Windows.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Xml.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Linq.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Serialization.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/Microsoft.Win32.Primitives.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.AppContext.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Buffers.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Concurrent.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.NonGeneric.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Specialized.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.Primitives.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.TypeConverter.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Console.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Data.Common.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Contracts.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Debug.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Process.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.StackTrace.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tools.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TraceSource.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tracing.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Drawing.Primitives.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Dynamic.Runtime.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Calendars.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Extensions.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.ZipFile.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Primitives.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Watcher.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.IsolatedStorage.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.MemoryMappedFiles.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Pipes.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Expressions.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Parallel.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Queryable.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Memory.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Http.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NameResolution.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NetworkInformation.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Ping.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Primitives.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Requests.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Security.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Sockets.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebHeaderCollection.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.Client.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Numerics.Vectors.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ObjectModel.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.DispatchProxy.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.ILGeneration.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.Lightweight.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Extensions.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Primitives.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Reader.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.ResourceManager.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Writer.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Extensions.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Handles.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Numerics.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Json.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Xml.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Claims.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Csp.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Encoding.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Primitives.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Principal.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Security.SecureString.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.Extensions.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Text.RegularExpressions.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Overlapped.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Extensions.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Parallel.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Thread.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.ThreadPool.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Timer.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.ValueTuple.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.ReaderWriter.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XDocument.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.dll",
+        "D:/Unity/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll",
+        "D:/Unity/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "D:/Unity/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AccessibilityModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AIModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AndroidJNIModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AnimationModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ARModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AssetBundleModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AudioModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ClothModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ContentLoadModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.CoreModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.CrashReportingModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.DirectorModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.DSPGraphModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.GameCenterModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.GIModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.GridModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.HotReloadModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ImageConversionModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.IMGUIModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.InputLegacyModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.InputModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.JSONSerializeModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.LocalizationModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ParticleSystemModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.PerformanceReportingModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.Physics2DModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.PhysicsModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ProfilerModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.PropertiesModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ScreenCaptureModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SharedInternalsModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SpriteMaskModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SpriteShapeModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.StreamingModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SubstanceModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SubsystemsModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TerrainModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TerrainPhysicsModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TextCoreFontEngineModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TextCoreTextEngineModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TextRenderingModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TilemapModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TLSModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UIElementsModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UIModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UmbraModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityAnalyticsModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityConnectModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityCurlModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityTestProtocolModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VehiclesModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VFXModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VideoModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VRModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.WindModule.dll",
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.XRModule.dll",
+        "Assets/Scripts/Game1/Account.cs",
+        "Assets/Scripts/Game1/ActionChat.cs",
+        "Assets/Scripts/Game1/AddressScr.cs",
+        "Assets/Scripts/Game1/AdminPopup.cs",
+        "Assets/Scripts/Game1/Archivement.cs",
+        "Assets/Scripts/Game1/ArrayCast.cs",
+        "Assets/Scripts/Game1/Arrow.cs",
+        "Assets/Scripts/Game1/Arrowpaint.cs",
+        "Assets/Scripts/Game1/Assets.Assets.Scripts.Assembly_CSharp/Random.cs",
+        "Assets/Scripts/Game1/Assets.src.e/Small.cs",
+        "Assets/Scripts/Game1/Assets.src.f/Controller2.cs",
+        "Assets/Scripts/Game1/Assets.src.g/BigBoss.cs",
+        "Assets/Scripts/Game1/Assets.src.g/ClientInput.cs",
+        "Assets/Scripts/Game1/Assets.src.g/GameInfo.cs",
+        "Assets/Scripts/Game1/Assets.src.g/ImageSource.cs",
+        "Assets/Scripts/Game1/Assets.src.g/Mabu.cs",
+        "Assets/Scripts/Game1/Assets.src.g/PetFollow.cs",
+        "Assets/Scripts/Game1/Assets.src.g/RegisterScreen.cs",
+        "Assets/Scripts/Game1/AutoLogin.cs",
+        "Assets/Scripts/Game1/BachTuoc.cs",
+        "Assets/Scripts/Game1/BackgroudEffect.cs",
+        "Assets/Scripts/Game1/BallInfo.cs",
+        "Assets/Scripts/Game1/BgItem.cs",
+        "Assets/Scripts/Game1/BgItemMn.cs",
+        "Assets/Scripts/Game1/BigBoss2.cs",
+        "Assets/Scripts/Game1/BypassCertificateHandler.cs",
+        "Assets/Scripts/Game1/Char.cs",
+        "Assets/Scripts/Game1/ChatPopup.cs",
+        "Assets/Scripts/Game1/ChatTextField.cs",
+        "Assets/Scripts/Game1/ChooseCharScr.cs",
+        "Assets/Scripts/Game1/Clan.cs",
+        "Assets/Scripts/Game1/ClanImage.cs",
+        "Assets/Scripts/Game1/ClanMessage.cs",
+        "Assets/Scripts/Game1/ClanObject.cs",
+        "Assets/Scripts/Game1/ClientVerifier.cs",
+        "Assets/Scripts/Game1/Command.cs",
+        "Assets/Scripts/Game1/Controller.cs",
+        "Assets/Scripts/Game1/CoroutineRunner.cs",
+        "Assets/Scripts/Game1/Cout.cs",
+        "Assets/Scripts/Game1/CrackBallScr.cs",
+        "Assets/Scripts/Game1/CreateCharScr.cs",
+        "Assets/Scripts/Game1/DartInfo.cs",
+        "Assets/Scripts/Game1/DataInputStream.cs",
+        "Assets/Scripts/Game1/DataOutputStream.cs",
+        "Assets/Scripts/Game1/Dialog.cs",
+        "Assets/Scripts/Game1/EffecMn.cs",
+        "Assets/Scripts/Game1/Effect.cs",
+        "Assets/Scripts/Game1/Effect2.cs",
+        "Assets/Scripts/Game1/EffectChar.cs",
+        "Assets/Scripts/Game1/EffectCharPaint.cs",
+        "Assets/Scripts/Game1/EffectData.cs",
+        "Assets/Scripts/Game1/EffectInfoPaint.cs",
+        "Assets/Scripts/Game1/EffectManager.cs",
+        "Assets/Scripts/Game1/EffectPaint.cs",
+        "Assets/Scripts/Game1/EffectPanel.cs",
+        "Assets/Scripts/Game1/EffectTemplate.cs",
+        "Assets/Scripts/Game1/Effect_End.cs",
+        "Assets/Scripts/Game1/Firework.cs",
+        "Assets/Scripts/Game1/FireWorkEff.cs",
+        "Assets/Scripts/Game1/FireWorkMn.cs",
+        "Assets/Scripts/Game1/Frame.cs",
+        "Assets/Scripts/Game1/FrameImage.cs",
+        "Assets/Scripts/Game1/GameCanvas.cs",
+        "Assets/Scripts/Game1/GameMidlet.cs",
+        "Assets/Scripts/Game1/GamePad.cs",
+        "Assets/Scripts/Game1/GameScr.cs",
+        "Assets/Scripts/Game1/Hint.cs",
+        "Assets/Scripts/Game1/IActionListener.cs",
+        "Assets/Scripts/Game1/IChatable.cs",
+        "Assets/Scripts/Game1/Image.cs",
+        "Assets/Scripts/Game1/ImageInfo.cs",
+        "Assets/Scripts/Game1/IMapObject.cs",
+        "Assets/Scripts/Game1/IMessageHandler.cs",
+        "Assets/Scripts/Game1/ImgByName.cs",
+        "Assets/Scripts/Game1/Info.cs",
+        "Assets/Scripts/Game1/InfoDlg.cs",
+        "Assets/Scripts/Game1/InfoItem.cs",
+        "Assets/Scripts/Game1/InfoMe.cs",
+        "Assets/Scripts/Game1/InfoPhuBan.cs",
+        "Assets/Scripts/Game1/Info_RadaScr.cs",
+        "Assets/Scripts/Game1/InputDlg.cs",
+        "Assets/Scripts/Game1/iPhoneGeneration.cs",
+        "Assets/Scripts/Game1/iPhoneSettings.cs",
+        "Assets/Scripts/Game1/ipKeyboard.cs",
+        "Assets/Scripts/Game1/ISession.cs",
+        "Assets/Scripts/Game1/Item.cs",
+        "Assets/Scripts/Game1/ItemAuto.cs",
+        "Assets/Scripts/Game1/ItemAutoFilter.cs",
+        "Assets/Scripts/Game1/ItemMap.cs",
+        "Assets/Scripts/Game1/ItemNapTuan.cs",
+        "Assets/Scripts/Game1/ItemObject.cs",
+        "Assets/Scripts/Game1/ItemOption.cs",
+        "Assets/Scripts/Game1/ItemOptionTemplate.cs",
+        "Assets/Scripts/Game1/ItemTamBao.cs",
+        "Assets/Scripts/Game1/ItemTemplate.cs",
+        "Assets/Scripts/Game1/ItemTemplates.cs",
+        "Assets/Scripts/Game1/ItemTime.cs",
+        "Assets/Scripts/Game1/Key.cs",
+        "Assets/Scripts/Game1/Layer.cs",
+        "Assets/Scripts/Game1/Line.cs",
+        "Assets/Scripts/Game1/LoginScr.cs",
+        "Assets/Scripts/Game1/MagicTree.cs",
+        "Assets/Scripts/Game1/Main.cs",
+        "Assets/Scripts/Game1/MainImage.cs",
+        "Assets/Scripts/Game1/MapTemplate.cs",
+        "Assets/Scripts/Game1/Math.cs",
+        "Assets/Scripts/Game1/Member.cs",
+        "Assets/Scripts/Game1/Menu.cs",
+        "Assets/Scripts/Game1/Message.cs",
+        "Assets/Scripts/Game1/mFont.cs",
+        "Assets/Scripts/Game1/mGraphics.cs",
+        "Assets/Scripts/Game1/Mob.cs",
+        "Assets/Scripts/Game1/MobCapcha.cs",
+        "Assets/Scripts/Game1/MobTemplate.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/AutoXmap.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/GroupMap.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/GroupMapData.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/ManualXmap.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/MapNext.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/PickMob.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/PickMobController.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/TypeMapNext.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/XmapAlgorithm.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/XmapController.cs",
+        "Assets/Scripts/Game1/Mod.XMAP/XmapData.cs",
+        "Assets/Scripts/Game1/Mod/BossCustom.cs",
+        "Assets/Scripts/Game1/Mod/CustomBossNotification.cs",
+        "Assets/Scripts/Game1/Mod/ShowBoss.cs",
+        "Assets/Scripts/Game1/ModFunc.cs",
+        "Assets/Scripts/Game1/MoneyCharge.cs",
+        "Assets/Scripts/Game1/MonsterDart.cs",
+        "Assets/Scripts/Game1/MotherCanvas.cs",
+        "Assets/Scripts/Game1/MovePoint.cs",
+        "Assets/Scripts/Game1/mResources.cs",
+        "Assets/Scripts/Game1/mScreen.cs",
+        "Assets/Scripts/Game1/MsgDlg.cs",
+        "Assets/Scripts/Game1/mSystem.cs",
+        "Assets/Scripts/Game1/MyHashTable.cs",
+        "Assets/Scripts/Game1/MyKeyMap.cs",
+        "Assets/Scripts/Game1/MyRandom.cs",
+        "Assets/Scripts/Game1/myReader.cs",
+        "Assets/Scripts/Game1/MyStream.cs",
+        "Assets/Scripts/Game1/MyVector.cs",
+        "Assets/Scripts/Game1/myWriter.cs",
+        "Assets/Scripts/Game1/NClass.cs",
+        "Assets/Scripts/Game1/Net.cs",
+        "Assets/Scripts/Game1/NewBagUI.cs",
+        "Assets/Scripts/Game1/NewBoss.cs",
+        "Assets/Scripts/Game1/NinjaUtil.cs",
+        "Assets/Scripts/Game1/Npc.cs",
+        "Assets/Scripts/Game1/NpcTemplate.cs",
+        "Assets/Scripts/Game1/Paint.cs",
+        "Assets/Scripts/Game1/Panel.cs",
+        "Assets/Scripts/Game1/Part.cs",
+        "Assets/Scripts/Game1/PartImage.cs",
+        "Assets/Scripts/Game1/PKFlag.cs",
+        "Assets/Scripts/Game1/PlayerDart.cs",
+        "Assets/Scripts/Game1/PlayerData.cs",
+        "Assets/Scripts/Game1/Point.cs",
+        "Assets/Scripts/Game1/PopUp.cs",
+        "Assets/Scripts/Game1/PopUpYesNo.cs",
+        "Assets/Scripts/Game1/Position.cs",
+        "Assets/Scripts/Game1/QuaNapTuan.cs",
+        "Assets/Scripts/Game1/QuayTamBao.cs",
+        "Assets/Scripts/Game1/RadarScr.cs",
+        "Assets/Scripts/Game1/Res.cs",
+        "Assets/Scripts/Game1/Rms.cs",
+        "Assets/Scripts/Game1/ScaleGUI.cs",
+        "Assets/Scripts/Game1/Scroll.cs",
+        "Assets/Scripts/Game1/ScrollResult.cs",
+        "Assets/Scripts/Game1/ServerEffect.cs",
+        "Assets/Scripts/Game1/ServerListScreen.cs",
+        "Assets/Scripts/Game1/ServerScr.cs",
+        "Assets/Scripts/Game1/Service.cs",
+        "Assets/Scripts/Game1/Session_ME.cs",
+        "Assets/Scripts/Game1/Session_ME2.cs",
+        "Assets/Scripts/Game1/Skill.cs",
+        "Assets/Scripts/Game1/SkillInfoPaint.cs",
+        "Assets/Scripts/Game1/SkillOption.cs",
+        "Assets/Scripts/Game1/SkillOptionTemplate.cs",
+        "Assets/Scripts/Game1/SkillPaint.cs",
+        "Assets/Scripts/Game1/Skills.cs",
+        "Assets/Scripts/Game1/SkillTemplate.cs",
+        "Assets/Scripts/Game1/SmallDart.cs",
+        "Assets/Scripts/Game1/SmallImage.cs",
+        "Assets/Scripts/Game1/Sound.cs",
+        "Assets/Scripts/Game1/SoundMn.cs",
+        "Assets/Scripts/Game1/SplashScr.cs",
+        "Assets/Scripts/Game1/StaticObj.cs",
+        "Assets/Scripts/Game1/T1.cs",
+        "Assets/Scripts/Game1/TabClanIcon.cs",
+        "Assets/Scripts/Game1/TabCommand.cs",
+        "Assets/Scripts/Game1/TabController.cs",
+        "Assets/Scripts/Game1/Task.cs",
+        "Assets/Scripts/Game1/TaskOrder.cs",
+        "Assets/Scripts/Game1/Teleport.cs",
+        "Assets/Scripts/Game1/TextInfo.cs",
+        "Assets/Scripts/Game1/TField.cs",
+        "Assets/Scripts/Game1/TileMap.cs",
+        "Assets/Scripts/Game1/Timer.cs",
+        "Assets/Scripts/Game1/TopInfo.cs",
+        "Assets/Scripts/Game1/TransportScr.cs",
+        "Assets/Scripts/Game1/Util.cs",
+        "Assets/Scripts/Game1/Waypoint.cs",
+        "Assets/Scripts/Game2/Account.cs",
+        "Assets/Scripts/Game2/ActionChat.cs",
+        "Assets/Scripts/Game2/AddressScr.cs",
+        "Assets/Scripts/Game2/AdminPopup.cs",
+        "Assets/Scripts/Game2/Archivement.cs",
+        "Assets/Scripts/Game2/ArrayCast.cs",
+        "Assets/Scripts/Game2/Arrow.cs",
+        "Assets/Scripts/Game2/Arrowpaint.cs",
+        "Assets/Scripts/Game2/Assets.Assets.Scripts.Assembly_CSharp/Random.cs",
+        "Assets/Scripts/Game2/Assets.src.e/Small.cs",
+        "Assets/Scripts/Game2/Assets.src.f/Controller2.cs",
+        "Assets/Scripts/Game2/Assets.src.g/BigBoss.cs",
+        "Assets/Scripts/Game2/Assets.src.g/ClientInput.cs",
+        "Assets/Scripts/Game2/Assets.src.g/GameInfo.cs",
+        "Assets/Scripts/Game2/Assets.src.g/ImageSource.cs",
+        "Assets/Scripts/Game2/Assets.src.g/Mabu.cs",
+        "Assets/Scripts/Game2/Assets.src.g/PetFollow.cs",
+        "Assets/Scripts/Game2/Assets.src.g/RegisterScreen.cs",
+        "Assets/Scripts/Game2/AutoLogin.cs",
+        "Assets/Scripts/Game2/BachTuoc.cs",
+        "Assets/Scripts/Game2/BackgroudEffect.cs",
+        "Assets/Scripts/Game2/BallInfo.cs",
+        "Assets/Scripts/Game2/BgItem.cs",
+        "Assets/Scripts/Game2/BgItemMn.cs",
+        "Assets/Scripts/Game2/BigBoss2.cs",
+        "Assets/Scripts/Game2/BypassCertificateHandler.cs",
+        "Assets/Scripts/Game2/Char.cs",
+        "Assets/Scripts/Game2/ChatPopup.cs",
+        "Assets/Scripts/Game2/ChatTextField.cs",
+        "Assets/Scripts/Game2/ChooseCharScr.cs",
+        "Assets/Scripts/Game2/Clan.cs",
+        "Assets/Scripts/Game2/ClanImage.cs",
+        "Assets/Scripts/Game2/ClanMessage.cs",
+        "Assets/Scripts/Game2/ClanObject.cs",
+        "Assets/Scripts/Game2/ClientVerifier.cs",
+        "Assets/Scripts/Game2/Command.cs",
+        "Assets/Scripts/Game2/Controller.cs",
+        "Assets/Scripts/Game2/CoroutineRunner.cs",
+        "Assets/Scripts/Game2/Cout.cs",
+        "Assets/Scripts/Game2/CrackBallScr.cs",
+        "Assets/Scripts/Game2/CreateCharScr.cs",
+        "Assets/Scripts/Game2/DartInfo.cs",
+        "Assets/Scripts/Game2/DataInputStream.cs",
+        "Assets/Scripts/Game2/DataOutputStream.cs",
+        "Assets/Scripts/Game2/Dialog.cs",
+        "Assets/Scripts/Game2/EffecMn.cs",
+        "Assets/Scripts/Game2/Effect.cs",
+        "Assets/Scripts/Game2/Effect2.cs",
+        "Assets/Scripts/Game2/EffectChar.cs",
+        "Assets/Scripts/Game2/EffectCharPaint.cs",
+        "Assets/Scripts/Game2/EffectData.cs",
+        "Assets/Scripts/Game2/EffectInfoPaint.cs",
+        "Assets/Scripts/Game2/EffectManager.cs",
+        "Assets/Scripts/Game2/EffectPaint.cs",
+        "Assets/Scripts/Game2/EffectPanel.cs",
+        "Assets/Scripts/Game2/EffectTemplate.cs",
+        "Assets/Scripts/Game2/Effect_End.cs",
+        "Assets/Scripts/Game2/Firework.cs",
+        "Assets/Scripts/Game2/FireWorkEff.cs",
+        "Assets/Scripts/Game2/FireWorkMn.cs",
+        "Assets/Scripts/Game2/Frame.cs",
+        "Assets/Scripts/Game2/FrameImage.cs",
+        "Assets/Scripts/Game2/GameCanvas.cs",
+        "Assets/Scripts/Game2/GameMidlet.cs",
+        "Assets/Scripts/Game2/GamePad.cs",
+        "Assets/Scripts/Game2/GameScr.cs",
+        "Assets/Scripts/Game2/Hint.cs",
+        "Assets/Scripts/Game2/IActionListener.cs",
+        "Assets/Scripts/Game2/IChatable.cs",
+        "Assets/Scripts/Game2/Image.cs",
+        "Assets/Scripts/Game2/ImageInfo.cs",
+        "Assets/Scripts/Game2/IMapObject.cs",
+        "Assets/Scripts/Game2/IMessageHandler.cs",
+        "Assets/Scripts/Game2/ImgByName.cs",
+        "Assets/Scripts/Game2/Info.cs",
+        "Assets/Scripts/Game2/InfoDlg.cs",
+        "Assets/Scripts/Game2/InfoItem.cs",
+        "Assets/Scripts/Game2/InfoMe.cs",
+        "Assets/Scripts/Game2/InfoPhuBan.cs",
+        "Assets/Scripts/Game2/Info_RadaScr.cs",
+        "Assets/Scripts/Game2/InputDlg.cs",
+        "Assets/Scripts/Game2/iPhoneGeneration.cs",
+        "Assets/Scripts/Game2/iPhoneSettings.cs",
+        "Assets/Scripts/Game2/ipKeyboard.cs",
+        "Assets/Scripts/Game2/ISession.cs",
+        "Assets/Scripts/Game2/Item.cs",
+        "Assets/Scripts/Game2/ItemAuto.cs",
+        "Assets/Scripts/Game2/ItemAutoFilter.cs",
+        "Assets/Scripts/Game2/ItemMap.cs",
+        "Assets/Scripts/Game2/ItemNapTuan.cs",
+        "Assets/Scripts/Game2/ItemObject.cs",
+        "Assets/Scripts/Game2/ItemOption.cs",
+        "Assets/Scripts/Game2/ItemOptionTemplate.cs",
+        "Assets/Scripts/Game2/ItemTamBao.cs",
+        "Assets/Scripts/Game2/ItemTemplate.cs",
+        "Assets/Scripts/Game2/ItemTemplates.cs",
+        "Assets/Scripts/Game2/ItemTime.cs",
+        "Assets/Scripts/Game2/Key.cs",
+        "Assets/Scripts/Game2/Layer.cs",
+        "Assets/Scripts/Game2/Line.cs",
+        "Assets/Scripts/Game2/LoginScr.cs",
+        "Assets/Scripts/Game2/MagicTree.cs",
+        "Assets/Scripts/Game2/Main.cs",
+        "Assets/Scripts/Game2/MainImage.cs",
+        "Assets/Scripts/Game2/MapTemplate.cs",
+        "Assets/Scripts/Game2/Math.cs",
+        "Assets/Scripts/Game2/Member.cs",
+        "Assets/Scripts/Game2/Menu.cs",
+        "Assets/Scripts/Game2/Message.cs",
+        "Assets/Scripts/Game2/mFont.cs",
+        "Assets/Scripts/Game2/mGraphics.cs",
+        "Assets/Scripts/Game2/Mob.cs",
+        "Assets/Scripts/Game2/MobCapcha.cs",
+        "Assets/Scripts/Game2/MobTemplate.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/AutoXmap.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/GroupMap.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/GroupMapData.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/ManualXmap.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/MapNext.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/PickMob.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/PickMobController.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/TypeMapNext.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/XmapAlgorithm.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/XmapController.cs",
+        "Assets/Scripts/Game2/Mod.XMAP/XmapData.cs",
+        "Assets/Scripts/Game2/Mod/BossCustom.cs",
+        "Assets/Scripts/Game2/Mod/CustomBossNotification.cs",
+        "Assets/Scripts/Game2/Mod/ShowBoss.cs",
+        "Assets/Scripts/Game2/ModFunc.cs",
+        "Assets/Scripts/Game2/MoneyCharge.cs",
+        "Assets/Scripts/Game2/MonsterDart.cs",
+        "Assets/Scripts/Game2/MotherCanvas.cs",
+        "Assets/Scripts/Game2/MovePoint.cs",
+        "Assets/Scripts/Game2/mResources.cs",
+        "Assets/Scripts/Game2/mScreen.cs",
+        "Assets/Scripts/Game2/MsgDlg.cs",
+        "Assets/Scripts/Game2/mSystem.cs",
+        "Assets/Scripts/Game2/MyHashTable.cs",
+        "Assets/Scripts/Game2/MyKeyMap.cs",
+        "Assets/Scripts/Game2/MyRandom.cs",
+        "Assets/Scripts/Game2/myReader.cs",
+        "Assets/Scripts/Game2/MyStream.cs",
+        "Assets/Scripts/Game2/MyVector.cs",
+        "Assets/Scripts/Game2/myWriter.cs",
+        "Assets/Scripts/Game2/NClass.cs",
+        "Assets/Scripts/Game2/Net.cs",
+        "Assets/Scripts/Game2/NewBagUI.cs",
+        "Assets/Scripts/Game2/NewBoss.cs",
+        "Assets/Scripts/Game2/NinjaUtil.cs",
+        "Assets/Scripts/Game2/Npc.cs",
+        "Assets/Scripts/Game2/NpcTemplate.cs",
+        "Assets/Scripts/Game2/Paint.cs",
+        "Assets/Scripts/Game2/Panel.cs",
+        "Assets/Scripts/Game2/Part.cs",
+        "Assets/Scripts/Game2/PartImage.cs",
+        "Assets/Scripts/Game2/PKFlag.cs",
+        "Assets/Scripts/Game2/PlayerDart.cs",
+        "Assets/Scripts/Game2/PlayerData.cs",
+        "Assets/Scripts/Game2/Point.cs",
+        "Assets/Scripts/Game2/PopUp.cs",
+        "Assets/Scripts/Game2/PopUpYesNo.cs",
+        "Assets/Scripts/Game2/Position.cs",
+        "Assets/Scripts/Game2/QuaNapTuan.cs",
+        "Assets/Scripts/Game2/QuayTamBao.cs",
+        "Assets/Scripts/Game2/RadarScr.cs",
+        "Assets/Scripts/Game2/Res.cs",
+        "Assets/Scripts/Game2/Rms.cs",
+        "Assets/Scripts/Game2/ScaleGUI.cs",
+        "Assets/Scripts/Game2/Scroll.cs",
+        "Assets/Scripts/Game2/ScrollResult.cs",
+        "Assets/Scripts/Game2/ServerEffect.cs",
+        "Assets/Scripts/Game2/ServerListScreen.cs",
+        "Assets/Scripts/Game2/ServerScr.cs",
+        "Assets/Scripts/Game2/Service.cs",
+        "Assets/Scripts/Game2/Session_ME.cs",
+        "Assets/Scripts/Game2/Session_ME2.cs",
+        "Assets/Scripts/Game2/Skill.cs",
+        "Assets/Scripts/Game2/SkillInfoPaint.cs",
+        "Assets/Scripts/Game2/SkillOption.cs",
+        "Assets/Scripts/Game2/SkillOptionTemplate.cs",
+        "Assets/Scripts/Game2/SkillPaint.cs",
+        "Assets/Scripts/Game2/Skills.cs",
+        "Assets/Scripts/Game2/SkillTemplate.cs",
+        "Assets/Scripts/Game2/SmallDart.cs",
+        "Assets/Scripts/Game2/SmallImage.cs",
+        "Assets/Scripts/Game2/Sound.cs",
+        "Assets/Scripts/Game2/SoundMn.cs",
+        "Assets/Scripts/Game2/SplashScr.cs",
+        "Assets/Scripts/Game2/StaticObj.cs",
+        "Assets/Scripts/Game2/T1.cs",
+        "Assets/Scripts/Game2/TabClanIcon.cs",
+        "Assets/Scripts/Game2/TabCommand.cs",
+        "Assets/Scripts/Game2/TabController.cs",
+        "Assets/Scripts/Game2/Task.cs",
+        "Assets/Scripts/Game2/TaskOrder.cs",
+        "Assets/Scripts/Game2/Teleport.cs",
+        "Assets/Scripts/Game2/TextInfo.cs",
+        "Assets/Scripts/Game2/TField.cs",
+        "Assets/Scripts/Game2/TileMap.cs",
+        "Assets/Scripts/Game2/Timer.cs",
+        "Assets/Scripts/Game2/TopInfo.cs",
+        "Assets/Scripts/Game2/TransportScr.cs",
+        "Assets/Scripts/Game2/Util.cs",
+        "Assets/Scripts/Game2/Waypoint.cs",
+        "Assets/TabE.cs",
+        "Assets/TabMn.cs",
+        "Assets/VideoScript.cs",
+        "D:/Unity/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll",
+        "D:/Unity/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll",
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.rsp"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll",
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.pdb",
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.ref.dll"
+      ],
+      "ToBuildDependencies": [
+        1,
+        2,
+        3,
+        71
+      ],
+      "ToUseDependencies": [
+        1,
+        3
+      ],
+      "FrontendResponseFiles": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.rsp"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [
+        {
+          "Key": "DOTNET_MULTILEVEL_LOOKUP",
+          "Value": "0"
+        }
+      ],
+      "DebugActionIndex": 4
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AccessibilityModule.dll_BE03B2720E3A04DF.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.AccessibilityModule.dll_BE03B2720E3A04DF",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.AccessibilityModule.dll_BE03B2720E3A04DF.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.AccessibilityModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AccessibilityModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AccessibilityModule.dll_BE03B2720E3A04DF.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 5
+    },
+    {
+      "Annotation": "ScriptAssemblies",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "ToBuildDependencies": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        72,
+        73
+      ],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 6
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AIModule.dll_A77C57505061156B.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.AIModule.dll_A77C57505061156B",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.AIModule.dll_A77C57505061156B.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.AIModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AIModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AIModule.dll_A77C57505061156B.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 7
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AndroidJNIModule.dll_92C802F4D55790A9.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.AndroidJNIModule.dll_92C802F4D55790A9",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.AndroidJNIModule.dll_92C802F4D55790A9.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.AndroidJNIModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AndroidJNIModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AndroidJNIModule.dll_92C802F4D55790A9.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 8
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AnimationModule.dll_ED3758C4BEC013C5.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.AnimationModule.dll_ED3758C4BEC013C5",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.AnimationModule.dll_ED3758C4BEC013C5.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.AnimationModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AnimationModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AnimationModule.dll_ED3758C4BEC013C5.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 9
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ARModule.dll_60EF1C53AD7E7434.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.ARModule.dll_60EF1C53AD7E7434",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.ARModule.dll_60EF1C53AD7E7434.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.ARModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ARModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ARModule.dll_60EF1C53AD7E7434.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 10
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AssetBundleModule.dll_A8D1CE84A3198593.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.AssetBundleModule.dll_A8D1CE84A3198593",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.AssetBundleModule.dll_A8D1CE84A3198593.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.AssetBundleModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AssetBundleModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AssetBundleModule.dll_A8D1CE84A3198593.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 11
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AudioModule.dll_04B89CFC8CFB7B77.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.AudioModule.dll_04B89CFC8CFB7B77",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.AudioModule.dll_04B89CFC8CFB7B77.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.AudioModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AudioModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AudioModule.dll_04B89CFC8CFB7B77.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 12
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ClothModule.dll_6BA0F9F767185A5B.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.ClothModule.dll_6BA0F9F767185A5B",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.ClothModule.dll_6BA0F9F767185A5B.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.ClothModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ClothModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ClothModule.dll_6BA0F9F767185A5B.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 13
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ContentLoadModule.dll_41E827C5719C2D80.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.ContentLoadModule.dll_41E827C5719C2D80",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.ContentLoadModule.dll_41E827C5719C2D80.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.ContentLoadModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ContentLoadModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ContentLoadModule.dll_41E827C5719C2D80.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 14
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.CoreModule.dll_B69FBB195B7D8B22.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.CoreModule.dll_B69FBB195B7D8B22",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.CoreModule.dll_B69FBB195B7D8B22.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.CoreModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.CoreModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.CoreModule.dll_B69FBB195B7D8B22.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 15
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.CrashReportingModule.dll_18A13A42F10967FA.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.CrashReportingModule.dll_18A13A42F10967FA",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.CrashReportingModule.dll_18A13A42F10967FA.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.CrashReportingModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.CrashReportingModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.CrashReportingModule.dll_18A13A42F10967FA.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 16
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.DirectorModule.dll_9257101ADD1491BF.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.DirectorModule.dll_9257101ADD1491BF",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.DirectorModule.dll_9257101ADD1491BF.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.DirectorModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.DirectorModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.DirectorModule.dll_9257101ADD1491BF.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 17
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.dll_EA0F6B79515274D3.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.dll_EA0F6B79515274D3",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.dll_EA0F6B79515274D3.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.dll_EA0F6B79515274D3.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 18
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.DSPGraphModule.dll_97A871844F7562E0.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.DSPGraphModule.dll_97A871844F7562E0",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.DSPGraphModule.dll_97A871844F7562E0.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.DSPGraphModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.DSPGraphModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.DSPGraphModule.dll_97A871844F7562E0.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 19
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.GameCenterModule.dll_BD154D0F9B98819A.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.GameCenterModule.dll_BD154D0F9B98819A",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.GameCenterModule.dll_BD154D0F9B98819A.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.GameCenterModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.GameCenterModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.GameCenterModule.dll_BD154D0F9B98819A.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 20
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.GIModule.dll_3FB8A05DEC0FFD85.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.GIModule.dll_3FB8A05DEC0FFD85",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.GIModule.dll_3FB8A05DEC0FFD85.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.GIModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.GIModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.GIModule.dll_3FB8A05DEC0FFD85.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 21
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.GridModule.dll_9410D70773D22119.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.GridModule.dll_9410D70773D22119",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.GridModule.dll_9410D70773D22119.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.GridModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.GridModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.GridModule.dll_9410D70773D22119.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 22
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.HotReloadModule.dll_6E8016CA99F32F47.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.HotReloadModule.dll_6E8016CA99F32F47",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.HotReloadModule.dll_6E8016CA99F32F47.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.HotReloadModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.HotReloadModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.HotReloadModule.dll_6E8016CA99F32F47.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 23
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ImageConversionModule.dll_83459D88646315F2.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.ImageConversionModule.dll_83459D88646315F2",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.ImageConversionModule.dll_83459D88646315F2.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.ImageConversionModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ImageConversionModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ImageConversionModule.dll_83459D88646315F2.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 24
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.IMGUIModule.dll_3D183C63532D0F58.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.IMGUIModule.dll_3D183C63532D0F58",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.IMGUIModule.dll_3D183C63532D0F58.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.IMGUIModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.IMGUIModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.IMGUIModule.dll_3D183C63532D0F58.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 25
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.InputLegacyModule.dll_3A16E9A33B0B3B84.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.InputLegacyModule.dll_3A16E9A33B0B3B84",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.InputLegacyModule.dll_3A16E9A33B0B3B84.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.InputLegacyModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.InputLegacyModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.InputLegacyModule.dll_3A16E9A33B0B3B84.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 26
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.InputModule.dll_6B2E64AD0333A01B.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.InputModule.dll_6B2E64AD0333A01B",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.InputModule.dll_6B2E64AD0333A01B.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.InputModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.InputModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.InputModule.dll_6B2E64AD0333A01B.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 27
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.JSONSerializeModule.dll_1E1B3BAE0D756569.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.JSONSerializeModule.dll_1E1B3BAE0D756569",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.JSONSerializeModule.dll_1E1B3BAE0D756569.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.JSONSerializeModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.JSONSerializeModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.JSONSerializeModule.dll_1E1B3BAE0D756569.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 28
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.LocalizationModule.dll_0E41509FC5B18FEC.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.LocalizationModule.dll_0E41509FC5B18FEC",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.LocalizationModule.dll_0E41509FC5B18FEC.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.LocalizationModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.LocalizationModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.LocalizationModule.dll_0E41509FC5B18FEC.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 29
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ParticleSystemModule.dll_6BB3838F5F1AF388.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.ParticleSystemModule.dll_6BB3838F5F1AF388",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.ParticleSystemModule.dll_6BB3838F5F1AF388.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.ParticleSystemModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ParticleSystemModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ParticleSystemModule.dll_6BB3838F5F1AF388.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 30
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.PerformanceReportingModule.dll_AA370E61DB04C1E1.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.PerformanceReportingModule.dll_AA370E61DB04C1E1",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.PerformanceReportingModule.dll_AA370E61DB04C1E1.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.PerformanceReportingModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.PerformanceReportingModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.PerformanceReportingModule.dll_AA370E61DB04C1E1.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 31
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.Physics2DModule.dll_39DD48B55FBD0B5A.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.Physics2DModule.dll_39DD48B55FBD0B5A",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.Physics2DModule.dll_39DD48B55FBD0B5A.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.Physics2DModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.Physics2DModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.Physics2DModule.dll_39DD48B55FBD0B5A.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 32
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.PhysicsModule.dll_97345B5350484B28.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.PhysicsModule.dll_97345B5350484B28",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.PhysicsModule.dll_97345B5350484B28.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.PhysicsModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.PhysicsModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.PhysicsModule.dll_97345B5350484B28.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 33
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ProfilerModule.dll_C49D4951766E18CC.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.ProfilerModule.dll_C49D4951766E18CC",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.ProfilerModule.dll_C49D4951766E18CC.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.ProfilerModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ProfilerModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ProfilerModule.dll_C49D4951766E18CC.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 34
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.PropertiesModule.dll_EA508C4E0E83E5D6.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.PropertiesModule.dll_EA508C4E0E83E5D6",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.PropertiesModule.dll_EA508C4E0E83E5D6.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.PropertiesModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.PropertiesModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.PropertiesModule.dll_EA508C4E0E83E5D6.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 35
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll_992C396B6C083023.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll_992C396B6C083023",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll_992C396B6C083023.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll_992C396B6C083023.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 36
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ScreenCaptureModule.dll_3802E93321E191CB.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.ScreenCaptureModule.dll_3802E93321E191CB",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.ScreenCaptureModule.dll_3802E93321E191CB.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.ScreenCaptureModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ScreenCaptureModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ScreenCaptureModule.dll_3802E93321E191CB.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 37
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SharedInternalsModule.dll_0756DC5DDB911142.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.SharedInternalsModule.dll_0756DC5DDB911142",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.SharedInternalsModule.dll_0756DC5DDB911142.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.SharedInternalsModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SharedInternalsModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SharedInternalsModule.dll_0756DC5DDB911142.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 38
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SpriteMaskModule.dll_A641BF9FBD081714.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.SpriteMaskModule.dll_A641BF9FBD081714",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.SpriteMaskModule.dll_A641BF9FBD081714.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.SpriteMaskModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SpriteMaskModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SpriteMaskModule.dll_A641BF9FBD081714.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 39
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SpriteShapeModule.dll_C232FBDF58BBBD9D.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.SpriteShapeModule.dll_C232FBDF58BBBD9D",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.SpriteShapeModule.dll_C232FBDF58BBBD9D.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.SpriteShapeModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SpriteShapeModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SpriteShapeModule.dll_C232FBDF58BBBD9D.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 40
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.StreamingModule.dll_A1CC46150E47CB03.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.StreamingModule.dll_A1CC46150E47CB03",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.StreamingModule.dll_A1CC46150E47CB03.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.StreamingModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.StreamingModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.StreamingModule.dll_A1CC46150E47CB03.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 41
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SubstanceModule.dll_7E775A5E599AC911.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.SubstanceModule.dll_7E775A5E599AC911",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.SubstanceModule.dll_7E775A5E599AC911.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.SubstanceModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SubstanceModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SubstanceModule.dll_7E775A5E599AC911.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 42
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SubsystemsModule.dll_10EF26018B4FFF27.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.SubsystemsModule.dll_10EF26018B4FFF27",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.SubsystemsModule.dll_10EF26018B4FFF27.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.SubsystemsModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SubsystemsModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SubsystemsModule.dll_10EF26018B4FFF27.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 43
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TerrainModule.dll_B17AD6C226069416.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.TerrainModule.dll_B17AD6C226069416",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.TerrainModule.dll_B17AD6C226069416.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.TerrainModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TerrainModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TerrainModule.dll_B17AD6C226069416.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 44
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TerrainPhysicsModule.dll_6C2E2C62785DEE15.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.TerrainPhysicsModule.dll_6C2E2C62785DEE15",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.TerrainPhysicsModule.dll_6C2E2C62785DEE15.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.TerrainPhysicsModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TerrainPhysicsModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TerrainPhysicsModule.dll_6C2E2C62785DEE15.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 45
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TextCoreFontEngineModule.dll_2A4E2BDEE5EE2E60.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.TextCoreFontEngineModule.dll_2A4E2BDEE5EE2E60",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.TextCoreFontEngineModule.dll_2A4E2BDEE5EE2E60.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.TextCoreFontEngineModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TextCoreFontEngineModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TextCoreFontEngineModule.dll_2A4E2BDEE5EE2E60.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 46
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TextCoreTextEngineModule.dll_723662507571E77E.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.TextCoreTextEngineModule.dll_723662507571E77E",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.TextCoreTextEngineModule.dll_723662507571E77E.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.TextCoreTextEngineModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TextCoreTextEngineModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TextCoreTextEngineModule.dll_723662507571E77E.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 47
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TextRenderingModule.dll_61425B3DD91911C0.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.TextRenderingModule.dll_61425B3DD91911C0",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.TextRenderingModule.dll_61425B3DD91911C0.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.TextRenderingModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TextRenderingModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TextRenderingModule.dll_61425B3DD91911C0.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 48
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TilemapModule.dll_50773E433DC3751F.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.TilemapModule.dll_50773E433DC3751F",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.TilemapModule.dll_50773E433DC3751F.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.TilemapModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TilemapModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TilemapModule.dll_50773E433DC3751F.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 49
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TLSModule.dll_FF675496C21F91FC.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.TLSModule.dll_FF675496C21F91FC",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.TLSModule.dll_FF675496C21F91FC.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.TLSModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TLSModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TLSModule.dll_FF675496C21F91FC.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 50
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UIElementsModule.dll_152D87698E7C3B1E.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UIElementsModule.dll_152D87698E7C3B1E",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UIElementsModule.dll_152D87698E7C3B1E.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UIElementsModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UIElementsModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UIElementsModule.dll_152D87698E7C3B1E.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 51
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UIModule.dll_A2EFF57DACA81B17.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UIModule.dll_A2EFF57DACA81B17",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UIModule.dll_A2EFF57DACA81B17.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UIModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UIModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UIModule.dll_A2EFF57DACA81B17.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 52
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UmbraModule.dll_7F8D49151A2226EA.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UmbraModule.dll_7F8D49151A2226EA",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UmbraModule.dll_7F8D49151A2226EA.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UmbraModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UmbraModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UmbraModule.dll_7F8D49151A2226EA.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 53
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityAnalyticsCommonModule.dll_4575CBA5F4ED603F.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityAnalyticsCommonModule.dll_4575CBA5F4ED603F",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityAnalyticsCommonModule.dll_4575CBA5F4ED603F.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityAnalyticsCommonModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityAnalyticsCommonModule.dll_4575CBA5F4ED603F.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 54
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityAnalyticsModule.dll_8B52F4590B424584.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityAnalyticsModule.dll_8B52F4590B424584",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityAnalyticsModule.dll_8B52F4590B424584.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityAnalyticsModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityAnalyticsModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityAnalyticsModule.dll_8B52F4590B424584.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 55
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityConnectModule.dll_3DB795467735CAD8.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityConnectModule.dll_3DB795467735CAD8",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityConnectModule.dll_3DB795467735CAD8.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityConnectModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityConnectModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityConnectModule.dll_3DB795467735CAD8.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 56
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityCurlModule.dll_2053F9F62ED405B2.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityCurlModule.dll_2053F9F62ED405B2",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityCurlModule.dll_2053F9F62ED405B2.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityCurlModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityCurlModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityCurlModule.dll_2053F9F62ED405B2.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 57
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityTestProtocolModule.dll_1553657F3898F320.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityTestProtocolModule.dll_1553657F3898F320",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityTestProtocolModule.dll_1553657F3898F320.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityTestProtocolModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityTestProtocolModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityTestProtocolModule.dll_1553657F3898F320.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 58
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestAssetBundleModule.dll_C6B1DDAFEE06EB55.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityWebRequestAssetBundleModule.dll_C6B1DDAFEE06EB55",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityWebRequestAssetBundleModule.dll_C6B1DDAFEE06EB55.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestAssetBundleModule.dll_C6B1DDAFEE06EB55.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 59
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestAudioModule.dll_22336240616F8C79.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityWebRequestAudioModule.dll_22336240616F8C79",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityWebRequestAudioModule.dll_22336240616F8C79.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityWebRequestAudioModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestAudioModule.dll_22336240616F8C79.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 60
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestModule.dll_94E4A5326F57B071.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityWebRequestModule.dll_94E4A5326F57B071",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityWebRequestModule.dll_94E4A5326F57B071.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityWebRequestModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestModule.dll_94E4A5326F57B071.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 61
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestTextureModule.dll_04AF536E76E65B6E.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityWebRequestTextureModule.dll_04AF536E76E65B6E",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityWebRequestTextureModule.dll_04AF536E76E65B6E.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityWebRequestTextureModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestTextureModule.dll_04AF536E76E65B6E.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 62
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestWWWModule.dll_3CF8A7AC6531A3EA.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.UnityWebRequestWWWModule.dll_3CF8A7AC6531A3EA",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.UnityWebRequestWWWModule.dll_3CF8A7AC6531A3EA.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestWWWModule.dll_3CF8A7AC6531A3EA.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 63
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VehiclesModule.dll_0A1A099A573E615A.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.VehiclesModule.dll_0A1A099A573E615A",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.VehiclesModule.dll_0A1A099A573E615A.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.VehiclesModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VehiclesModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.VehiclesModule.dll_0A1A099A573E615A.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 64
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VFXModule.dll_8045ED05988CFB69.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.VFXModule.dll_8045ED05988CFB69",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.VFXModule.dll_8045ED05988CFB69.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.VFXModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VFXModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.VFXModule.dll_8045ED05988CFB69.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 65
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VideoModule.dll_29C221674F8D971C.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.VideoModule.dll_29C221674F8D971C",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.VideoModule.dll_29C221674F8D971C.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.VideoModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VideoModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.VideoModule.dll_29C221674F8D971C.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 66
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VRModule.dll_F5C21C034E62A08F.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.VRModule.dll_F5C21C034E62A08F",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.VRModule.dll_F5C21C034E62A08F.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.VRModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VRModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.VRModule.dll_F5C21C034E62A08F.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 67
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_2CEE9641ECB4098B.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.WindModule.dll_2CEE9641ECB4098B",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.WindModule.dll_2CEE9641ECB4098B.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.WindModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.WindModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_2CEE9641ECB4098B.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 68
+    },
+    {
+      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_2880DF07D79CEDED.mvfrm",
+      "DisplayName": "MovedFromExtractor UnityEngine.XRModule.dll_2880DF07D79CEDED",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEngine.XRModule.dll_2880DF07D79CEDED.mvfrm\" \"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.XRModule.dll\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.XRModule.dll",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_2880DF07D79CEDED.mvfrm"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 69
+    },
+    {
+      "Annotation": "WriteText Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll.mvfrm.rsp",
+      "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
+      "ActionType": "WriteFile",
+      "PayloadOffset": 38759,
+      "PayloadLength": 5523,
+      "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
+      "Inputs": [],
+      "Outputs": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll.mvfrm.rsp"
+      ],
+      "DebugActionIndex": 70
+    },
+    {
+      "Annotation": "MovedFromExtractorCombine Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll.mvfrm",
+      "DisplayName": "MovedFromExtractorCombine Assembly-CSharp.dll",
+      "Action": "\"D:\\Unity\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe\" \"Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll.mvfrm\" \"@Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll.mvfrm.rsp\"",
+      "Inputs": [
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AccessibilityModule.dll_BE03B2720E3A04DF.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AIModule.dll_A77C57505061156B.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AndroidJNIModule.dll_92C802F4D55790A9.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AnimationModule.dll_ED3758C4BEC013C5.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ARModule.dll_60EF1C53AD7E7434.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AssetBundleModule.dll_A8D1CE84A3198593.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.AudioModule.dll_04B89CFC8CFB7B77.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ClothModule.dll_6BA0F9F767185A5B.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ContentLoadModule.dll_41E827C5719C2D80.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.CoreModule.dll_B69FBB195B7D8B22.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.CrashReportingModule.dll_18A13A42F10967FA.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.DirectorModule.dll_9257101ADD1491BF.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.dll_EA0F6B79515274D3.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.DSPGraphModule.dll_97A871844F7562E0.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.GameCenterModule.dll_BD154D0F9B98819A.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.GIModule.dll_3FB8A05DEC0FFD85.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.GridModule.dll_9410D70773D22119.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.HotReloadModule.dll_6E8016CA99F32F47.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ImageConversionModule.dll_83459D88646315F2.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.IMGUIModule.dll_3D183C63532D0F58.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.InputLegacyModule.dll_3A16E9A33B0B3B84.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.InputModule.dll_6B2E64AD0333A01B.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.JSONSerializeModule.dll_1E1B3BAE0D756569.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.LocalizationModule.dll_0E41509FC5B18FEC.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ParticleSystemModule.dll_6BB3838F5F1AF388.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.PerformanceReportingModule.dll_AA370E61DB04C1E1.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.Physics2DModule.dll_39DD48B55FBD0B5A.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.PhysicsModule.dll_97345B5350484B28.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ProfilerModule.dll_C49D4951766E18CC.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.PropertiesModule.dll_EA508C4E0E83E5D6.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll_992C396B6C083023.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.ScreenCaptureModule.dll_3802E93321E191CB.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SharedInternalsModule.dll_0756DC5DDB911142.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SpriteMaskModule.dll_A641BF9FBD081714.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SpriteShapeModule.dll_C232FBDF58BBBD9D.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.StreamingModule.dll_A1CC46150E47CB03.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SubstanceModule.dll_7E775A5E599AC911.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.SubsystemsModule.dll_10EF26018B4FFF27.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TerrainModule.dll_B17AD6C226069416.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TerrainPhysicsModule.dll_6C2E2C62785DEE15.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TextCoreFontEngineModule.dll_2A4E2BDEE5EE2E60.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TextCoreTextEngineModule.dll_723662507571E77E.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TextRenderingModule.dll_61425B3DD91911C0.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TilemapModule.dll_50773E433DC3751F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.TLSModule.dll_FF675496C21F91FC.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UIElementsModule.dll_152D87698E7C3B1E.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UIModule.dll_A2EFF57DACA81B17.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UmbraModule.dll_7F8D49151A2226EA.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityAnalyticsCommonModule.dll_4575CBA5F4ED603F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityAnalyticsModule.dll_8B52F4590B424584.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityConnectModule.dll_3DB795467735CAD8.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityCurlModule.dll_2053F9F62ED405B2.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityTestProtocolModule.dll_1553657F3898F320.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestAssetBundleModule.dll_C6B1DDAFEE06EB55.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestAudioModule.dll_22336240616F8C79.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestModule.dll_94E4A5326F57B071.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestTextureModule.dll_04AF536E76E65B6E.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestWWWModule.dll_3CF8A7AC6531A3EA.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.VehiclesModule.dll_0A1A099A573E615A.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.VFXModule.dll_8045ED05988CFB69.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.VideoModule.dll_29C221674F8D971C.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.VRModule.dll_F5C21C034E62A08F.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_2CEE9641ECB4098B.mvfrm",
+        "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_2880DF07D79CEDED.mvfrm",
+        "D:/Unity/Editor/Data/Tools/ScriptUpdater/ApiUpdater.MovedFromExtractor.exe",
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll.mvfrm.rsp"
+      ],
+      "Outputs": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll.mvfrm"
+      ],
+      "ToBuildDependencies": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 71
+    },
+    {
+      "Annotation": "CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+      "DisplayName": "Copying Assembly-CSharp.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.dll"
+      ],
+      "Outputs": [
+        "Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll"
+      ],
+      "ToBuildDependencies": [
+        4
+      ],
+      "DebugActionIndex": 72
+    },
+    {
+      "Annotation": "CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb",
+      "DisplayName": "Copying Assembly-CSharp.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/900b0aP.dag/Assembly-CSharp.pdb"
+      ],
+      "Outputs": [
+        "Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb"
+      ],
+      "ToBuildDependencies": [
+        4
+      ],
+      "DebugActionIndex": 73
+    },
+    {
+      "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Player/RuntimeInitializeOnLoads.json (+1 other)",
+      "DisplayName": "BuildPlayerDataGenerator RuntimeInitializeOnLoads",
+      "Action": "\"D:/Unity/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"D:\\ZNNNNNNNNNNNNNN\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll\" -s=\"D:\\Unity\\Editor\\Data\\Managed\\UnityEngine\" -s=\"D:\\Unity\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"D:\\Unity\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"D:\\Unity\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"D:\\Unity\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"D:\\ZNNNNNNNNNNNNNN\\Library\\Bee\\PlayerScriptAssemblies\" -o=\"Library/BuildPlayerData/Player\" -rn=\"RuntimeInitializeOnLoads.json\" -tn=\"TypeDb-All.json\"",
+      "Inputs": [
+        "D:/Unity/Editor/Data/Tools/netcorerun/netcorerun.exe",
+        "D:/Unity/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
+        "Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll"
+      ],
+      "Outputs": [
+        "Library/BuildPlayerData/Player/RuntimeInitializeOnLoads.json",
+        "Library/BuildPlayerData/Player/TypeDb-All.json"
+      ],
+      "ToBuildDependencies": [
+        72
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 74
+    },
+    {
+      "Annotation": "ScriptAssembliesAndTypeDB",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "ToBuildDependencies": [
+        6,
+        74
+      ],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 75
+    }
+  ],
+  "FileSignatures": [
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.BuildTools.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.Core.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.CSharpSupport.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.DotNet.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.NativeProgramSupport.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.Stevedore.Program.exe"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.TinyProfiler2.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.GNU.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.LLVM.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.VisualStudio.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.Xcode.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.Tools.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.TundraBackend.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Bee.VisualStudioSolution.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/BeeBuildProgramCommon.Data.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/BeeBuildProgramCommon.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/BeeLocalCacheTool.exe"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Newtonsoft.Json.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/NiceIO.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/PlayerBuildProgramLibrary.Data.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/PlayerBuildProgramLibrary.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/ScriptCompilationBuildProgram.Data.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/ScriptCompilationBuildProgram.exe"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/SharpYaml.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.Api.Attributes.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.Cecil.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Mdb.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Pdb.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Rocks.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Api.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Bee.BuildLogic.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Bee.IL2CPPExeCompileCppBuildProgram.Data.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.Linker.Api.dll"
+    },
+    {
+      "File": "D:/Unity/Editor/Data/Tools/BuildPipeline/Unity.Options.dll"
+    },
+    {
+      "File": "Library/Bee/900b0aP-inputdata.json"
+    }
+  ],
+  "StatSignatures": [
+    {
+      "File": "Assets/csc.rsp"
+    },
+    {
+      "File": "Assets/mcs.rsp"
+    },
+    {
+      "File": "Library/Bee/900b0aP-inputdata.json"
+    }
+  ],
+  "GlobSignatures": [
+    {
+      "Path": "D:/Unity/Editor/Data/Tools/BuildPipeline"
+    }
+  ],
+  "ContentDigestExtensions": [
+    ".rsp",
+    ".dll",
+    ".exe",
+    ".csproj",
+    ".pdb"
+  ],
+  "StructuredLogFileName": "Library/Bee/tundra.log.json",
+  "StateFileName": "Library/Bee/TundraBuildState.state",
+  "StateFileNameTmp": "Library/Bee/TundraBuildState.state.tmp",
+  "StateFileNameMapped": "Library/Bee/TundraBuildState.state.map",
+  "ScanCacheFileName": "Library/Bee/tundra.scancache",
+  "ScanCacheFileNameTmp": "Library/Bee/tundra.scancache.tmp",
+  "DigestCacheFileName": "Library/Bee/tundra.digestcache",
+  "DigestCacheFileNameTmp": "Library/Bee/tundra.digestcache.tmp",
+  "CachedNodeOutputDirectoryName": "Library/Bee/CachedNodeOutput",
+  "EmitDataForBeeWhy": 0,
+        "NamedNodes": {
+          "all_tundra_nodes": 0,
+          "ScriptAssemblies": 6,
+          "ScriptAssembliesAndTypeDB": 75
+        }
+,  "DefaultNodes": [
+    0
+  ],
+  "SharedResources": [],
+  "Scanners": [],
+  "Identifier": "Library/Bee/900b0aP.dag.json",
+  "PayloadsFile": "D:/ZNNNNNNNNNNNNNN/Library/Bee/900b0aP.dag.payloads",
+  "RelativePathToRoot": "../.."
+}

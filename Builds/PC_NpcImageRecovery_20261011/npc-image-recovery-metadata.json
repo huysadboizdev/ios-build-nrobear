@@ -1,0 +1,17 @@
+[
+  {
+    "file": "C:\\Users\\Admin\\Downloads\\PRJ_2Tab_550K\\Builds\\PC_NpcImageRecovery_20261011\\NRO.exe",
+    "bytes": 666624,
+    "sha256": "5cc71bf032f440ac46a5d24bb4101050a37001dd8f1b8325aec1067ea0d1ff52"
+  },
+  {
+    "file": "C:\\Users\\Admin\\Downloads\\PRJ_2Tab_550K\\Builds\\PC_NpcImageRecovery_20261011\\NRO_Data\\Managed\\Assembly-CSharp.dll",
+    "bytes": 1711104,
+    "sha256": "334c8d84c2d5137c62f44362c15f868721a445429d3994d7499e2b3ca96d0d52"
+  },
+  {
+    "file": "C:\\Users\\Admin\\Downloads\\nroteam\\Teamobi2026\\ClientWeb\\PRJ_2Tab_Web\\Builds\\WebGL\\Build\\WebGL.wasm",
+    "bytes": 24874076,
+    "sha256": "0fc96e2ce2afc68555fb0dcca72873990c65ceea2e540ca4f8e35818ffcbf471"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "file": "C:\\Users\\Admin\\Downloads\\PRJ_2Tab_550K\\Builds\\Distribution\\20261015-Cadic-AnimationFix-v3\\Android\\NRO.apk",
+  "bytes": 84179293,
+  "sha256": "fbaf22b76f3f4ab24b855cef54a1552691d38170b414f30144fe6ee51bb79073",
+  "package": "com.DefaultCompany.DragonBoy002",
+  "minSDK": 23,
+  "targetSDK": 34,
+  "backend": "IL2CPP",
+  "architectures": [
+    "armeabi-v7a",
+    "arm64-v8a"
+  ],
+  "orientation": "landscape",
+  "signatureVerified": true,
+  "sameSigningCertificateAsV2": true,
+  "certificateSHA256": "54960b13e6b370f7ed4b8a3c68507c240e6884c71f4e5569e0c8ff0ad63ad696",
+  "zipAlignmentVerified": true,
+  "arm64ELFAlignment": {
+    "lib/arm64-v8a/libil2cpp.so": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "lib/arm64-v8a/libmain.so": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "lib/arm64-v8a/libunity.so": [
+      16384,
+      16384,
+      16384,
+      16384
+    ]
+  },
+  "mobSourceSHA256": {
+    "Game1": "6e214ade1717bdfa2f8ca3e9290e491cc52cc88de218f362604bbf78529fa16c",
+    "Game2": "89ae79f86c3b11e0d6db852a8e16a2b32b121dd65f3d42094fd7ff4ad62076f9"
+  },
+  "physicalDeviceTest": false,
+  "serverResourceDeployed": false
+}

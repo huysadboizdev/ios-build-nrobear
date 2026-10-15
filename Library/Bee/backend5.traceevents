@@ -1,0 +1,202 @@
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1782539145758427, "dur":28389, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782539145786821, "dur":2245, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782539145789565, "dur":355, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1782539145789921, "dur":283, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782539145792060, "dur":80, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Classes/Unity/IUnityInterface.h" }}
+,{ "pid":12345, "tid":0, "ts":1782539145808738, "dur":72, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/metadata/console-io.h" }}
+,{ "pid":12345, "tid":0, "ts":1782539145825369, "dur":61, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/vm/Enum.h" }}
+,{ "pid":12345, "tid":0, "ts":1782539145790225, "dur":37082, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782539145827319, "dur":19936, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782539145847256, "dur":121, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782539145847496, "dur":39263, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1782539145790694, "dur":36639, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145827336, "dur":219, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145827555, "dur":213, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145827768, "dur":141, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145827909, "dur":170, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145828079, "dur":131, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145828210, "dur":8079, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145836354, "dur":125, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145837288, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145838125, "dur":244, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\iOS\\ManagedStripped\\UnityEngine.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782539145838124, "dur":302, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":1, "ts":1782539145838806, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145838911, "dur":149, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\os\\ClassLibraryPAL\\brotli\\common\\transform.c" }}
+,{ "pid":12345, "tid":1, "ts":1782539145838910, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/os/ClassLibraryPAL/brotli/common/transform.c" }}
+,{ "pid":12345, "tid":1, "ts":1782539145839061, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145839188, "dur":78, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/mono/ThreadPool/threadpool-ms.h" }}
+,{ "pid":12345, "tid":1, "ts":1782539145839552, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\icalls\\System\\System.Net.Sockets\\Socket.cpp" }}
+,{ "pid":12345, "tid":1, "ts":1782539145839551, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/icalls/System/System.Net.Sockets/Socket.cpp" }}
+,{ "pid":12345, "tid":1, "ts":1782539145839657, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145839756, "dur":71, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\icalls\\mscorlib\\System\\Object.cpp" }}
+,{ "pid":12345, "tid":1, "ts":1782539145839755, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/icalls/mscorlib/System/Object.cpp" }}
+,{ "pid":12345, "tid":1, "ts":1782539145840355, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/icalls/mscorlib/System.Diagnostics/Debugger.h" }}
+,{ "pid":12345, "tid":1, "ts":1782539145840466, "dur":322, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145841843, "dur":234, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/utils/mono-machine.h" }}
+,{ "pid":12345, "tid":1, "ts":1782539145845027, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145845157, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\build\\deploy_x86_64\\System.IO.Pipes.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782539145845156, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_x86_64/System.IO.Pipes.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782539145845718, "dur":96, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782539145847195, "dur":58, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145790747, "dur":36602, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145827352, "dur":224, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145827577, "dur":214, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145827791, "dur":161, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145827952, "dur":162, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145828114, "dur":8173, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145836346, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145837734, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145838126, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/System.Core-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":2, "ts":1782539145838275, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.InputLegacyModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":2, "ts":1782539145838353, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.PropertiesModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":2, "ts":1782539145839309, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\metadata\\Il2CppGenericInstCompare.cpp" }}
+,{ "pid":12345, "tid":2, "ts":1782539145839308, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/metadata/Il2CppGenericInstCompare.cpp" }}
+,{ "pid":12345, "tid":2, "ts":1782539145839705, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145840447, "dur":338, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782539145841833, "dur":225, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/utils/mono-log-darwin.c" }}
+,{ "pid":12345, "tid":2, "ts":1782539145842974, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\external\\mono\\mono\\metadata\\mono-basic-block.c" }}
+,{ "pid":12345, "tid":2, "ts":1782539145842974, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/metadata/mono-basic-block.c" }}
+,{ "pid":12345, "tid":3, "ts":1782539145790738, "dur":36606, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145827347, "dur":216, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145827563, "dur":223, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145827786, "dur":155, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145827941, "dur":159, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145828101, "dur":110, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145828211, "dur":8072, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145836343, "dur":168, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145836626, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\vm\\WeakReference.h" }}
+,{ "pid":12345, "tid":3, "ts":1782539145836625, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/vm/WeakReference.h" }}
+,{ "pid":12345, "tid":3, "ts":1782539145837245, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\utils\\MemoryUtils.h" }}
+,{ "pid":12345, "tid":3, "ts":1782539145837245, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/utils/MemoryUtils.h" }}
+,{ "pid":12345, "tid":3, "ts":1782539145838118, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.VideoModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":3, "ts":1782539145838199, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/System-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":3, "ts":1782539145838274, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.TextRenderingModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":3, "ts":1782539145838351, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/System.Xml-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":3, "ts":1782539145838463, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CollectRequiredReasonAPIs Library/Bee/artifacts/iOS/AppleRequiredReasonCSharpAPIs.txt" }}
+,{ "pid":12345, "tid":3, "ts":1782539145838581, "dur":61, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\iOS\\AppleRequiredReasonCSharpAPIs.txt" }}
+,{ "pid":12345, "tid":3, "ts":1782539145838580, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/UnityFramework/AppleRequiredReasonCSharpAPIs.txt" }}
+,{ "pid":12345, "tid":3, "ts":1782539145838850, "dur":1205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/CNNNNNNNNNNNNNN/queen/2/UnityFramework/AppleRequiredReasonCSharpAPIs.txt" }}
+,{ "pid":12345, "tid":3, "ts":1782539145840139, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\icalls\\mscorlib\\System.Runtime.CompilerServices\\RuntimeHelpers.cpp" }}
+,{ "pid":12345, "tid":3, "ts":1782539145840138, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/icalls/mscorlib/System.Runtime.CompilerServices/RuntimeHelpers.cpp" }}
+,{ "pid":12345, "tid":3, "ts":1782539145840472, "dur":321, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\gc\\Allocator.h" }}
+,{ "pid":12345, "tid":3, "ts":1782539145840471, "dur":322, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/gc/Allocator.h" }}
+,{ "pid":12345, "tid":3, "ts":1782539145841839, "dur":234, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/utils/mono-log-unity.c" }}
+,{ "pid":12345, "tid":3, "ts":1782539145843327, "dur":87, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\external\\mono\\mono\\eglib\\gptrarray.c" }}
+,{ "pid":12345, "tid":3, "ts":1782539145843326, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/eglib/gptrarray.c" }}
+,{ "pid":12345, "tid":3, "ts":1782539145843582, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\external\\bdwgc\\mach_dep.c" }}
+,{ "pid":12345, "tid":3, "ts":1782539145843581, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/bdwgc/mach_dep.c" }}
+,{ "pid":12345, "tid":3, "ts":1782539145843885, "dur":56, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\external\\bdwgc\\include\\gc_mark.h" }}
+,{ "pid":12345, "tid":3, "ts":1782539145843885, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/bdwgc/include/gc_mark.h" }}
+,{ "pid":12345, "tid":3, "ts":1782539145844932, "dur":62, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\build\\deploy_x86_64\\System.Security.Principal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782539145844931, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_x86_64/System.Security.Principal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782539145845712, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145846687, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782539145847143, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Unity-iPhone/Images.xcassets/AppIcon.appiconset/Icon-iPhone-Settings-87.png" }}
+,{ "pid":12345, "tid":4, "ts":1782539145790763, "dur":36593, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145827358, "dur":194, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145827553, "dur":219, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145827773, "dur":136, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145827909, "dur":165, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145828075, "dur":145, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145828220, "dur":8064, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145836331, "dur":125, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145837612, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782539145838134, "dur":61, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\iOS\\ManagedStripped\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1782539145838133, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/Assembly-CSharp-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":4, "ts":1782539145838264, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.UIModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":4, "ts":1782539145839190, "dur":78, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/mono/ThreadPool/threadpool-ms.cpp" }}
+,{ "pid":12345, "tid":4, "ts":1782539145840469, "dur":318, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\gc\\BoehmGC.cpp" }}
+,{ "pid":12345, "tid":4, "ts":1782539145840468, "dur":319, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/gc/BoehmGC.cpp" }}
+,{ "pid":12345, "tid":4, "ts":1782539145840811, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/codegen/il2cpp-codegen-il2cpp.cpp" }}
+,{ "pid":12345, "tid":4, "ts":1782539145841836, "dur":227, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/utils/mono-log-common.c" }}
+,{ "pid":12345, "tid":4, "ts":1782539145843260, "dur":76, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/metadata/class-accessors.c" }}
+,{ "pid":12345, "tid":4, "ts":1782539145844685, "dur":59, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_x86_64/Unity.TinyProfiler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1782539145845723, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145790689, "dur":36639, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145827331, "dur":221, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145827552, "dur":218, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145827770, "dur":146, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145827916, "dur":167, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145828084, "dur":119, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145828203, "dur":8077, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145836332, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145836949, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145838121, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.IMGUIModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":5, "ts":1782539145838183, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145838246, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.SharedInternalsModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":5, "ts":1782539145838882, "dur":71, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/os/ClassLibraryPAL/brotli/dec/bit_reader.h" }}
+,{ "pid":12345, "tid":5, "ts":1782539145839125, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145840470, "dur":322, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145841838, "dur":229, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/utils/mono-log-android.c" }}
+,{ "pid":12345, "tid":5, "ts":1782539145842360, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145842747, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145842875, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145843207, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145845700, "dur":153, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145845876, "dur":126, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145846111, "dur":94, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\build\\deploy_arm64\\System.Runtime.Serialization.Json.dll" }}
+,{ "pid":12345, "tid":5, "ts":1782539145846110, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_arm64/System.Runtime.Serialization.Json.dll" }}
+,{ "pid":12345, "tid":5, "ts":1782539145846282, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782539145846784, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\build\\deploy_arm64\\Analytics.Api.Output.dll" }}
+,{ "pid":12345, "tid":5, "ts":1782539145846783, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_arm64/Analytics.Api.Output.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782539145790715, "dur":36623, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145827341, "dur":229, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145827570, "dur":217, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145827787, "dur":161, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145827948, "dur":164, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145828112, "dur":8170, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145836354, "dur":115, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145838118, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/Mono.Security-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":6, "ts":1782539145838286, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.UnityWebRequestAudioModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":6, "ts":1782539145839255, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145840461, "dur":323, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\gc\\GarbageCollector.h" }}
+,{ "pid":12345, "tid":6, "ts":1782539145840461, "dur":324, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/gc/GarbageCollector.h" }}
+,{ "pid":12345, "tid":6, "ts":1782539145841846, "dur":237, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/utils/mono-linked-list-set.h" }}
+,{ "pid":12345, "tid":6, "ts":1782539145842184, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782539145845993, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\build\\deploy_arm64\\System.Transactions.Local.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782539145845993, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_arm64/System.Transactions.Local.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782539145846448, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_arm64/SharpYaml.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782539145847082, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText D:/CNNNNNNNNNNNNNN/queen/2/Unity-iPhone.xcodeproj/project.pbxproj" }}
+,{ "pid":12345, "tid":7, "ts":1782539145790668, "dur":36657, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1782539145827327, "dur":8947, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1782539145836355, "dur":109, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Variations\\il2cpp\\Managed\\UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782539145836351, "dur":1007, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"UnityLinker D:/ZNNNNNNNNNNNNNN/Library/Bee/artifacts/unitylinker_fi2v.traceevents" }}
+,{ "pid":12345, "tid":7, "ts":1782539145837358, "dur":260, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1782539145838118, "dur":465, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"IL2CPP_CodeGen D:/ZNNNNNNNNNNNNNN/Library/Bee/artifacts/il2cpp_conv_647m.traceevents" }}
+,{ "pid":12345, "tid":7, "ts":1782539145838584, "dur":1134, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1782539145841847, "dur":268, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/utils/mono-linked-list-set.c" }}
+,{ "pid":12345, "tid":7, "ts":1782539145842522, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\external\\mono\\mono\\metadata\\w32process-win32-internals.h" }}
+,{ "pid":12345, "tid":7, "ts":1782539145842521, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/metadata/w32process-win32-internals.h" }}
+,{ "pid":12345, "tid":7, "ts":1782539145843059, "dur":131, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\external\\mono\\mono\\metadata\\image-internals.h" }}
+,{ "pid":12345, "tid":7, "ts":1782539145843059, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/metadata/image-internals.h" }}
+,{ "pid":12345, "tid":7, "ts":1782539145845111, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_x86_64/System.Net.NetworkInformation.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782539145846216, "dur":56, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\build\\deploy_arm64\\System.Net.WebSockets.Client.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782539145846215, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_arm64/System.Net.WebSockets.Client.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782539145846583, "dur":55, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/build/deploy_arm64/il2cpp.deps.json" }}
+,{ "pid":12345, "tid":7, "ts":1782539145846838, "dur":123, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\Trampoline\\Classes\\UnityTrampolineConfigure.h" }}
+,{ "pid":12345, "tid":7, "ts":1782539145846837, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Classes/UnityTrampolineConfigure.h" }}
+,{ "pid":12345, "tid":7, "ts":1782539145847072, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145790780, "dur":36584, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145827365, "dur":202, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145827567, "dur":224, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145827791, "dur":173, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145827964, "dur":156, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145828120, "dur":8161, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145836336, "dur":120, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145836524, "dur":478, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/iOS/boot.config" }}
+,{ "pid":12345, "tid":8, "ts":1782539145838118, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.AudioModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":8, "ts":1782539145838218, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/UnityEngine.ImageConversionModule-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":8, "ts":1782539145838371, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"ExtractUsedFeatures Library/Bee/artifacts/iOS/Features/System.Configuration-FeaturesChecked.txt" }}
+,{ "pid":12345, "tid":8, "ts":1782539145838535, "dur":53, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/os/ClassLibraryPAL/pal_platform.h" }}
+,{ "pid":12345, "tid":8, "ts":1782539145839167, "dur":85, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/mono/ThreadPool/ThreadPoolMonitorThread.h" }}
+,{ "pid":12345, "tid":8, "ts":1782539145840470, "dur":328, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Unity\\Editor\\Data\\PlaybackEngines\\iOSSupport\\il2cpp\\libil2cpp\\gc\\AppendOnlyGCHashMap.h" }}
+,{ "pid":12345, "tid":8, "ts":1782539145840470, "dur":328, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/gc/AppendOnlyGCHashMap.h" }}
+,{ "pid":12345, "tid":8, "ts":1782539145840829, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/libil2cpp/char-conversions.cpp" }}
+,{ "pid":12345, "tid":8, "ts":1782539145841847, "dur":310, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/utils/mono-lazy-init.h" }}
+,{ "pid":12345, "tid":8, "ts":1782539145842611, "dur":59, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/mono/mono/metadata/w32error.h" }}
+,{ "pid":12345, "tid":8, "ts":1782539145844206, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145844365, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782539145844500, "dur":68, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles D:/CNNNNNNNNNNNNNN/queen/2/Il2CppOutputProject/IL2CPP/external/baselib/Include/C/Internal/Compiler/Baselib_Atomic_Gcc_Patch_PostInclude.h" }}
+,{ "pid":12345, "tid":0, "ts":1782539145889866, "dur":462, "ph":"X", "name": "ProfilerWriteOutput" }
+,

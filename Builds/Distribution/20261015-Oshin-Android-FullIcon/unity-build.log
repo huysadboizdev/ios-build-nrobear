@@ -1,0 +1,1507 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Admin" at "2026-10-15T01:18:18.899427Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 12560, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              a59603e93dfa48c0bcca99e86f84101f
+  Correlation Id:          a3604a8b444c1d575b41223ac98f1f7f
+  External correlation Id: 2146564331203219745
+  Machine Id:              W2Rk1ZMub4gst3hcW6h4jxYs7Kg=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Admin" (connect: 0.00s, validation: 0.01s, handshake: 0.03s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Admin-notifications" at "2026-10-15T01:18:18.9450163Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully updated license
+Built from '2022.3/respin/2022.3.62f2-4af31df585-v2' branch; Version is '2022.3.62f2 (7670c08855a9) revision 7762112'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 16110 MB
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Serial number assigned to: "18968348210301-UnityPersXXXX"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+[Licensing::Client] Successfully resolved entitlement details
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Unity.exe
+-batchmode
+-quit
+-projectPath
+C:\Users\Admin\Downloads\PRJ_2Tab_550K
+-executeMethod
+ClientDistributionBuild.Android
+-logFile
+C:\Users\Admin\Downloads\PRJ_2Tab_550K\Builds\Distribution\20261015-Oshin-Android-FullIcon\unity-build.log
+Successfully changed project path to: C:\Users\Admin\Downloads\PRJ_2Tab_550K
+C:/Users/Admin/Downloads/PRJ_2Tab_550K
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [24468]  Target information:
+
+Player connection [24468]  * "[IP] 172.23.208.1 [Port] 55504 [Flags] 2 [Guid] 79156789 [EditorId] 79156789 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0QSC19T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24468]  * "[IP] 192.168.100.101 [Port] 55504 [Flags] 2 [Guid] 79156789 [EditorId] 79156789 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0QSC19T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24468] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [24468] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[Package Manager] UpmClient::Connect -- Connected to IPC stream "Upm-22796" after 0.3 seconds.
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 32 packages:
+  Built-in packages:
+    com.unity.modules.ai@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.ai@1.0.0)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.androidjni@1.0.0)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.animation@1.0.0)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.assetbundle@1.0.0)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.audio@1.0.0)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.cloth@1.0.0)
+    com.unity.modules.director@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.director@1.0.0)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.imageconversion@1.0.0)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.imgui@1.0.0)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.particlesystem@1.0.0)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.physics@1.0.0)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.physics2d@1.0.0)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.screencapture@1.0.0)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.terrain@1.0.0)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.tilemap@1.0.0)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.ui@1.0.0)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.uielements@1.0.0)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.umbra@1.0.0)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.vehicles@1.0.0)
+    com.unity.modules.video@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.video@1.0.0)
+    com.unity.modules.vr@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.vr@1.0.0)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.wind@1.0.0)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.xr@1.0.0)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\PackageCache\com.unity.modules.subsystems@1.0.0)
+[Subsystems] No new subsystems found in resolved package list.
+Package Manager log level set to [2]
+[Package Manager] Done registering packages in 0.11 seconds
+[Licensing::Client] Successfully resolved entitlement details
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.62f2 (7670c08855a9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Admin/Downloads/PRJ_2Tab_550K/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 Laptop GPU (ID=0x25a2)
+    Vendor:   NVIDIA
+    VRAM:     3964 MB
+    Driver:   32.0.15.8132
+[Licensing::Client] Successfully resolved entitlement details
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56796
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.022303 seconds.
+- Loaded All Assemblies, in  0.351 seconds
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 252 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.545 seconds
+Domain Reload Profiling: 894ms
+	BeginReloadAssembly (103ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (137ms)
+		LoadAssemblies (102ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (134ms)
+			TypeCache.Refresh (133ms)
+				TypeCache.ScanAssembly (120ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (545ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (500ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (340ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (110ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:80
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Admin\Downloads\PRJ_2Tab_550K\
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 45.5533ms
+Starting: C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1300b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/Admin/Downloads/PRJ_2Tab_550K
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 3s109ms
+[108/111    2s] Csc Library/Bee/artifacts/1300b0aEDbg.dag/Assembly-CSharp-Editor.dll (+2 others)
+[109/111    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[110/111    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (3.06 seconds), 3 items updated, 111 evaluated
+AssetDatabase: script compilation time: 3.590856s
+Begin MonoManager ReloadAssembly
+Total cache size 190473435
+Total cache size after purge 190473435
+- Loaded All Assemblies, in  0.487 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Start importing Assets/Editor/HighSpeedSkillRegression.cs using Guid(74fd6ee2c9e58294296bbaa908e23b7f) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'dab6c46814f29b39e1fd113e23d2811b') in 0.018060 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.312 seconds
+Domain Reload Profiling: 798ms
+	BeginReloadAssembly (230ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (186ms)
+		LoadAssemblies (273ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (28ms)
+			TypeCache.Refresh (24ms)
+				TypeCache.ScanAssembly (12ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (312ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (210ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (30ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (25ms)
+			ProcessInitializeOnLoadAttributes (130ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1c3bbb7b2cc3d7b43a22dc1d1d1bc7ea): Total: 4.688 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=3 ms, native=213 ms
+		Asset DB Callback time: managed=45 ms, native=2 ms
+		Scripting: domain reloads=1, domain reload time=823 ms, compile time=3592 ms, other=8 ms
+		Project Asset Count: scripts=742, non-scripts=2772
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeBeforeRefreshCallbacks: 0.636ms
+	ApplyChangesToAssetFolders: 0.040ms
+	Scan: 23.506ms
+	OnSourceAssetsModified: 2.753ms
+	GetAllGuidsForCategorization: 0.432ms
+	CategorizeAssets: 41.252ms
+	ImportOutOfDateAssets: 341.167ms (-3278.807ms without children)
+		ImportManagerImport: 24.395ms (4.959ms without children)
+			ImportInProcess: 19.409ms
+			UpdateCategorizedAssets: 0.027ms
+		CompileScripts: 3592.353ms
+		ReloadNativeAssets: 0.007ms
+		UnloadImportedAssets: 1.965ms
+		ReloadImportedAssets: 0.265ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.641ms
+		InitializingProgressBar: 0.010ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.004ms
+		OnDemandSchedulerStart: 0.334ms
+	PostProcessAllAssets: 43.528ms
+	Hotreload: 0.536ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 0.234ms
+	PersistCurrentRevisions: 0.704ms
+	UnloadStreamsEnd: 0.007ms
+	GenerateScriptTypeHashes: 0.001ms
+	Untracked: 4233.328ms
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Scanning for USB devices : 1.607ms
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-NRO QUEEN
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ProgressiveSceneManager::Cancel()
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 14 unused Assets / (469.3 KB). Loaded Objects now: 935.
+Memory consumption went from 87.4 MB to 86.9 MB.
+Total: 2.572600 ms (FindLiveObjects: 0.061900 ms CreateObjectMapping: 0.011800 ms MarkObjects: 2.247800 ms  DeleteObjects: 0.250000 ms)
+
+Start importing Assets/Branding/iconlogo.png using Guid(054eb5fd52746234c905f54864a5ed0e) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9712b3b3273d3b16357be87e8c3cb21b') in 0.134001 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ea97a3bf7b17b704db8678ca153d2e7e): Total: 0.157 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '3bec060a980cfd73a634a6a9feb691fe') in 0.003109 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=dd8353d5f5171974daeee6d06eb9959c): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+CLIENT_BRANDING_APPLIED 054eb5fd52746234c905f54864a5ed0e
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ClientBranding:Apply () (at Assets/Editor/ClientBranding.cs:32)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:12)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+(Filename: Assets/Editor/ClientBranding.cs Line: 32)
+
+EQUIPMENT_AURA_CLIENT_TESTS_PASS both clients
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+EquipmentAuraClientTests:Run () (at Assets/Editor/EquipmentAuraClientTests.cs:26)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:13)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+(Filename: Assets/Editor/EquipmentAuraClientTests.cs Line: 26)
+
+BLACK_POWER_AURA_THRESHOLD_PASS checks=202
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BlackPowerAuraRegression:Run () (at Assets/Editor/BlackPowerAuraRegression.cs:32)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:14)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+(Filename: Assets/Editor/BlackPowerAuraRegression.cs Line: 32)
+
+Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Object:Destroy (UnityEngine.Object)
+Game1.Image:__createImage (byte[]) (at Assets/Scripts/Assembly-CSharp/Game1/Image.cs:160)
+Game1.Image:createImage (byte[]) (at Assets/Scripts/Assembly-CSharp/Game1/Image.cs:47)
+NpcImageDecodeCases:Run () (at Assets/Editor/NpcImageDecodeCases.cs:8)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:15)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Scripts/Assembly-CSharp/Game1/Image.cs line 160]
+
+Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Object:Destroy (UnityEngine.Object)
+Game2.Image:__createImage (byte[]) (at Assets/Scripts/Assembly-CSharp/Game2/Image.cs:160)
+Game2.Image:createImage (byte[]) (at Assets/Scripts/Assembly-CSharp/Game2/Image.cs:47)
+NpcImageDecodeCases:Run () (at Assets/Editor/NpcImageDecodeCases.cs:8)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:15)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Scripts/Assembly-CSharp/Game2/Image.cs line 160]
+
+NPC_IMAGE_ACTUAL_UNITY_DECODE_PASSED both tabs: invalid bytes and valid PNG
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NpcImageDecodeCases:Run () (at Assets/Editor/NpcImageDecodeCases.cs:19)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:15)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+(Filename: Assets/Editor/NpcImageDecodeCases.cs Line: 19)
+
+PASS Game1 skill integration: x1..x100, release packets, mana, cooldown, monkey, cancellation, duplicate prepare
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HighSpeedSkillRegression:Run () (at Assets/Editor/HighSpeedSkillRegression.cs:125)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:16)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+(Filename: Assets/Editor/HighSpeedSkillRegression.cs Line: 125)
+
+Curl error 7: Failed to connect to config.uca.cloud.unity3d.com port 443 after 2236 ms: Could not connect to server
+PASS Game2 skill integration: x1..x100, release packets, mana, cooldown, monkey, cancellation, duplicate prepare
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HighSpeedSkillRegression:Run () (at Assets/Editor/HighSpeedSkillRegression.cs:125)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:16)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+(Filename: Assets/Editor/HighSpeedSkillRegression.cs Line: 125)
+
+HIGH_SPEED_SKILL_REGRESSION_PASS checks=169612
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HighSpeedSkillRegression:Run () (at Assets/Editor/HighSpeedSkillRegression.cs:127)
+ClientDistributionBuild:Verify () (at Assets/Editor/ClientDistributionBuild.cs:16)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:26)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+(Filename: Assets/Editor/HighSpeedSkillRegression.cs Line: 127)
+
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '3bec060a980cfd73a634a6a9feb691fe') in 0.002780 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=86ddac4e06c40d64fa64054a610f79cd): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+DisplayProgressbar: Checking prerequisites
+Android PostProcess task "Checking prerequisites" took 21.6589 ms
+DisplayProgressbar: Detect Java Development Kit (JDK)
+Android PostProcess task "Detect Java Development Kit (JDK)" took 143.4934 ms
+DisplayProgressbar: Detecting Android SDK
+AndroidSDKTools:
+
+	root          : C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\SDK
+	cmdline-tools : C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\cmdline-tools\6.0
+	platform-tools: C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\platform-tools
+	build-tools   : C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\build-tools\34.0.0
+
+	adb           : C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\platform-tools\adb.exe
+
+Android PostProcess task "Detecting Android SDK" took 4820.4191 ms
+DisplayProgressbar: Detect Android NDK
+Android PostProcess task "Detect Android NDK" took 11.4914 ms
+Android PostProcess task "Trying to find a suitable Android device" took 0.4418 ms
+DisplayProgressbar: Checking Graphics API compatibility
+Android PostProcess task "Checking Graphics API compatibility" took 2.2617 ms
+DisplayProgressbar: Check resources
+Android PostProcess task "Check resources" took 0.3501 ms
+DisplayProgressbar: Check Android Player Settings
+Android PostProcess task "Check Android Player Settings" took 0.6458 ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 1.6002ms
+Starting: C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1300b0aEDbgSkipCompile.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: C:/Users/Admin/Downloads/PRJ_2Tab_550K
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s575ms
+[2/3        0s] BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json
+*** Tundra build success (0.54 seconds), 1 items updated, 3 evaluated
+Asset Pipeline Refresh (id=86b0c6ccf04354f41a3c85f5ad1bb788): Total: 0.004 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[ScriptCompilation] Requested script compilation because: Recompiling scripts for player build.
+BuildPlayer: start building target 13
+Total cache size 190473435
+Total cache size after purge 190473435
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 0.6383ms
+Starting: C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1300b0aP.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: C:/Users/Admin/Downloads/PRJ_2Tab_550K
+ExitCode: 0 Duration: 4s173ms
+[70/75      3s] Csc Library/Bee/artifacts/1300b0aP.dag/Assembly-CSharp.dll (+2 others)
+Assets\Scripts\Assembly-CSharp\Game1\ipKeyboard.cs(30,23): warning CS0618: 'TouchScreenKeyboard.done' is obsolete: 'Property done is deprecated, use status instead'
+
+Assets\Scripts\Assembly-CSharp\Game1\myReader.cs(58,19): warning CS0675: Bitwise-or operator used on a sign-extended operand; consider casting to a smaller unsigned type first
+
+Assets\Scripts\Assembly-CSharp\Game1\Session_ME.cs(317,22): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+
+Assets\Scripts\Assembly-CSharp\Game2\ipKeyboard.cs(30,23): warning CS0618: 'TouchScreenKeyboard.done' is obsolete: 'Property done is deprecated, use status instead'
+
+Assets\Scripts\Assembly-CSharp\Game2\myReader.cs(58,19): warning CS0675: Bitwise-or operator used on a sign-extended operand; consider casting to a smaller unsigned type first
+
+Assets\Scripts\Assembly-CSharp\Game2\Session_ME.cs(315,22): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(5342,30): warning CS0168: The variable 'ex2' is declared but never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(5342,30): warning CS0168: The variable 'ex2' is declared but never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Mob.cs(208,15): warning CS0414: The field 'Mob.color' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\FireWorkEff.cs(15,22): warning CS0414: The field 'FireWorkEff.f' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(761,22): warning CS0414: The field 'Panel.isUp' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\GameScr.cs(742,15): warning CS0414: The field 'GameScr.Hitem' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(685,21): warning CS0414: The field 'Panel.keyTouchLock' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\ModFunc.cs(201,15): warning CS0414: The field 'ModFunc.ChiSoNoiTai' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Mob.cs(208,15): warning CS0414: The field 'Mob.color' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\ModFunc.cs(206,18): warning CS0414: The field 'ModFunc.currentPlayerNoiTai' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Mod\ShowBoss.cs(9,22): warning CS0414: The field 'ShowBoss.SHOW_TIME' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(656,15): warning CS0414: The field 'Char.chargeCount' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\FireWorkEff.cs(31,22): warning CS0414: The field 'FireWorkEff.ymax' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\ChatTextField.cs(31,16): warning CS0414: The field 'ChatTextField.isPublic' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(1030,21): warning CS0414: The field 'Panel.WidthBoxNew' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\ModFunc.cs(207,18): warning CS0414: The field 'ModFunc.currentPlayerNoiTai' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(493,15): warning CS0414: The field 'Char.indexUseSkill' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(679,22): warning CS0414: The field 'Panel.wantUpdateList' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\ModFunc.cs(200,15): warning CS0414: The field 'ModFunc.ChiSoNoiTai' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(547,16): warning CS0414: The field 'Char.isSoundJump' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(679,22): warning CS0414: The field 'Panel.wantUpdateList' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(685,21): warning CS0414: The field 'Panel.keyTouchLock' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\MotherCanvas.cs(11,15): warning CS0414: The field 'MotherCanvas.OUTPUTSIZE' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(675,15): warning CS0414: The field 'Char.per' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(677,15): warning CS0414: The field 'Char.per_tem' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Mod\ShowBoss.cs(9,22): warning CS0414: The field 'ShowBoss.SHOW_TIME' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(548,16): warning CS0414: The field 'Char.isSoundJump' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\GameScr.cs(744,15): warning CS0414: The field 'GameScr.maxSizeRow' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(687,21): warning CS0414: The field 'Panel.keyToundGD' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\ModFunc.cs(204,18): warning CS0414: The field 'ModFunc.CurrentNoiTai' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\GameCanvas.cs(308,15): warning CS0414: The field 'GameCanvas.count' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\TabClanIcon.cs(43,16): warning CS0414: The field 'TabClanIcon.isUpdate' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\ModFunc.cs(60,23): warning CS0414: The field 'ModFunc.lastTimeLog' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\FireWorkEff.cs(31,22): warning CS0414: The field 'FireWorkEff.ymax' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\SoundMn.cs(16,22): warning CS0414: The field 'SoundMn.MAX_VOLUME' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\MotherCanvas.cs(11,15): warning CS0414: The field 'MotherCanvas.OUTPUTSIZE' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(494,15): warning CS0414: The field 'Char.indexUseSkill' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(678,15): warning CS0414: The field 'Char.per_tem' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(676,15): warning CS0414: The field 'Char.per' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\GameCanvas.cs(189,23): warning CS0414: The field 'GameCanvas.isShowErrorForm' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Menu.cs(63,16): warning CS0414: The field 'Menu.wantUpdateList' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\TabClanIcon.cs(43,16): warning CS0414: The field 'TabClanIcon.isUpdate' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\GameCanvas.cs(190,23): warning CS0414: The field 'GameCanvas.isShowErrorForm' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\GameCanvas.cs(307,15): warning CS0414: The field 'GameCanvas.count' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\SoundMn.cs(16,22): warning CS0414: The field 'SoundMn.MAX_VOLUME' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(687,21): warning CS0414: The field 'Panel.keyToundGD' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(657,15): warning CS0414: The field 'Char.chargeCount' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\NewBoss.cs(27,16): warning CS0414: The field 'NewBoss.flyUp' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(1030,21): warning CS0414: The field 'Panel.WidthBoxNew' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Menu.cs(63,16): warning CS0414: The field 'Menu.wantUpdateList' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\ModFunc.cs(61,23): warning CS0414: The field 'ModFunc.lastTimeLog' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\NewBoss.cs(27,16): warning CS0414: The field 'NewBoss.flyUp' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\GameScr.cs(744,15): warning CS0414: The field 'GameScr.maxSizeRow' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\GameScr.cs(742,15): warning CS0414: The field 'GameScr.Hitem' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\FireWorkEff.cs(15,22): warning CS0414: The field 'FireWorkEff.f' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\ModFunc.cs(205,18): warning CS0414: The field 'ModFunc.CurrentNoiTai' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(761,22): warning CS0414: The field 'Panel.isUp' is assigned but its value is never used
+
+Assets\Scripts\Assembly-CSharp\Game1\ChatTextField.cs(31,16): warning CS0414: The field 'ChatTextField.isPublic' is assigned but its value is never used
+[71/75      0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb
+[72/75      0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll
+[74/75      0s] BuildPlayerDataGenerator Library/BuildPlayerData/Player/RuntimeInitializeOnLoads.json (+1 other)
+*** Tundra build success (4.15 seconds), 4 items updated, 75 evaluated
+Assets\Scripts\Assembly-CSharp\Game1\ipKeyboard.cs(30,23): warning CS0618: 'TouchScreenKeyboard.done' is obsolete: 'Property done is deprecated, use status instead'
+Assets\Scripts\Assembly-CSharp\Game1\myReader.cs(58,19): warning CS0675: Bitwise-or operator used on a sign-extended operand; consider casting to a smaller unsigned type first
+Assets\Scripts\Assembly-CSharp\Game1\Session_ME.cs(317,22): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+Assets\Scripts\Assembly-CSharp\Game2\ipKeyboard.cs(30,23): warning CS0618: 'TouchScreenKeyboard.done' is obsolete: 'Property done is deprecated, use status instead'
+Assets\Scripts\Assembly-CSharp\Game2\myReader.cs(58,19): warning CS0675: Bitwise-or operator used on a sign-extended operand; consider casting to a smaller unsigned type first
+Assets\Scripts\Assembly-CSharp\Game2\Session_ME.cs(315,22): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(5342,30): warning CS0168: The variable 'ex2' is declared but never used
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(5342,30): warning CS0168: The variable 'ex2' is declared but never used
+Assets\Scripts\Assembly-CSharp\Game1\Mob.cs(208,15): warning CS0414: The field 'Mob.color' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\FireWorkEff.cs(15,22): warning CS0414: The field 'FireWorkEff.f' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(761,22): warning CS0414: The field 'Panel.isUp' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\GameScr.cs(742,15): warning CS0414: The field 'GameScr.Hitem' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(685,21): warning CS0414: The field 'Panel.keyTouchLock' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\ModFunc.cs(201,15): warning CS0414: The field 'ModFunc.ChiSoNoiTai' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Mob.cs(208,15): warning CS0414: The field 'Mob.color' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\ModFunc.cs(206,18): warning CS0414: The field 'ModFunc.currentPlayerNoiTai' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Mod\ShowBoss.cs(9,22): warning CS0414: The field 'ShowBoss.SHOW_TIME' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(656,15): warning CS0414: The field 'Char.chargeCount' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\FireWorkEff.cs(31,22): warning CS0414: The field 'FireWorkEff.ymax' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\ChatTextField.cs(31,16): warning CS0414: The field 'ChatTextField.isPublic' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(1030,21): warning CS0414: The field 'Panel.WidthBoxNew' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\ModFunc.cs(207,18): warning CS0414: The field 'ModFunc.currentPlayerNoiTai' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(493,15): warning CS0414: The field 'Char.indexUseSkill' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(679,22): warning CS0414: The field 'Panel.wantUpdateList' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\ModFunc.cs(200,15): warning CS0414: The field 'ModFunc.ChiSoNoiTai' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(547,16): warning CS0414: The field 'Char.isSoundJump' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(679,22): warning CS0414: The field 'Panel.wantUpdateList' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(685,21): warning CS0414: The field 'Panel.keyTouchLock' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\MotherCanvas.cs(11,15): warning CS0414: The field 'MotherCanvas.OUTPUTSIZE' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(675,15): warning CS0414: The field 'Char.per' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(677,15): warning CS0414: The field 'Char.per_tem' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Mod\ShowBoss.cs(9,22): warning CS0414: The field 'ShowBoss.SHOW_TIME' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(548,16): warning CS0414: The field 'Char.isSoundJump' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\GameScr.cs(744,15): warning CS0414: The field 'GameScr.maxSizeRow' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(687,21): warning CS0414: The field 'Panel.keyToundGD' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\ModFunc.cs(204,18): warning CS0414: The field 'ModFunc.CurrentNoiTai' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\GameCanvas.cs(308,15): warning CS0414: The field 'GameCanvas.count' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\TabClanIcon.cs(43,16): warning CS0414: The field 'TabClanIcon.isUpdate' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\ModFunc.cs(60,23): warning CS0414: The field 'ModFunc.lastTimeLog' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\FireWorkEff.cs(31,22): warning CS0414: The field 'FireWorkEff.ymax' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\SoundMn.cs(16,22): warning CS0414: The field 'SoundMn.MAX_VOLUME' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\MotherCanvas.cs(11,15): warning CS0414: The field 'MotherCanvas.OUTPUTSIZE' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(494,15): warning CS0414: The field 'Char.indexUseSkill' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(678,15): warning CS0414: The field 'Char.per_tem' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Char.cs(676,15): warning CS0414: The field 'Char.per' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\GameCanvas.cs(189,23): warning CS0414: The field 'GameCanvas.isShowErrorForm' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Menu.cs(63,16): warning CS0414: The field 'Menu.wantUpdateList' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\TabClanIcon.cs(43,16): warning CS0414: The field 'TabClanIcon.isUpdate' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\GameCanvas.cs(190,23): warning CS0414: The field 'GameCanvas.isShowErrorForm' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\GameCanvas.cs(307,15): warning CS0414: The field 'GameCanvas.count' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\SoundMn.cs(16,22): warning CS0414: The field 'SoundMn.MAX_VOLUME' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(687,21): warning CS0414: The field 'Panel.keyToundGD' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Char.cs(657,15): warning CS0414: The field 'Char.chargeCount' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\NewBoss.cs(27,16): warning CS0414: The field 'NewBoss.flyUp' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\Panel.cs(1030,21): warning CS0414: The field 'Panel.WidthBoxNew' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Menu.cs(63,16): warning CS0414: The field 'Menu.wantUpdateList' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\ModFunc.cs(61,23): warning CS0414: The field 'ModFunc.lastTimeLog' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\NewBoss.cs(27,16): warning CS0414: The field 'NewBoss.flyUp' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\GameScr.cs(744,15): warning CS0414: The field 'GameScr.maxSizeRow' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\GameScr.cs(742,15): warning CS0414: The field 'GameScr.Hitem' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\FireWorkEff.cs(15,22): warning CS0414: The field 'FireWorkEff.f' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\ModFunc.cs(205,18): warning CS0414: The field 'ModFunc.CurrentNoiTai' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game2\Panel.cs(761,22): warning CS0414: The field 'Panel.isUp' is assigned but its value is never used
+Assets\Scripts\Assembly-CSharp\Game1\ChatTextField.cs(31,16): warning CS0414: The field 'ChatTextField.isPublic' is assigned but its value is never used
+Total cache size 190473435
+Total cache size after purge 190473435
+Not rebuilding Data files -- no changes
+Asset Pipeline Refresh (id=c98fb4d9592c66b49ba38abc53227898): Total: 0.016 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+
+
+Mono dependencies included in the build
+Dependency assembly - Mono.Security.dll
+Dependency assembly - System.Security.Cryptography.Encryption.ECDsa.dll
+Dependency assembly - System.Diagnostics.Contracts.dll
+Dependency assembly - System.Threading.Tasks.dll
+Dependency assembly - System.ServiceModel.Duplex.dll
+Dependency assembly - System.Dynamic.Runtime.dll
+Dependency assembly - System.Windows.dll
+Dependency assembly - System.Diagnostics.TextWriterTraceListener.dll
+Dependency assembly - System.EnterpriseServices.dll
+Dependency assembly - System.Diagnostics.TraceSource.dll
+Dependency assembly - System.Data.Common.dll
+Dependency assembly - System.Runtime.DurableInstancing.dll
+Dependency assembly - System.Xml.Xsl.Primitives.dll
+Dependency assembly - System.Net.WebSockets.dll
+Dependency assembly - System.Diagnostics.TraceEvent.dll
+Dependency assembly - netstandard.dll
+Dependency assembly - System.Messaging.dll
+Dependency assembly - System.ServiceModel.dll
+Dependency assembly - System.Net.WebHeaderCollection.dll
+Dependency assembly - System.Xml.Linq.dll
+Dependency assembly - System.Data.DataSetExtensions.dll
+Dependency assembly - System.Web.DynamicData.dll
+Dependency assembly - System.ServiceProcess.ServiceController.dll
+Dependency assembly - System.Xml.XDocument.dll
+Dependency assembly - System.Data.dll
+Dependency assembly - System.Resources.Reader.dll
+Dependency assembly - System.ServiceModel.Routing.dll
+Dependency assembly - System.ComponentModel.TypeConverter.dll
+Dependency assembly - System.IO.FileSystem.Watcher.dll
+Dependency assembly - System.Diagnostics.Process.dll
+Dependency assembly - System.Threading.Timer.dll
+Dependency assembly - System.Threading.ThreadPool.dll
+Dependency assembly - System.Security.Cryptography.Pkcs.dll
+Dependency assembly - System.Xml.XPath.XmlDocument.dll
+Dependency assembly - System.ComponentModel.Composition.dll
+Dependency assembly - System.ComponentModel.EventBasedAsync.dll
+Dependency assembly - System.Drawing.Design.dll
+Dependency assembly - System.Security.Cryptography.Encryption.ECDiffieHellman.dll
+Dependency assembly - System.IO.Compression.FileSystem.dll
+Dependency assembly - System.Management.dll
+Dependency assembly - System.Net.Primitives.dll
+Dependency assembly - System.Diagnostics.Debug.dll
+Dependency assembly - System.DirectoryServices.Protocols.dll
+Dependency assembly - System.Buffers.dll
+Dependency assembly - System.Runtime.InteropServices.dll
+Dependency assembly - System.Web.Services.dll
+Dependency assembly - System.Globalization.dll
+Dependency assembly - Microsoft.Win32.Registry.dll
+Dependency assembly - System.ServiceModel.Discovery.dll
+Dependency assembly - System.Web.Extensions.dll
+Dependency assembly - System.Reflection.Emit.dll
+Dependency assembly - System.Resources.ResourceManager.dll
+Dependency assembly - System.Security.AccessControl.dll
+Dependency assembly - System.Runtime.InteropServices.WindowsRuntime.dll
+Dependency assembly - System.Net.ServicePoint.dll
+Dependency assembly - System.Security.Cryptography.Hashing.dll
+Dependency assembly - System.IO.FileSystem.dll
+Dependency assembly - System.ServiceProcess.dll
+Dependency assembly - System.Core.dll
+Dependency assembly - System.Security.Cryptography.Encryption.Aes.dll
+Dependency assembly - System.IO.Compression.dll
+Dependency assembly - System.Configuration.Install.dll
+Dependency assembly - System.Threading.Tasks.Parallel.dll
+Dependency assembly - System.Runtime.Extensions.dll
+Dependency assembly - System.Data.Services.dll
+Dependency assembly - System.IdentityModel.dll
+Dependency assembly - System.Net.Requests.dll
+Dependency assembly - Accessibility.dll
+Dependency assembly - System.Runtime.Serialization.Json.dll
+Dependency assembly - System.Linq.dll
+Dependency assembly - System.Design.dll
+Dependency assembly - System.ServiceModel.NetTcp.dll
+Dependency assembly - Assembly-CSharp.dll
+Dependency assembly - Microsoft.Win32.Primitives.dll
+Dependency assembly - System.Runtime.Serialization.Primitives.dll
+Dependency assembly - System.Reflection.TypeExtensions.dll
+Dependency assembly - System.Text.RegularExpressions.dll
+Dependency assembly - System.Resources.ReaderWriter.dll
+Dependency assembly - System.Runtime.Numerics.dll
+Dependency assembly - System.Security.Cryptography.OpenSsl.dll
+Dependency assembly - System.Web.ApplicationServices.dll
+Dependency assembly - System.Net.WebSockets.Client.dll
+Dependency assembly - System.Security.Cryptography.Cng.dll
+Dependency assembly - System.Security.dll
+Dependency assembly - System.Xml.ReaderWriter.dll
+Dependency assembly - System.Threading.Thread.dll
+Dependency assembly - System.Numerics.Vectors.dll
+Dependency assembly - System.ServiceModel.Primitives.dll
+Dependency assembly - System.dll
+Dependency assembly - System.Security.Cryptography.ProtectedData.dll
+Dependency assembly - System.ComponentModel.dll
+Dependency assembly - System.Data.Services.Client.dll
+Dependency assembly - System.Security.Cryptography.Encoding.dll
+Dependency assembly - System.Runtime.Caching.dll
+Dependency assembly - System.IO.FileSystem.AccessControl.dll
+Dependency assembly - System.Data.OracleClient.dll
+Dependency assembly - System.Security.SecureString.dll
+Dependency assembly - System.Security.Cryptography.DeriveBytes.dll
+Dependency assembly - System.Collections.NonGeneric.dll
+Dependency assembly - System.Runtime.Remoting.dll
+Dependency assembly - System.Drawing.Primitives.dll
+Dependency assembly - System.Net.Security.dll
+Dependency assembly - System.Xml.dll
+Dependency assembly - System.ServiceModel.Http.dll
+Dependency assembly - System.Security.Principal.Windows.dll
+Dependency assembly - System.Xml.XmlSerializer.dll
+Dependency assembly - System.Globalization.Calendars.dll
+Dependency assembly - System.ValueTuple.dll
+Dependency assembly - System.Web.Extensions.Design.dll
+Dependency assembly - System.Security.Principal.dll
+Dependency assembly - System.Security.Cryptography.RSA.dll
+Dependency assembly - System.Threading.Tasks.Extensions.dll
+Dependency assembly - System.Text.Encoding.dll
+Dependency assembly - System.Reflection.Primitives.dll
+Dependency assembly - System.Linq.Queryable.dll
+Dependency assembly - Microsoft.Win32.Registry.AccessControl.dll
+Dependency assembly - System.Net.NetworkInformation.dll
+Dependency assembly - System.IdentityModel.Selectors.dll
+Dependency assembly - System.ServiceModel.Internals.dll
+Dependency assembly - System.AppContext.dll
+Dependency assembly - System.ComponentModel.DataAnnotations.dll
+Dependency assembly - System.IO.IsolatedStorage.dll
+Dependency assembly - System.Net.HttpListener.dll
+Dependency assembly - System.ServiceModel.Web.dll
+Dependency assembly - System.Data.SqlClient.dll
+Dependency assembly - System.Json.dll
+Dependency assembly - System.Transactions.dll
+Dependency assembly - System.IO.Compression.ZipFile.dll
+Dependency assembly - System.Threading.Overlapped.dll
+Dependency assembly - System.Text.Encoding.Extensions.dll
+Dependency assembly - System.ComponentModel.Annotations.dll
+Dependency assembly - System.Security.Cryptography.Hashing.Algorithms.dll
+Dependency assembly - System.Net.Cache.dll
+Dependency assembly - System.Collections.dll
+Dependency assembly - System.Runtime.Serialization.Formatters.dll
+Dependency assembly - System.Net.Http.WebRequest.dll
+Dependency assembly - System.Reflection.Extensions.dll
+Dependency assembly - System.Security.Cryptography.Encryption.dll
+Dependency assembly - System.Xaml.dll
+Dependency assembly - System.Runtime.Handles.dll
+Dependency assembly - System.Net.dll
+Dependency assembly - System.Security.Cryptography.Primitives.dll
+Dependency assembly - System.Web.dll
+Dependency assembly - System.Runtime.CompilerServices.VisualC.dll
+Dependency assembly - System.Runtime.Serialization.Formatters.Soap.dll
+Dependency assembly - System.Net.NameResolution.dll
+Dependency assembly - System.Web.RegularExpressions.dll
+Dependency assembly - System.Resources.Writer.dll
+Dependency assembly - System.IO.MemoryMappedFiles.dll
+Dependency assembly - System.Net.Http.dll
+Dependency assembly - System.Xml.XPath.dll
+Dependency assembly - System.Xml.XmlDocument.dll
+Dependency assembly - System.Diagnostics.StackTrace.dll
+Dependency assembly - System.DirectoryServices.dll
+Dependency assembly - System.Diagnostics.Tools.dll
+Dependency assembly - System.IO.dll
+Dependency assembly - System.Text.Encoding.CodePages.dll
+Dependency assembly - System.Console.dll
+Dependency assembly - System.Windows.Forms.DataVisualization.dll
+Dependency assembly - System.IO.FileSystem.DriveInfo.dll
+Dependency assembly - System.Reflection.DispatchProxy.dll
+Dependency assembly - System.Runtime.dll
+Dependency assembly - System.IO.Pipes.dll
+Dependency assembly - System.Threading.AccessControl.dll
+Dependency assembly - System.Linq.Expressions.dll
+Dependency assembly - System.Data.Entity.dll
+Dependency assembly - System.ObjectModel.dll
+Dependency assembly - System.Net.Sockets.dll
+Dependency assembly - System.ComponentModel.Primitives.dll
+Dependency assembly - System.Diagnostics.Tracing.dll
+Dependency assembly - System.Collections.Specialized.dll
+Dependency assembly - System.Reflection.Context.dll
+Dependency assembly - System.IO.FileSystem.Primitives.dll
+Dependency assembly - Mono.Data.Sqlite.dll
+Dependency assembly - System.Runtime.Loader.dll
+Dependency assembly - System.Memory.dll
+Dependency assembly - System.Security.Cryptography.Csp.dll
+Dependency assembly - System.Threading.dll
+Dependency assembly - System.Net.Mail.dll
+Dependency assembly - System.ServiceModel.Security.dll
+Dependency assembly - System.Windows.Forms.dll
+Dependency assembly - System.Configuration.dll
+Dependency assembly - System.ServiceModel.Activation.dll
+Dependency assembly - System.Security.Claims.dll
+Dependency assembly - System.Numerics.dll
+Dependency assembly - System.Runtime.Serialization.dll
+Dependency assembly - System.Reflection.Emit.ILGeneration.dll
+Dependency assembly - System.IO.UnmanagedMemoryStream.dll
+Dependency assembly - System.Collections.Concurrent.dll
+Dependency assembly - System.Security.Cryptography.X509Certificates.dll
+Dependency assembly - System.Security.Cryptography.Algorithms.dll
+Dependency assembly - mscorlib.dll
+Dependency assembly - System.Net.Ping.dll
+Dependency assembly - System.Security.Cryptography.RandomNumberGenerator.dll
+Dependency assembly - System.Reflection.Emit.Lightweight.dll
+Dependency assembly - System.Net.Utilities.dll
+Dependency assembly - System.Runtime.InteropServices.RuntimeInformation.dll
+Dependency assembly - System.Linq.Parallel.dll
+Dependency assembly - System.Drawing.dll
+Dependency assembly - System.Data.Linq.dll
+Dependency assembly - System.Net.AuthenticationManager.dll
+Dependency assembly - System.Runtime.Serialization.Xml.dll
+Dependency assembly - System.Reflection.dll
+Dependency assembly - System.Xml.XPath.XDocument.dll
+Dependency assembly - System.Diagnostics.FileVersionInfo.dll
+Dependency assembly - System.Globalization.Extensions.dll
+Dependency assembly - Microsoft.CSharp.dll
+Dependency assembly - System.Xml.Serialization.dll
+Dependency assembly - Mono.Data.Tds.dll
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+Compressed texture iconlogo is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.BuildPipeline:BuildPlayerInternal (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (string[],string,string,UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,int,UnityEditor.BuildOptions,string[])
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:46)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+[Assets/Editor/ClientDistributionBuild.cs line 46]
+
+DisplayProgressbar: Initializing
+Android PostProcess task "Initializing" took 0.7047 ms
+DisplayProgressbar: Check gradle project collisions
+Android PostProcess task "Check gradle project collisions" took 0.2775 ms
+DisplayProgressbar: Preparing banner
+Android PostProcess task "Preparing banner" took 0.3959 ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 0.2132ms
+Starting: C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\bee_backend.exe --ipc --dagfile="Library/Bee/Player2fd936fe.dag" --profile="Library/Bee/backend1.traceevents" Player
+WorkingDir: C:/Users/Admin/Downloads/PRJ_2Tab_550K
+DisplayProgressbar: Incremental Player Build
+[3289/3784  0s] AddBootConfigGUID Library/Bee/artifacts/Android/boot.config
+[3290/3784  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/assets/bin/Data/boot.config
+[BUSY       6s] UnityLinker C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/unitylinker_xy1a.traceevents
+[3291/3784  7s] UnityLinker C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/unitylinker_xy1a.traceevents
+C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\il2cpp\build\deploy\UnityLinker.exe @Library\Bee\artifacts\rsp\17701112030194536545.rsp
+*** Tundra requires additional run (7.98 seconds), 3 items updated, 3784 evaluated
+*** Additional run caused by: contents change of Library/Bee/artifacts/Android/ManagedStripped
+ExitCode: 4 Duration: 8s2ms
+Starting: C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\Tools\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidPlayerBuildProgram.exe" "C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/PlaybackEngines/AndroidPlayer/Bee;C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/Tools/BuildPipeline" "Library/Bee/Player2fd936fe.dag.json" "Library/Bee/Player2fd936fe-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/Admin/Downloads/PRJ_2Tab_550K
+ExitCode: 0 Duration: 1s485ms
+Starting: C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\bee_backend.exe --ipc --dagfile="Library/Bee/Player2fd936fe.dag" --dagfilejson="Library\Bee\Player2fd936fe.dag.json" --profile="Library/Bee/backend2.traceevents" Player
+WorkingDir: C:/Users/Admin/Downloads/PRJ_2Tab_550K
+[W] FindFirstFile() failed: C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\artifacts\Android\il2cppOutput\cpp\Symbols
+Finished compiling graph: 3791 nodes, 8083 flattened edges (8077 ToBuild, 9 ToUse), maximum node priority 485
+[           0s] Delete 13 artifact files that are no longer in use. (like C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Il2CppBackup\Managed\icallsummary.txt)
+[2458/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/Managed/Assembly-CSharp.pdb
+[2473/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/Managed/Assembly-CSharp.dll
+[3360/3783  0s] ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Assembly-CSharp-FeaturesChecked.txt
+[3362/3783  4s] IL2CPP_CodeGen C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/il2cpp_conv_4hp5.traceevents
+C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\il2cpp\build\deploy\il2cpp.exe --convert-to-cpp --assembly=Library/Bee/artifacts/Android/ManagedStripped/Assembly-CSharp.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/Mono.Security.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/mscorlib.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/System.Configuration.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/System.Core.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/System.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/System.Xml.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.AndroidJNIModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.AudioModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.CoreModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.ImageConversionModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.IMGUIModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.InputLegacyModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.PropertiesModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.SharedInternalsModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.TextRenderingModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.UnityWebRequestAudioModule.dll --assembly=Library/Bee/artifacts/Android/ManagedStripped/UnityEngine.UnityWebRequestModule.dll --generatedcppdir=C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/cpp --symbols-folder=C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/cpp/Symbols --enable-analytics --emit-null-checks --enable-array-bounds-check --dotnetprofile=unityaot-linux --profiler-report --profiler-output-file=C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/il2cpp_conv_4hp5.traceevents --print-command-line --data-folder=C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/data
+[3400/3783  0s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/0ufxtpyhnqhw.o
+[3402/3783  0s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/kt0f86k5qt5f.o
+[3408/3783  1s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/oae6198hkiuw.o
+[3421/3783  4s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/no12qawtg0k1.o
+[3426/3783  6s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/6iqcvkphuztu.o
+[3427/3783  6s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/y1ktqsc8619v.o
+[3436/3783  6s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/cli81so6g2kl.o
+[3437/3783  7s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/y1ktqsc8619v.o
+[3438/3783  8s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/glaabcn06lgj.o
+[3439/3783  9s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/28xeb1hwdc9h.o
+[3441/3783  9s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/dt2om844k410.o
+[3443/3783 10s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/zgqtmxz0ruuz.o
+[3446/3783  5s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/10dyql1x99r2.o
+[3448/3783  5s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/y85c2hj2nsdk.o
+[3449/3783 10s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/v56lv2823x4z.o
+[3454/3783  4s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/5bx5hgsvx6h2.o
+[3455/3783  1s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/bxg04proj65s.o
+[3459/3783  7s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/5a6va58iqxcf.o
+[3462/3783  0s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/o392sis66tz3.o
+[3466/3783  5s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/s6dhv9jd1pmt.o
+[3468/3783  8s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/9hjhvde7w7b1.o
+[3473/3783  5s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/uxm5ans4zvnk.o
+[3475/3783  9s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/dmh5ajya4dyc.o
+[3479/3783  4s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/k3tejbv44z68.o
+[3482/3783  6s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/zfzjfmgoklpc.o
+[3486/3783  8s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/z949a8s6a4qb.o
+[3492/3783 10s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/y7e3u6zpgj8w.o
+[3494/3783  4s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/cfoyxe1o7kmk.o
+[3495/3783  1s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/38thnsi916p1.o
+[3499/3783  8s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/rzkai5mr4wa1.o
+[3505/3783  0s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/0ufxtpyhnqhw.o
+[3512/3783  1s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/bxg04proj65s.o
+[3522/3783  5s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/kv27uvuln90v.o
+[3526/3783  0s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/kt0f86k5qt5f.o
+[3530/3783  8s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/kwth26dyui6i.o
+[3534/3783  7s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/nuvcvojbqhj2.o
+[3546/3783  5s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/s6dhv9jd1pmt.o
+[3547/3783  7s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/uxm5ans4zvnk.o
+[3552/3783  8s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/kwth26dyui6i.o
+[3555/3783 10s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/dt2om844k410.o
+[3557/3783  7s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/k3tejbv44z68.o
+[3561/3783 11s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/y7e3u6zpgj8w.o
+[3562/3783  6s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/no12qawtg0k1.o
+[3563/3783  6s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/cli81so6g2kl.o
+[3568/3783  6s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/kv27uvuln90v.o
+[3569/3783 19s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/r5ekmja9de91.o
+[3573/3783 17s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/ryt0au3exn5d.o
+[3575/3783  1s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/oae6198hkiuw.o
+[3583/3783  7s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/y85c2hj2nsdk.o
+[3584/3783  2s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/38thnsi916p1.o
+[3587/3783  6s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/6iqcvkphuztu.o
+[3591/3783 11s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/dmh5ajya4dyc.o
+[3592/3783 11s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/rzkai5mr4wa1.o
+[3596/3783  1s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/o392sis66tz3.o
+[3597/3783  7s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/5bx5hgsvx6h2.o
+[3602/3783  7s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/10dyql1x99r2.o
+[3604/3783 10s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/9hjhvde7w7b1.o
+[3608/3783  9s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/nuvcvojbqhj2.o
+[3611/3783 11s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/zgqtmxz0ruuz.o
+[3613/3783  9s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/zfzjfmgoklpc.o
+[3614/3783  8s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/glaabcn06lgj.o
+[3616/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/build/armeabi-v7a/Data/Resources/mscorlib.dll-resources.dat
+[3617/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/build/armeabi-v7a/Data/Metadata/global-metadata.dat
+[3619/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Resources/mscorlib.dll-resources.dat
+[3627/3783 11s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/z949a8s6a4qb.o
+[3636/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Metadata/global-metadata.dat
+[3643/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppGenericMethodDefinitions.c
+[3646/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__22.cpp
+[3647/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__28.cpp
+[3649/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__14.cpp
+[3650/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__27.cpp
+[3651/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__13.cpp
+[3652/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__24.cpp
+[3653/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__20.cpp
+[3654/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__21.cpp
+[3655/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__12.cpp
+[3657/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__26.cpp
+[3658/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__10.cpp
+[3659/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__15.cpp
+[3660/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__17.cpp
+[3661/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__23.cpp
+[3662/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__29.cpp
+[3663/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__16.cpp
+[3664/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__25.cpp
+[3665/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__18.cpp
+[3666/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__19.cpp
+[3667/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__11.cpp
+[3669/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppCCalculateTypeValues.cpp
+[3677/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp.cpp
+[3729/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp_CodeGen.c
+[3730/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppRgctxTable.c
+[3739/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppMetadataUsage.c
+[3743/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Il2CppCCalculateFieldValues.cpp
+[3744/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__7.cpp
+[3745/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__4.cpp
+[3746/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__5.cpp
+[3747/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__6.cpp
+[3749/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__9.cpp
+[3750/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__1.cpp
+[3751/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__3.cpp
+[3752/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__8.cpp
+[3753/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Il2CppBackup/il2cppOutput/Assembly-CSharp__2.cpp
+[3754/3783 10s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/28xeb1hwdc9h.o
+[3755/3783  9s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/5a6va58iqxcf.o
+[3756/3783 21s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/r5ekmja9de91.o
+[3757/3783  5s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/cfoyxe1o7kmk.o
+[3758/3783 20s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/ryt0au3exn5d.o
+[3759/3783  5s] GuidGenerator C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid
+[3760/3783 10s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/v56lv2823x4z.o
+[BUSY      43s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/6jhm2v8t18yh.o
+[BUSY      72s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/89y0ayx8s5ul.o
+[3761/3783 60s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/6jhm2v8t18yh.o
+[3762/3783 51s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/6jhm2v8t18yh.o
+[BUSY      80s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/89y0ayx8s5ul.o
+[BUSY      87s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/89y0ayx8s5ul.o
+[BUSY      91s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/89y0ayx8s5ul.o
+[3763/3783 92s] C_Android_arm64 Library/Bee/artifacts/Android/d8kzr/89y0ayx8s5ul.o
+[3764/3783 93s] C_Android_arm32 Library/Bee/artifacts/Android/iz17e/89y0ayx8s5ul.o
+[3765/3783  4s] Link_Android_arm32 Library/Bee/artifacts/Android/iz17e/libil2cpp.so
+[3766/3783  5s] Link_Android_arm64 Library/Bee/artifacts/Android/d8kzr/libil2cpp.so
+[3767/3783  0s] CopyFiles Library/Bee/artifacts/objcopy_b9ry/libil2cpp.dbg.so
+[3768/3783  0s] CopyFiles Library/Bee/artifacts/objcopy_5lmi/libil2cpp.dbg.so
+[3769/3783  0s] NdkObjCopy Library/Bee/artifacts/objcopy_b9ry/stripped/libil2cpp.so
+[3770/3783  0s] NdkObjCopy Library/Bee/artifacts/objcopy_5lmi/stripped/libil2cpp.so
+[3771/3783  0s] NdkObjCopy Library/Bee/artifacts/objcopy_b9ry/libil2cpp.sym.so
+[3772/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/build/armeabi-v7a/libil2cpp.sym.so
+[3773/3783  0s] NdkObjCopy Library/Bee/artifacts/objcopy_5lmi/libil2cpp.sym.so
+[3774/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/build/arm64-v8a/libil2cpp.sym.so
+[3775/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/build/armeabi-v7a/libil2cpp.dbg.so
+[3776/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/build/arm64-v8a/libil2cpp.dbg.so
+[3777/3783  0s] NdkObjCopy Library/Bee/artifacts/objcopy_b9ry/libil2cpp.so
+[3778/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/build/armeabi-v7a/libil2cpp.so
+[3779/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libil2cpp.so
+[3780/3783  0s] NdkObjCopy Library/Bee/artifacts/objcopy_5lmi/libil2cpp.so
+[3781/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/artifacts/Android/il2cppOutput/build/arm64-v8a/libil2cpp.so
+[3782/3783  0s] CopyFiles C:/Users/Admin/Downloads/PRJ_2Tab_550K/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/jniLibs/arm64-v8a/libil2cpp.so
+*** Tundra build success (104.50 seconds - 0:01:44), 135 items updated, 3783 evaluated
+ExitCode: 0 Duration: 1m:44s
+Total cache size 190473435
+Total cache size after purge 190473435
+DisplayProgressbar: Calling IPostGenerateGradleAndroidProject callbacks
+Calling IPostGenerateGradleAndroidProject callbacks on 'C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary':
+Android PostProcess task "Calling IPostGenerateGradleAndroidProject callbacks" took 26.8792 ms
+Android PostProcess task "Cloud Diagnostics Symbol Upload" took 6.5947 ms
+DisplayProgressbar: Building Gradle project
+Android PostProcess task "Building Gradle project" took 34761.6446 ms
+DisplayProgressbar: Processing Mapping File
+Android PostProcess task "Processing Mapping File" took 0.4816 ms
+DisplayProgressbar: Moving output package(s)
+Android PostProcess task "Moving output package(s)" took 35.3472 ms
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+
+-------------------------------------------------------------------------------
+Build Report
+Information on used Assets is not available, since player data was not rebuilt.
+Do a clean build to view the Asset build report information.
+-------------------------------------------------------------------------------
+[Licensing::Client] Successfully resolved entitlement details
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 177 unused Assets / (0.7 MB). Loaded Objects now: 1013.
+Memory consumption went from 103.5 MB to 102.8 MB.
+Total: 22.280300 ms (FindLiveObjects: 2.559200 ms CreateObjectMapping: 0.095800 ms MarkObjects: 9.281000 ms  DeleteObjects: 10.342600 ms)
+
+DisplayProgressNotification: Build Successful
+Build Finished, Result: Success.
+##utp:{"type":"PlayerBuildInfo","version":2,"phase":"Immediate","time":1792027278800,"processId":22796,"steps":[{"description":"Preprocess Player","duration":24},{"description":"Prepare For Build","duration":5016},{"description":"ProducePlayerScriptAssemblies","duration":5053},{"description":"Verify Build setup","duration":4301},{"description":"Prepare assets for target platform","duration":23},{"description":"Prepare splash screen","duration":9},{"description":"Run script only build","duration":121},{"description":"Postprocess built player","duration":153959}],"duration":168506}
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            4.929 ms
+	Integration:            24.450 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.021 ms
+	Total Operation Time:   29.401 ms
+Unloading 0 unused Assets / (0 B). Loaded Objects now: 955.
+Memory consumption went from 92.5 MB to 92.5 MB.
+Total: 3.389500 ms (FindLiveObjects: 0.184500 ms CreateObjectMapping: 0.012000 ms MarkObjects: 3.186000 ms  DeleteObjects: 0.006100 ms)
+
+NRO_DISTRIBUTION_SUCCEEDED Android C:\Users\Admin\Downloads\PRJ_2Tab_550K\Builds\Distribution\20261015-Oshin-Android-FullIcon\Android\NRO.apk
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ClientDistributionBuild:Build (UnityEditor.BuildTarget) (at Assets/Editor/ClientDistributionBuild.cs:55)
+ClientDistributionBuild:Android () (at Assets/Editor/ClientDistributionBuild.cs:19)
+
+(Filename: Assets/Editor/ClientDistributionBuild.cs Line: 55)
+
+Batchmode quit successfully invoked - shutting down!
+Curl error 42: Callback aborted
+Killing ADB server in 0.1255301 seconds.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-Admin-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-Admin channel disconnected successfully.
+Cleanup mono
+abort_threads: Failed aborting id: 0000000000003844, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000005094, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000003844, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000005094, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 4828
+[usbmuxd] Stop listen thread
+[usbmuxd] Listen thread exiting
+[Performance] WinEditorMain                                                                                                  :        1 samples, Peak.   570 ms (1.0x), Avg.   570 ms, Total. 570.5 ms (0.3%)
+[Performance] WinEditorMain.ConfigureCrashHandler                                                                            :        1 samples, Peak.  27.6 us (1.0x), Avg.  27.6 us, Total. 27.60 us (0.0%)
+[Performance] WinEditorMain.CurlRequestInitialize                                                                            :        1 samples, Peak.  1.06 ms (1.0x), Avg.  1.06 ms, Total. 1.061 ms (0.0%)
+[Performance] WinEditorMain.SetupLogFile                                                                                     :        1 samples, Peak.   392 us (1.0x), Avg.   392 us, Total. 391.9 us (0.0%)
+[Performance] WinEditorMain.RunNativeTestsIfRequiredAndExit                                                                  :        1 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 300.0 ns (0.0%)
+[Performance] WinEditorMain.Licensing                                                                                        :        1 samples, Peak.   554 ms (1.0x), Avg.   554 ms, Total. 553.6 ms (0.3%)
+[Performance] WinEditorMain.InitializeCrashHandler                                                                           :        1 samples, Peak.  12.5 ms (1.0x), Avg.  12.5 ms, Total. 12.52 ms (0.0%)
+[Performance] WinEditorMain.CreateApplication                                                                                :        1 samples, Peak.   234 us (1.0x), Avg.   234 us, Total. 233.6 us (0.0%)
+[Performance] Application.InitializeProject                                                                                  :        1 samples, Peak.  7.49 s (1.0x), Avg.  7.49 s, Total. 7.491 s (4.1%)
+[Performance] Application.PackageManager.StartServer                                                                         :        1 samples, Peak.  3.41 ms (1.0x), Avg.  3.41 ms, Total. 3.414 ms (0.0%)
+[Performance] Application.AcquireProjectLock                                                                                 :        1 samples, Peak.  8.59 ms (1.0x), Avg.  8.59 ms, Total. 8.594 ms (0.0%)
+[Performance] Application.InitializeEngineNoGraphics                                                                         :        1 samples, Peak.  58.2 ms (1.0x), Avg.  58.2 ms, Total. 58.24 ms (0.0%)
+[Performance] Application.PackageManager.Initialize                                                                          :        1 samples, Peak.   340 ms (1.0x), Avg.   340 ms, Total. 340.2 ms (0.2%)
+[Performance] Connecting to Package Manager                                                                                  :       35 samples, Peak.  98.4 us (28.3x), Avg.  3.48 us, Total. 121.7 us (0.0%)
+[Performance] Application.EngineGraphics.Initialize                                                                          :        1 samples, Peak.   786 ms (1.0x), Avg.   786 ms, Total. 786.4 ms (0.4%)
+[Performance] Application.GI.Initialize                                                                                      :        1 samples, Peak.  6.12 ms (1.0x), Avg.  6.12 ms, Total. 6.118 ms (0.0%)
+[Performance] Application.LoadAllDefaultResourcesFromEditor                                                                  :        1 samples, Peak.  3.98 ms (1.0x), Avg.  3.98 ms, Total. 3.975 ms (0.0%)
+[Performance] Application.LoadMonoAssemblies                                                                                 :        1 samples, Peak.   916 ms (1.0x), Avg.   916 ms, Total. 915.8 ms (0.5%)
+[Performance] RestoreManagedReferences                                                                                       :        2 samples, Peak.  46.9 ms (2.0x), Avg.  23.5 ms, Total. 46.92 ms (0.0%)
+[Performance] InitializeOnLoad DrivenRectTransformUndo                                                                       :        2 samples, Peak.  1.43 ms (1.4x), Avg.  1.00 ms, Total. 2.006 ms (0.0%)
+[Performance] InitializeOnLoad SceneSearch                                                                                   :        2 samples, Peak.   156 us (1.2x), Avg.   131 us, Total. 262.0 us (0.0%)
+[Performance] InitializeOnLoad CloudBuild                                                                                    :        2 samples, Peak.  5.70 us (1.2x), Avg.  4.65 us, Total. 9.300 us (0.0%)
+[Performance] InitializeOnLoad NativeFormatImporterUtility                                                                   :        2 samples, Peak.  2.72 ms (1.1x), Avg.  2.44 ms, Total. 4.872 ms (0.0%)
+[Performance] InitializeOnLoad SearchService                                                                                 :        2 samples, Peak.   216 us (1.2x), Avg.   185 us, Total. 370.6 us (0.0%)
+[Performance] InitializeOnLoad SettingsService                                                                               :        2 samples, Peak.  12.0 us (1.3x), Avg.  9.55 us, Total. 19.10 us (0.0%)
+[Performance] InitializeOnLoad WindowLayout                                                                                  :        2 samples, Peak.   374 us (1.1x), Avg.   332 us, Total. 664.3 us (0.0%)
+[Performance] InitializeOnLoad AssetStoreContext                                                                             :        2 samples, Peak.  23.6 ms (1.7x), Avg.  13.9 ms, Total. 27.77 ms (0.0%)
+[Performance] InitializeOnLoad PoolManager                                                                                   :        2 samples, Peak.   703 us (1.1x), Avg.   658 us, Total. 1.316 ms (0.0%)
+[Performance] InitializeOnLoad MixerEffectDefinitionReloader                                                                 :        2 samples, Peak.  2.48 ms (1.2x), Avg.  2.09 ms, Total. 4.173 ms (0.0%)
+[Performance] InitializeOnLoad ProjectSearch                                                                                 :        2 samples, Peak.  80.5 us (1.1x), Avg.  72.5 us, Total. 145.0 us (0.0%)
+[Performance] InitializeOnLoad UISystemProfilerRenderService                                                                 :        2 samples, Peak.  12.9 us (1.1x), Avg.  11.3 us, Total. 22.60 us (0.0%)
+[Performance] InitializeOnLoad EditMode                                                                                      :        2 samples, Peak.   413 us (1.1x), Avg.   385 us, Total. 769.6 us (0.0%)
+[Performance] InitializeOnLoad UnityConnect                                                                                  :        2 samples, Peak.  67.0 us (1.1x), Avg.  59.9 us, Total. 119.8 us (0.0%)
+[Performance] InitializeOnLoad ManagedDebugger                                                                               :        2 samples, Peak.   585 us (1.0x), Avg.   580 us, Total. 1.159 ms (0.0%)
+[Performance] InitializeOnLoad ShortcutIntegration                                                                           :        2 samples, Peak.  62.7 us (1.0x), Avg.  59.8 us, Total. 119.5 us (0.0%)
+[Performance] InitializeOnLoad AddComponentWindow                                                                            :        2 samples, Peak.   111 us (1.0x), Avg.   110 us, Total. 220.1 us (0.0%)
+[Performance] InitializeOnLoad ManagedDebuggerWindow                                                                         :        2 samples, Peak.   129 us (1.0x), Avg.   127 us, Total. 253.5 us (0.0%)
+[Performance] InitializeOnLoad CacheServerWindow                                                                             :        2 samples, Peak.  10.2 us (1.1x), Avg.  9.15 us, Total. 18.30 us (0.0%)
+[Performance] InitializeOnLoad PlayModeDownload                                                                              :        2 samples, Peak.  3.66 ms (1.9x), Avg.  1.89 ms, Total. 3.783 ms (0.0%)
+[Performance] InitializeOnLoad MenuItems                                                                                     :        2 samples, Peak.   128 us (1.3x), Avg.   100 us, Total. 200.2 us (0.0%)
+[Performance] InitializeOnLoad PrefabInstanceChangedListener                                                                 :        2 samples, Peak.   159 us (1.1x), Avg.   144 us, Total. 287.1 us (0.0%)
+[Performance] InitializeOnLoad ObjectSelectorSearch                                                                          :        2 samples, Peak.  45.0 us (1.0x), Avg.  44.7 us, Total. 89.40 us (0.0%)
+[Performance] InitializeOnLoad EditorMonitor                                                                                 :        2 samples, Peak.   629 us (1.1x), Avg.   564 us, Total. 1.127 ms (0.0%)
+[Performance] InitializeOnLoad RetainedMode                                                                                  :        2 samples, Peak.  2.34 ms (1.0x), Avg.  2.29 ms, Total. 4.584 ms (0.0%)
+[Performance] InitializeOnLoad EditorShaderLoader                                                                            :        2 samples, Peak.   656 us (1.0x), Avg.   635 us, Total. 1.269 ms (0.0%)
+[Performance] InitializeOnLoad EditorDelegateRegistration                                                                    :        2 samples, Peak.   520 us (1.0x), Avg.   508 us, Total. 1.015 ms (0.0%)
+[Performance] InitializeOnLoad UIDocumentHierarchyWatcher                                                                    :        2 samples, Peak.   112 us (1.2x), Avg.  90.6 us, Total. 181.3 us (0.0%)
+[Performance] InitializeOnLoad LiveReloadTrackerCreator                                                                      :        2 samples, Peak.   244 us (1.2x), Avg.   204 us, Total. 407.7 us (0.0%)
+[Performance] InitializeOnLoad UxmlObjectEditorFactories                                                                     :        2 samples, Peak.   568 us (1.1x), Avg.   524 us, Total. 1.048 ms (0.0%)
+[Performance] InitializeOnLoad UXMLEditorFactories                                                                           :        2 samples, Peak.  60.6 ms (1.1x), Avg.  57.1 ms, Total. 114.2 ms (0.1%)
+[Performance] InitializeOnLoad PurchasingService                                                                             :        2 samples, Peak.  6.44 ms (1.0x), Avg.  6.37 ms, Total. 12.75 ms (0.0%)
+[Performance] InitializeOnLoad CloudBuildPoller                                                                              :        2 samples, Peak.   128 us (1.0x), Avg.   127 us, Total. 254.8 us (0.0%)
+[Performance] InitializeOnLoad EditorGameServicesAnalytics                                                                   :        2 samples, Peak.  1.51 ms (1.0x), Avg.  1.49 ms, Total. 2.974 ms (0.0%)
+[Performance] InitializeOnLoad AnalyticsService                                                                              :        2 samples, Peak.   198 us (1.0x), Avg.   193 us, Total. 385.1 us (0.0%)
+[Performance] InitializeOnLoad BuildService                                                                                  :        2 samples, Peak.   180 us (1.1x), Avg.   161 us, Total. 322.9 us (0.0%)
+[Performance] InitializeOnLoad AdsService                                                                                    :        2 samples, Peak.   385 us (1.0x), Avg.   379 us, Total. 758.6 us (0.0%)
+[Performance] InitializeOnLoad UDPService                                                                                    :        2 samples, Peak.   160 us (1.0x), Avg.   155 us, Total. 309.3 us (0.0%)
+[Performance] InitializeOnLoad CrashService                                                                                  :        2 samples, Peak.   138 us (1.0x), Avg.   138 us, Total. 275.7 us (0.0%)
+[Performance] InitializeOnLoad ServicesRepository                                                                            :        2 samples, Peak.   900 ns (1.1x), Avg.   800 ns, Total. 1.600 us (0.0%)
+[Performance] InitializeOnLoad SearchWindow                                                                                  :        2 samples, Peak.   153 us (1.1x), Avg.   137 us, Total. 275.0 us (0.0%)
+[Performance] InitializeOnLoad CustomIndexers                                                                                :        2 samples, Peak.  18.2 ms (1.0x), Avg.  17.9 ms, Total. 35.84 ms (0.0%)
+[Performance] InitializeOnLoad SearchMonitor                                                                                 :        2 samples, Peak.  1.09 ms (1.2x), Avg.   930 us, Total. 1.860 ms (0.0%)
+[Performance] InitializeOnLoad ParameterControllerEditor                                                                     :        2 samples, Peak.  24.4 us (1.1x), Avg.  21.7 us, Total. 43.50 us (0.0%)
+[Performance] InitializeOnLoad LayerSettingsWindow                                                                           :        2 samples, Peak.  25.4 us (1.8x), Avg.  14.4 us, Total. 28.80 us (0.0%)
+[Performance] InitializeOnLoad PackageManagerHookGUIDConverter.RegisterPackagesEventHandler                                  :        2 samples, Peak.   825 us (1.7x), Avg.   496 us, Total. 991.1 us (0.0%)
+[Performance] InitializeOnLoad EditorDragAndDrop.RegisterEditorClient                                                        :        2 samples, Peak.   239 us (1.1x), Avg.   221 us, Total. 441.4 us (0.0%)
+[Performance] InitializeOnLoad EditorEventCallbacks.InitializeFontAssetResourceChangeCallBacks                               :        2 samples, Peak.  1.01 ms (1.0x), Avg.  1.01 ms, Total. 2.013 ms (0.0%)
+[Performance] InitializeOnLoad SceneTemplateService.Init                                                                     :        2 samples, Peak.  1.31 ms (1.1x), Avg.  1.22 ms, Total. 2.431 ms (0.0%)
+[Performance] InitializeOnLoad DiagnosticSwitchesConsoleMessage.Init                                                         :        2 samples, Peak.  5.12 ms (1.6x), Avg.  3.19 ms, Total. 6.380 ms (0.0%)
+[Performance] InitializeOnLoad PackageManagerWindow.EditorInitializedInSafeMode                                              :        2 samples, Peak.  26.0 ms (2.0x), Avg.  13.1 ms, Total. 26.19 ms (0.0%)
+[Performance] InitializeOnLoad ToolShortcutContext.Init                                                                      :        2 samples, Peak.   147 us (1.0x), Avg.   145 us, Total. 289.5 us (0.0%)
+[Performance] InitializeOnLoad MemoryProfilerCompilationGuard.InjectCompileGuard                                             :        2 samples, Peak.   171 us (1.0x), Avg.   168 us, Total. 335.8 us (0.0%)
+[Performance] InitializeOnLoad AssetPostprocessingInternal.RefreshCustomDependencies                                         :        2 samples, Peak.  3.18 ms (1.4x), Avg.  2.26 ms, Total. 4.522 ms (0.0%)
+[Performance] InitializeOnLoad SysrootManager.Initialize                                                                     :        2 samples, Peak.  18.5 us (1.2x), Avg.  16.0 us, Total. 32.00 us (0.0%)
+[Performance] InitializeOnLoad ScopedRegistryAddedPopup.SubscribeToRegistriesAdded                                           :        2 samples, Peak.  7.70 ms (2.0x), Avg.  3.90 ms, Total. 7.807 ms (0.0%)
+[Performance] InitializeOnLoad SceneVisibilityManager.Initialize                                                             :        2 samples, Peak.  3.23 ms (1.6x), Avg.  2.01 ms, Total. 4.021 ms (0.0%)
+[Performance] InitializeOnLoad EditorWindow.Initialize                                                                       :        2 samples, Peak.   274 us (1.1x), Avg.   259 us, Total. 518.2 us (0.0%)
+[Performance] AssemblyReloadEvents.afterAssemblyReload: UnityEditor.SceneTemplate.SceneTemplateService.AfterAssemblyReload   :        2 samples, Peak.  4.19 ms (1.8x), Avg.  2.30 ms, Total. 4.607 ms (0.0%)
+[Performance] ProcessService.EditorAfterLoadAllAssemblies                                                                    :        2 samples, Peak.   406 us (1.1x), Avg.   370 us, Total. 739.5 us (0.0%)
+[Performance] Application.ReadLicenseInfo                                                                                    :        1 samples, Peak.  25.0 ms (1.0x), Avg.  25.0 ms, Total. 25.01 ms (0.0%)
+[Performance] Application.InitialRefresh                                                                                     :        1 samples, Peak.  4.69 s (1.0x), Avg.  4.69 s, Total. 4.689 s (2.5%)
+[Performance] ShaderImporter.SourceAssetModified                                                                             :        2 samples, Peak.   700 ns (1.6x), Avg.   450 ns, Total. 900.0 ns (0.0%)
+[Performance] ShaderIncludeImporter.SourceAssetModified                                                                      :        2 samples, Peak.   900 ns (1.1x), Avg.   850 ns, Total. 1.700 us (0.0%)
+[Performance] Compiling Scripts                                                                                              :        1 samples, Peak.  3.59 s (1.0x), Avg.  3.59 s, Total. 3.591 s (1.9%)
+[Performance] AssemblyReloadEvents.beforeAssemblyReload: UnityEditor.SceneTemplate.SceneTemplateService.BeforeAssemblyReload :        1 samples, Peak.   867 us (1.0x), Avg.   867 us, Total. 867.4 us (0.0%)
+[Performance] PresetManagerPostProcessor.OnPreprocessAsset                                                                   :        4 samples, Peak.  1.37 ms (3.3x), Avg.   418 us, Total. 1.674 ms (0.0%)
+[Performance] CancelSplashScreenOnAssetChange.OnPreprocessAsset                                                              :        4 samples, Peak.   175 us (3.8x), Avg.  46.2 us, Total. 184.8 us (0.0%)
+[Performance] DidReloadScriptsAdvancedDropdownWindow.OnScriptReload                                                          :        1 samples, Peak.   202 us (1.0x), Avg.   202 us, Total. 201.9 us (0.0%)
+[Performance] AssetDatabase.ImportAssets                                                                                     :       10 samples, Peak.  10.4 ms (5.0x), Avg.  2.08 ms, Total. 20.77 ms (0.0%)
+[Performance] VersionControl.Task.Wait                                                                                       :        1 samples, Peak.  14.5 us (1.0x), Avg.  14.5 us, Total. 14.50 us (0.0%)
+[Performance] BuilderAssetPostprocessor.OnPostprocessAllAssets                                                               :        8 samples, Peak.  2.58 ms (3.8x), Avg.   683 us, Total. 5.466 ms (0.0%)
+[Performance] ArtifactBrowserPostProcessor.OnPostprocessAllAssets                                                            :        8 samples, Peak.   474 us (3.8x), Avg.   124 us, Total. 992.0 us (0.0%)
+[Performance] AssetEvents.OnPostprocessAllAssets                                                                             :       16 samples, Peak.   340 us (6.4x), Avg.  53.1 us, Total. 848.9 us (0.0%)
+[Performance] AudioMixerPostprocessor.OnPostprocessAllAssets                                                                 :        8 samples, Peak.   272 us (3.9x), Avg.  70.1 us, Total. 561.0 us (0.0%)
+[Performance] StyleCatalogPostProcessor.OnPostprocessAllAssets                                                               :        8 samples, Peak.  20.1 ms (4.0x), Avg.  5.05 ms, Total. 40.38 ms (0.0%)
+[Performance] BuildCatalog                                                                                                   :        1 samples, Peak.  19.2 ms (1.0x), Avg.  19.2 ms, Total. 19.15 ms (0.0%)
+[Performance] ModelImporterPostProcessor.OnPostprocessAllAssets                                                              :        8 samples, Peak.  1.40 ms (3.8x), Avg.   366 us, Total. 2.926 ms (0.0%)
+[Performance] RetainedModeAssetPostprocessor.OnPostprocessAllAssets                                                          :        8 samples, Peak.  2.36 ms (3.9x), Avg.   604 us, Total. 4.832 ms (0.0%)
+[Performance] AssetChangedListener.OnPostprocessAllAssets                                                                    :        8 samples, Peak.  2.13 ms (3.5x), Avg.   609 us, Total. 4.871 ms (0.0%)
+[Performance] SpeedTreePostProcessor.OnPostprocessAllAssets                                                                  :        8 samples, Peak.   270 us (3.3x), Avg.  81.6 us, Total. 652.5 us (0.0%)
+[Performance] TextAssetPostProcessor.OnPostprocessAllAssets                                                                  :        8 samples, Peak.  2.14 ms (3.2x), Avg.   671 us, Total. 5.367 ms (0.0%)
+[Performance] SyncVS.PostprocessSyncProject                                                                                  :        4 samples, Peak.  1.66 ms (3.7x), Avg.   445 us, Total. 1.779 ms (0.0%)
+[Performance] Application.ImportPackagesAndSetTemplateWhenCreatingProject                                                    :        1 samples, Peak.  13.4 ms (1.0x), Avg.  13.4 ms, Total. 13.43 ms (0.0%)
+[Performance] Application.SyncCurrentColorSpace                                                                              :        1 samples, Peak.  77.8 ms (1.0x), Avg.  77.8 ms, Total. 77.81 ms (0.0%)
+[Performance] Application.OnUsbDevicesChanged                                                                                :        1 samples, Peak.  1.66 ms (1.0x), Avg.  1.66 ms, Total. 1.664 ms (0.0%)
+[Performance] Application.AssetInstanceCacheUpdate                                                                           :        1 samples, Peak.   200 ns (1.0x), Avg.   200 ns, Total. 200.0 ns (0.0%)
+[Performance] Application.UnityExtensions.Initialize                                                                         :        1 samples, Peak.   898 us (1.0x), Avg.   898 us, Total. 897.9 us (0.0%)
+[Performance] CodeEditorProjectSync.SyncEditorProject                                                                        :        1 samples, Peak.   107 us (1.0x), Avg.   107 us, Total. 106.9 us (0.0%)
+[Performance] Application.ExecuteStartups                                                                                    :        1 samples, Peak.   106 ms (1.0x), Avg.   106 ms, Total. 105.6 ms (0.1%)
+[Performance] Menu.RegisterMenuInterface                                                                                     :       26 samples, Peak.   700 ns (3.8x), Avg.   185 ns, Total. 4.800 us (0.0%)
+[Performance] Gizmo.RebuildRenderers                                                                                         :        2 samples, Peak.   105 ms (1.4x), Avg.  75.7 ms, Total. 151.4 ms (0.1%)
+[Performance] Gizmo.AddGizmoRenderers                                                                                        :       56 samples, Peak.  1.77 ms (30.5x), Avg.  58.1 us, Total. 3.251 ms (0.0%)
+[Performance] Application.editorInitializingProject                                                                          :        1 samples, Peak.  84.6 ms (1.0x), Avg.  84.6 ms, Total. 84.65 ms (0.0%)
+[Performance] Application.InitializeMenu                                                                                     :        1 samples, Peak.  44.5 ms (1.0x), Avg.  44.5 ms, Total. 44.49 ms (0.0%)
+[Performance] Menu.RebuildAll                                                                                                :        1 samples, Peak.  44.5 ms (1.0x), Avg.  44.5 ms, Total. 44.47 ms (0.0%)
+[Performance] Menu.BuildRegisteredMenuInterfaces                                                                             :        1 samples, Peak.  42.6 ms (1.0x), Avg.  42.6 ms, Total. 42.59 ms (0.0%)
+[Performance] Menu.FilterMenuItem                                                                                            :      452 samples, Peak.  12.9 ms (444.0x), Avg.  29.0 us, Total. 13.09 ms (0.0%)
+[Performance] UpdateAllMenus                                                                                                 :        1 samples, Peak.   882 us (1.0x), Avg.   882 us, Total. 881.5 us (0.0%)
+[Performance] Menu.RebuildOSMainMenu                                                                                         :        3 samples, Peak.  1.13 ms (1.2x), Avg.   943 us, Total. 2.830 ms (0.0%)
+[Performance] EditorSceneManager.sceneClosing: UnityEditor.SceneVisibilityManager.EditorSceneManagerOnSceneClosing           :        2 samples, Peak.   886 us (1.5x), Avg.   597 us, Total. 1.193 ms (0.0%)
+[Performance] GUIView.RepaintAll.PlayerLoopController                                                                        :        2 samples, Peak.   562 us (2.0x), Avg.   282 us, Total. 563.1 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneTemplate.SceneTemplateService.OnNewSceneCreated           :        1 samples, Peak.   251 us (1.0x), Avg.   251 us, Total. 250.8 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneVisibilityManager.EditorSceneManagerOnNewSceneCreated     :        1 samples, Peak.   213 us (1.0x), Avg.   213 us, Total. 213.1 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneManagement.StageNavigationManager.OnNewSceneCreated       :        1 samples, Peak.  64.3 us (1.0x), Avg.  64.3 us, Total. 64.30 us (0.0%)
+[Performance] Application.InvokeFinishedLoadingProject                                                                       :        1 samples, Peak.  4.50 ms (1.0x), Avg.  4.50 ms, Total. 4.498 ms (0.0%)
+[Performance] ProcessService.OnProjectLoaded                                                                                 :        1 samples, Peak.  44.9 us (1.0x), Avg.  44.9 us, Total. 44.90 us (0.0%)
+[Performance] AssetDatabase.ImportAsset                                                                                      :        1 samples, Peak.   157 ms (1.0x), Avg.   157 ms, Total. 156.7 ms (0.1%)
+[Performance] TextureImporter.Import                                                                                         :        1 samples, Peak.   125 ms (1.0x), Avg.   125 ms, Total. 124.6 ms (0.1%)
+[Performance] BuilderAssetModificationProcessor.OnWillSaveAssets                                                             :        3 samples, Peak.   383 us (2.8x), Avg.   136 us, Total. 407.3 us (0.0%)
+[Performance] TerrainModificationProcessor.OnWillSaveAssets                                                                  :        3 samples, Peak.   884 us (3.0x), Avg.   297 us, Total. 890.1 us (0.0%)
+[Performance] Inspector.InitOrRebuild                                                                                        :        2 samples, Peak.   698 us (1.2x), Avg.   564 us, Total. 1.128 ms (0.0%)
+[Performance] GenerateAssemblyTypeInfos                                                                                      :        2 samples, Peak.  14.6 ms (1.2x), Avg.  12.0 ms, Total. 24.02 ms (0.0%)
+[Performance] AssetDatabase.Refresh                                                                                          :        1 samples, Peak.  4.02 ms (1.0x), Avg.  4.02 ms, Total. 4.017 ms (0.0%)
+[Performance] EditorApplication.quitting: callback in UnityEditor.TextCore.Text.EditorEventCallbacks                         :        1 samples, Peak.   487 ms (1.0x), Avg.   487 ms, Total. 486.7 ms (0.3%)
+[Performance] Killing ADB server                                                                                             :        1 samples, Peak.   126 ms (1.0x), Avg.   126 ms, Total. 125.8 ms (0.1%)
+[Performance] Application.Shutdown.PauseProfilerSession                                                                      :        1 samples, Peak.  2.23 ms (1.0x), Avg.  2.23 ms, Total. 2.233 ms (0.0%)
+[Performance] Application.Shutdown.PauseAssetImportWorkers                                                                   :        1 samples, Peak.  2.76 ms (1.0x), Avg.  2.76 ms, Total. 2.756 ms (0.0%)
+[Performance] Application.Shutdown.SaveAssets                                                                                :        1 samples, Peak.  7.89 ms (1.0x), Avg.  7.89 ms, Total. 7.891 ms (0.0%)
+[Performance] Application.Shutdown.CleanupRenderPipeline                                                                     :        1 samples, Peak.  11.3 us (1.0x), Avg.  11.3 us, Total. 11.30 us (0.0%)
+[Performance] Application.Shutdown.StopPreloadManager                                                                        :        1 samples, Peak.  9.88 ms (1.0x), Avg.  9.88 ms, Total. 9.876 ms (0.0%)
+[Performance] Application.Shutdown.DestroyWorld                                                                              :        1 samples, Peak.   406 us (1.0x), Avg.   406 us, Total. 406.1 us (0.0%)
+[Performance] Application.Shutdown.CleanupAfterLoad                                                                          :        1 samples, Peak.  2.48 ms (1.0x), Avg.  2.48 ms, Total. 2.484 ms (0.0%)
+[Performance] Application.Shutdown.Progress                                                                                  :        1 samples, Peak.   650 us (1.0x), Avg.   650 us, Total. 649.8 us (0.0%)
+[Performance] Application.Shutdown.GICleanupManagers                                                                         :        1 samples, Peak.  9.78 ms (1.0x), Avg.  9.78 ms, Total. 9.779 ms (0.0%)
+[Performance] Application.Shutdown.MenuCleanupClass                                                                          :        1 samples, Peak.   517 us (1.0x), Avg.   517 us, Total. 517.4 us (0.0%)
+[Performance] Application.Shutdown.ADBSaveStateBeforeShutdown                                                                :        1 samples, Peak.  11.5 us (1.0x), Avg.  11.5 us, Total. 11.50 us (0.0%)
+[Performance] Application.Shutdown.RemoteShutdown                                                                            :        1 samples, Peak.   800 ns (1.0x), Avg.   800 ns, Total. 800.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupVCProvider                                                                         :        1 samples, Peak.   332 us (1.0x), Avg.   332 us, Total. 332.3 us (0.0%)
+[Performance] Application.Shutdown.InputShutdown                                                                             :        1 samples, Peak.   169 us (1.0x), Avg.   169 us, Total. 168.7 us (0.0%)
+[Performance] Application.Shutdown.GizmoManagerDestroy                                                                       :        1 samples, Peak.   686 us (1.0x), Avg.   686 us, Total. 685.9 us (0.0%)
+[Performance] Application.Shutdown.ProfilerSession                                                                           :        1 samples, Peak.   746 us (1.0x), Avg.   746 us, Total. 745.6 us (0.0%)
+[Performance] Application.Shutdown.ReleaseGfxWindowOnAllGUIViews                                                             :        1 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 300.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupEngine                                                                             :        1 samples, Peak.   199 ms (1.0x), Avg.   199 ms, Total. 199.2 ms (0.1%)
+[Performance] Application.Shutdown.CleanupAssetDatabase                                                                      :        1 samples, Peak.  11.0 ms (1.0x), Avg.  11.0 ms, Total. 10.95 ms (0.0%)
+[Performance] Application.Shutdown.ScriptCompilationCleanUp                                                                  :        1 samples, Peak.  14.2 ms (1.0x), Avg.  14.2 ms, Total. 14.18 ms (0.0%)
+[Performance] Application.Shutdown.DestroyJobSystem                                                                          :        1 samples, Peak.   735 us (1.0x), Avg.   735 us, Total. 735.5 us (0.0%)
+[Performance] Application.Shutdown.CleanupPersistentManager                                                                  :        1 samples, Peak.   678 us (1.0x), Avg.   678 us, Total. 677.8 us (0.0%)
+[Performance] Application.Shutdown.CleanupAsyncReadManager                                                                   :        1 samples, Peak.   446 us (1.0x), Avg.   446 us, Total. 445.6 us (0.0%)
+[Performance] Application.Shutdown.CleanupProgressBar                                                                        :        1 samples, Peak.  13.5 us (1.0x), Avg.  13.5 us, Total. 13.50 us (0.0%)
+[Performance] Application.Shutdown.CleanupMono                                                                               :        1 samples, Peak.  65.1 ms (1.0x), Avg.  65.1 ms, Total. 65.15 ms (0.0%)
+[Performance] Application.Shutdown.CleanupStdConverters                                                                      :        1 samples, Peak.  11.3 us (1.0x), Avg.  11.3 us, Total. 11.30 us (0.0%)
+[Performance] Application.Shutdown.UnloadAllPlatformSupportModuleNativeDlls                                                  :        1 samples, Peak.  2.50 us (1.0x), Avg.  2.50 us, Total. 2.500 us (0.0%)
+[Performance] Application.Shutdown.UnloadAllPlatformSupportNativeLibraries                                                   :        1 samples, Peak.   879 ms (1.0x), Avg.   879 ms, Total. 879.1 ms (0.5%)
+[Performance] Application.Shutdown.CleanupAutoDocumentation                                                                  :        1 samples, Peak.  1.25 ms (1.0x), Avg.  1.25 ms, Total. 1.252 ms (0.0%)
+[Performance] Application.Shutdown.ShaderNameManagerDestroy                                                                  :        1 samples, Peak.  78.1 us (1.0x), Avg.  78.1 us, Total. 78.10 us (0.0%)
+[Performance] Application.Shutdown.CleanupCacheServer                                                                        :        1 samples, Peak.   400 ns (1.0x), Avg.   400 ns, Total. 400.0 ns (0.0%)
+[Performance] Application.Shutdown.Virtualization_Shutdown                                                                   :        1 samples, Peak.  3.50 us (1.0x), Avg.  3.50 us, Total. 3.500 us (0.0%)
+[Performance] Application.Shutdown.DevConnections                                                                            :        1 samples, Peak.   134 us (1.0x), Avg.   134 us, Total. 134.4 us (0.0%)
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

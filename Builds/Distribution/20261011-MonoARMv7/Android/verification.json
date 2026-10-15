@@ -1,0 +1,17 @@
+{
+  "backend": "Mono",
+  "architectures": [
+    "armeabi-v7a"
+  ],
+  "bytes": 83886776,
+  "sha256": "906cb58583d185bae5ec2a0797c19a7d3ab500dea335b95fed933868d4bdf312",
+  "orientation": "landscape",
+  "monoLibraries": [
+    "lib/armeabi-v7a/libmono-native.so",
+    "lib/armeabi-v7a/libmonobdwgc-2.0.so"
+  ],
+  "managedAssemblies": [
+    "assets/bin/Data/Managed/Assembly-CSharp.dll"
+  ],
+  "physicalDeviceTest": false
+}
