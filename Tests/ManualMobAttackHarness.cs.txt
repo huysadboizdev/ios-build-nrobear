@@ -1,0 +1,187 @@
+namespace __GAME__ {
+using NRO.Combat;
+using __GAME__.Mod.XMAP;
+public class SkillTemplate { public int id = 0, type = 1, manaUseType; public bool isBuffToPlayer() { return false; } public bool isUseAlone() { return false; } }
+public class Skill { public SkillTemplate template = new SkillTemplate(); public long lastTimeUseThisSkill; public int coolDown = 500, dx = 200, dy = 200, manaUse = 1; public bool paintCanNotUseSkill; }
+public class Mob { public int status = 5, mobId = 1, holdEffID, xFirst = 130, x = 130, y = 100; public int getX() { return x; } public int getY() { return y; } }
+public class Res { public static int abs(int x) { return System.Math.Abs(x); } }
+public class SkillPaint { }
+public class MyVector { readonly System.Collections.Generic.List<object> items = new System.Collections.Generic.List<object>(); public void addElement(object x) { items.Add(x); } public int size() { return items.Count; } public object elementAt(int i) { return items[i]; } }
+public class TileMap { public static int mapID; public static bool isOfflineMap() { return false; } }
+public class Controller { public static bool isStopReadMessage; }
+public class GameScr {
+    static GameScr self = new GameScr(); public static GameScr gI() { return self; }
+    public static MobVector vMob = new MobVector(); public int Fires;
+    public void doFire(bool isFireByShortCut, bool skipWaypoint) { Fires++; }
+    public bool isMeCanAttackMob(Mob m) { return m != null; }
+    public bool NeedsApproach(int num3, int num4) { return __APPROACH_CONDITION__; }
+    public bool TrySelectSkillForAutoCombat(Skill skill) { Char.myCharz().myskill = skill; return true; }
+}
+public class MobVector { public bool contains(object m) { return m != null; } }
+public class mSystem { public static long Now = 10000; public static long currentTimeMillis() { return Now; } }
+public class Service {
+    static Service self = new Service(); public static Service gI() { return self; }
+    public System.Action<MobAttackResult> Callback; public int Sends; public bool Ready = true, CanSend = true;
+    public bool IsCombatConnectionReady() { return Ready; }
+    public bool TryCharMove() { Char.myCharz().cxSend = Char.myCharz().cx; Char.myCharz().cySend = Char.myCharz().cy; return true; }
+    public bool TrySendPlayerAttack(MyVector a, MyVector b, int c, System.Action<MobAttackResult> callback = null) {
+        if (!CanSend) return false;
+        Sends++;
+        int sequence = MobAttackResultTracker.BeginFor(__LANE__, (byte)Char.myCharz().myskill.template.id, (byte)Char.myCharz().mobFocus.mobId, callback);
+        Callback = result => { result.Sequence = sequence; MobAttackResultTracker.ResolveFor(__LANE__, result, mSystem.Now); };
+        return true;
+    }
+}
+public class ModFunc {
+    static ModFunc self = new ModFunc(); public static ModFunc GI() { return self; }
+    public long lastAutoAttack;
+    public void AttackChar() {}
+    __SET_USED_LOCAL__
+    __SET_USED__
+    __AUTO__
+}
+public class Char {
+    public static Char Player; public static Char myCharz() { return Player; }
+    public bool isMeCanAttackOtherPlayer(Char c) { return false; }
+    public bool me = true, finishingCharge, isStandAndCharge, isFlyAndCharge, isWaitMonkey, isUseSkillAfterCharge;
+    public bool stone, sleepEff, blindEff, isLockMove, meDead, isTeleport, telePortSkill, isCreateDark, isFreez;
+    public static bool isLoadingMap, ischangingMap;
+    public int holdEffID;
+    public long cHP = 100, cHPFull = 100, cMP = 900, cMPFull = 1000;
+    public int cStamina = 90, cMaxStamina = 100, statusMe = 1, cx, cy, cxSend, cySend;
+    public Skill myskill = new Skill(); public Mob mobFocus = new Mob(); public Char charFocus;
+    public MyVector vSkill = new MyVector(); public void useSkillNotFocus() {}
+    public object dart; public SkillPaint skillPaint;
+    public bool hasSendAttack; public int AnimationStarts;
+    public long skillPaintManaSpent = 100; public int skillPaintStaminaSpent = 1;
+    public Skill pendingManualMobRetrySkill; public Mob pendingManualMobRetryTarget; public long pendingManualMobRetryAt;
+    public int pendingManualMobRetryMap;
+    public void stopUseChargeSkill() {}
+    public bool isSelectingSkillBuffToPlayer() { return false; }
+    public bool isSelectingSkillUseAlone() { return false; }
+    __RETRY__
+    __START__
+    public void Send() { MyVector myVector = new MyVector(), myVector2 = new MyVector(); int type = 1; __SEND__ }
+    public void Schedule(int delay) { scheduleManualMobRetry(myskill, mobFocus, delay); }
+    public void Tick() { updatePendingManualMobRetry(); }
+}
+public static class ManualMobAttackHarness {
+    static int failures;
+    sealed class DelayedAck { public long At; public System.Action<MobAttackResult> Callback; }
+    static void Check(bool condition, string name) { if (!condition) { failures++; System.Console.WriteLine("FAIL __GAME__: " + name); } }
+    static Char Fresh() {
+        MobAttackResultTracker.ClearFor(__LANE__); mSystem.Now = 10000;
+        Char.isLoadingMap = Char.ischangingMap = false; Controller.isStopReadMessage = false;
+        TileMap.mapID = 0; Service.gI().Ready = true; Service.gI().CanSend = true; Service.gI().Sends = 0; GameScr.gI().Fires = 0;
+        ModFunc.GI().lastAutoAttack = 0; PickMobController.ResetCursor(); return Char.Player = new Char();
+    }
+    public static int Run() {
+        Char p = Fresh(); p.myskill.lastTimeUseThisSkill = 9900; p.Schedule(350);
+        p.setSkillPaint(new SkillPaint(), 0); mSystem.Now = 10350; p.Tick();
+        Check(GameScr.gI().Fires == 1, "an early repeated click must preserve a server-scheduled retry");
+        p = Fresh(); p.Schedule(0); p.skillPaint = new SkillPaint(); p.Tick();
+        Check(GameScr.gI().Fires == 0, "retry waits for previous animation");
+        p.skillPaint = null; p.Tick(); p.Tick();
+        Check(GameScr.gI().Fires == 1, "retry fires exactly once after animation");
+        p = Fresh(); p.Schedule(0); p.mobFocus = new Mob(); p.Tick();
+        Check(GameScr.gI().Fires == 0, "changing target cancels retry");
+        p = Fresh(); p.Schedule(0); p.myskill = new Skill(); p.Tick();
+        Check(GameScr.gI().Fires == 0, "changing skill cancels retry");
+        p = Fresh(); p.Schedule(0); Char.isLoadingMap = true; p.Tick(); Char.isLoadingMap = false; p.Tick();
+        Check(GameScr.gI().Fires == 0, "map transition cancels retry permanently");
+        p = Fresh(); p.Schedule(0); TileMap.mapID++; p.Tick();
+        Check(GameScr.gI().Fires == 0, "a retry cannot follow the player to a new map");
+        p = Fresh(); p.Schedule(0); p.meDead = true; p.Tick(); p.meDead = false; p.Tick();
+        Check(GameScr.gI().Fires == 0, "death cancels retry permanently");
+        p = Fresh(); p.Schedule(0); Service.gI().Ready = false; p.Tick(); Service.gI().Ready = true; p.Tick();
+        Check(GameScr.gI().Fires == 0, "disconnect cancels retry permanently");
+        p = Fresh(); p.setSkillPaint(new SkillPaint(), 0); p.Send(); mSystem.Now = 10200;
+        Service.gI().Callback(new MobAttackResult { Status = MobAttackResultTracker.Accepted, RetryAfterMs = 350 });
+        Check(p.myskill.lastTimeUseThisSkill == 10000, "accepted manual hit must preserve animation-start cooldown instead of adding ACK travel time");
+        p = Fresh(); p.Send();
+        // An authoritative MP/stamina update may arrive before the result on this connection.
+        p.cMP = 950; p.cStamina = 95;
+        Service.gI().Callback(new MobAttackResult { Status = MobAttackResultTracker.Rejected, RetryAfterMs = 500 });
+        Check(p.cMP == 950 && p.cStamina == 95, "rejection cannot add a speculative refund over authoritative resources");
+        p = Fresh(); p.cx = p.cxSend = p.cy = p.cySend = 100; p.skillPaint = new SkillPaint();
+        ModFunc.GI().AutoAttack();
+        Check(Service.gI().Sends == 0, "auto attack cannot compete with an in-progress manual punch");
+        p = Fresh(); p.cx = p.cxSend = p.cy = p.cySend = 100; p.mobFocus.y = 260;
+        ModFunc.GI().AutoAttack();
+        Check(Service.gI().Sends == 0 && GameScr.gI().Fires == 1, "auto attack must approach a mob outside server melee range before sending");
+        p = Fresh();
+        Check(GameScr.gI().NeedsApproach(80, 80), "manual diagonal punch outside the server circle must approach before animating");
+        Check(!GameScr.gI().NeedsApproach(30, 0), "close manual punch starts immediately");
+        p = Fresh(); p.cMPFull = 2000; Service.gI().CanSend = false; p.Send(); p.Send();
+        Check(p.cMP == 1000 && p.cStamina == 91, "an unsent animation must refund its resources only once across repeated update ticks");
+        p = Fresh(); p.setSkillPaint(new SkillPaint(), 0); p.Send();
+        mSystem.Now += 50; p.setSkillPaint(new SkillPaint(), 0); p.Send();
+        Check(Service.gI().Sends == 1, "an early click must not rearm the hit packet of an already-sent animation");
+        foreach (int skillId in new int[] { 0, 2, 4 }) foreach (int cooldown in new int[] { 100, 250, 400, 500, 1000 }) {
+            int readyAfter = System.Math.Max(0, cooldown - 50);
+            p = Fresh(); p.myskill.template.id = skillId; p.myskill.coolDown = cooldown;
+            p.setSkillPaint(new SkillPaint(), 0); p.Send(); mSystem.Now = 10000 + readyAfter - 1;
+            p.setSkillPaint(new SkillPaint(), 0); p.Send();
+            Check(Service.gI().Sends == 1, "manual skill " + skillId + " cannot send 1 ms before server cooldown " + cooldown);
+            mSystem.Now++; p.setSkillPaint(new SkillPaint(), 0); p.Send();
+            Check(Service.gI().Sends == 2, "manual skill " + skillId + " is ready at server cooldown " + (cooldown - 50));
+            p = Fresh(); p.myskill.template.id = skillId; p.myskill.coolDown = cooldown;
+            for (int hit = 0; hit < 12; hit++) {
+                mSystem.Now = 10000 + hit * readyAfter;
+                p.setSkillPaint(new SkillPaint(), 0); p.Send();
+            }
+            Check(p.AnimationStarts == 12 && Service.gI().Sends == 12, "manual skill " + skillId + " cooldown " + cooldown + " stays ready without any ACK");
+            p = Fresh(); p.cx = p.cxSend = p.cy = p.cySend = 100; p.myskill.template.id = skillId; p.myskill.coolDown = cooldown;
+            ModFunc.GI().AutoAttack(); var firstAck = Service.gI().Callback;
+            mSystem.Now = 10000 + readyAfter - 1; ModFunc.GI().AutoAttack();
+            Check(Service.gI().Sends == 1, "auto skill cannot send early: " + skillId + "/" + cooldown);
+            for (int hit = 1; hit < 12; hit++) { mSystem.Now = 10000 + hit * readyAfter; ModFunc.GI().AutoAttack(); }
+            Check(Service.gI().Sends == 12, "auto skill " + skillId + " cooldown " + cooldown + " follows skill timing without ACK or a 500 ms floor");
+            long latestCast = p.myskill.lastTimeUseThisSkill;
+            firstAck(new MobAttackResult { Status = MobAttackResultTracker.Cooldown, RetryAfterMs = 400 });
+            Check(p.myskill.lastTimeUseThisSkill == latestCast && MobAttackResultTracker.CanAttemptFor(__LANE__, (byte)skillId, mSystem.Now), "stale rejection cannot pause a newer auto cast");
+            p = Fresh(); p.cx = p.cxSend = p.cy = p.cySend = 100; p.myskill.template.id = skillId; p.myskill.coolDown = cooldown; p.vSkill.addElement(p.myskill);
+            int used = 0;
+            for (int hit = 0; hit < 12; hit++) {
+                mSystem.Now = 10000 + hit * readyAfter;
+                if (PickMobController.Cast(p.myskill, p.mobFocus)) used++;
+                Check(!PickMobController.Cast(p.myskill, p.mobFocus), "massacre cannot duplicate a cast at the same timestamp");
+            }
+            Check(used == 12 && Service.gI().Sends == 12, "massacre skill " + skillId + " cooldown " + cooldown + " must not add 25 ms or wait for ACK");
+            foreach (int delay in new int[] { 0, 75, 250, 1200 }) foreach (int mode in new int[] { 0, 1, 2 }) {
+                p = Fresh(); p.cx = p.cxSend = p.cy = p.cySend = 100; p.myskill.template.id = skillId; p.myskill.coolDown = cooldown; p.vSkill.addElement(p.myskill);
+                var replies = new System.Collections.Generic.List<DelayedAck>();
+                for (int hit = 0; hit < 12; hit++) {
+                    mSystem.Now = 10000 + hit * readyAfter;
+                    for (int i = replies.Count - 1; i >= 0; i--) if (replies[i].At <= mSystem.Now) {
+                        replies[i].Callback(new MobAttackResult { Status = MobAttackResultTracker.Accepted, RetryAfterMs = cooldown - 50 }); replies.RemoveAt(i);
+                    }
+                    if (mode == 0) { p.setSkillPaint(new SkillPaint(), 0); p.Send(); }
+                    else if (mode == 1) ModFunc.GI().AutoAttack();
+                    else PickMobController.Cast(p.myskill, p.mobFocus);
+                    replies.Add(new DelayedAck { At = mSystem.Now + delay, Callback = Service.gI().Callback });
+                }
+                Check(Service.gI().Sends == 12, "mode " + mode + " skill " + skillId + " cooldown " + cooldown + " must preserve cadence with ACK delay " + delay);
+            }
+        }
+        p = Fresh(); p.setSkillPaint(new SkillPaint(), 0); p.Send(); mSystem.Now += 50;
+        Service.gI().Callback(new MobAttackResult { Status = MobAttackResultTracker.Cooldown, RetryAfterMs = 75 });
+        p.skillPaint = null; mSystem.Now += 74; p.Tick();
+        Check(GameScr.gI().Fires == 0, "actual cooldown rejection must preserve server's retry boundary");
+        mSystem.Now++; p.Tick(); p.Tick();
+        Check(GameScr.gI().Fires == 1, "actual cooldown rejection must retry exactly once when ready");
+        return failures;
+    }
+}
+}
+namespace __GAME__.Mod.XMAP {
+using NRO.Combat;
+public class PickMob { public static bool tanSat, tsPlayer; }
+public class PickMobController {
+    static int massacreSkillCursor;
+    public static void ResetCursor() { massacreSkillCursor = 0; }
+    public static void Wait(int milliseconds) {}
+    public static bool Cast(Skill skill, Mob target) { return TryUseMassacreSkill(skill, target, null); }
+    __MASSACRE__
+}
+}
