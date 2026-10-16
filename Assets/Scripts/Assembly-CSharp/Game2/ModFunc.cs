@@ -1,4 +1,5 @@
 using System;
+using NRO.Combat;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -675,14 +676,39 @@ namespace Game2
 		{
             if (PickMob.tanSat || PickMob.tsPlayer) return;
 			Char @char = Char.myCharz();
-			if (!Char.isLoadingMap && !@char.stone && !@char.meDead && @char.statusMe != 14 && @char.statusMe != 5 && @char.myskill.template.type == 1 && @char.myskill.template.id != 10 && @char.myskill.template.id != 11 && !@char.myskill.paintCanNotUseSkill && mSystem.currentTimeMillis() - lastAutoAttack > 500)
+			if (@char == null || @char.myskill == null || @char.myskill.template == null
+				|| @char.skillPaint != null || @char.dart != null) return;
+			int autoSkillCooldown = @char.mobFocus != null ? System.Math.Max(0, @char.myskill.coolDown - 50) : @char.myskill.coolDown;
+			if (!Char.isLoadingMap && !@char.stone && !@char.meDead && @char.statusMe != 14 && @char.statusMe != 5 && @char.myskill.template.type == 1 && @char.myskill.template.id != 10 && @char.myskill.template.id != 11 && mSystem.currentTimeMillis() - @char.myskill.lastTimeUseThisSkill >= autoSkillCooldown)
 			{
-				if (GameScr.gI().isMeCanAttackMob(@char.mobFocus) && Res.abs(@char.mobFocus.xFirst - @char.cx) < @char.myskill.dx * 2)
+				if (GameScr.gI().isMeCanAttackMob(@char.mobFocus) && Res.abs(@char.mobFocus.xFirst - @char.cx) < @char.myskill.dx * 2
+					&& MobAttackResultTracker.CanAttemptFor(2, (byte)@char.myskill.template.id, mSystem.currentTimeMillis()))
 				{
-					AttackMob(@char.mobFocus);
-					SetUsedSkill(@char.myskill);
+					if (!NRO.Combat.MassacreAttackRange.IsWithinSkillRange(@char.myskill.template.id,
+						System.Math.Abs((long)@char.mobFocus.getX() - @char.cx),
+						System.Math.Abs((long)@char.mobFocus.getY() - @char.cy), @char.myskill.dx, @char.myskill.dy))
+					{
+						GameScr.gI().doFire(isFireByShortCut: false, skipWaypoint: true);
+						return;
+					}
+					if ((@char.cx != @char.cxSend || @char.cy != @char.cySend) && !Service.gI().TryCharMove()) return;
+					MyVector mobs = new MyVector();
+					mobs.addElement(@char.mobFocus);
+					Skill attackSkill = @char.myskill;
+					long attackStartedAt = 0L;
+					bool sent = Service.gI().TrySendPlayerAttack(mobs, new MyVector(), 1, delegate(MobAttackResult result)
+					{
+						if (result.Status == MobAttackResultTracker.Accepted
+							|| attackSkill.lastTimeUseThisSkill != attackStartedAt) return;
+						SetUsedSkill(attackSkill, result.Status == MobAttackResultTracker.OutOfRange ? 0 : result.RetryAfterMs);
+					});
+					if (sent)
+					{
+						SetUsedSkill(attackSkill);
+						attackStartedAt = attackSkill.lastTimeUseThisSkill;
+					}
 				}
-				else if (@char.isMeCanAttackOtherPlayer(@char.charFocus) && Res.abs(@char.charFocus.cx - @char.cx) < @char.myskill.dx * 2)
+				else if (!@char.myskill.paintCanNotUseSkill && mSystem.currentTimeMillis() - lastAutoAttack > 500 && @char.isMeCanAttackOtherPlayer(@char.charFocus) && Res.abs(@char.charFocus.cx - @char.cx) < @char.myskill.dx * 2)
 				{
 					AttackChar();
 					SetUsedSkill(@char.myskill);
@@ -695,6 +721,15 @@ namespace Game2
 		{
 			skill.paintCanNotUseSkill = true;
 			skill.lastTimeUseThisSkill = mSystem.currentTimeMillis();
+		}
+
+		public void SetUsedSkill(Skill skill, int retryAfterMs)
+		{
+			if (skill == null) return;
+			long now = mSystem.currentTimeMillis();
+			int remaining = System.Math.Min(System.Math.Max(0, retryAfterMs), System.Math.Max(0, skill.coolDown));
+			skill.paintCanNotUseSkill = remaining > 0;
+			skill.lastTimeUseThisSkill = now + remaining - skill.coolDown;
 		}
 
 		public void UsePorata()

@@ -12,16 +12,16 @@ namespace Game2
 	{
 		public class Sender
 		{
-			public List<Message> sendingMessage;
+			public NRO.Networking.ConcurrentMessageQueue<Message> sendingMessage;
 
 			public Sender()
 			{
-				sendingMessage = new List<Message>();
+				sendingMessage = new NRO.Networking.ConcurrentMessageQueue<Message>();
 			}
 
 			public void AddMessage(Message message)
 			{
-				sendingMessage.Add(message);
+				sendingMessage.Enqueue(message);
 			}
 
 			public void run()
@@ -32,10 +32,9 @@ namespace Game2
 					{
 						if (getKeyComplete)
 						{
-							while (sendingMessage.Count > 0)
+							while (sendingMessage.TryDequeue(out Message message))
 							{
-								doSendMessage(sendingMessage[0]);
-								sendingMessage.RemoveAt(0);
+								doSendMessage(message);
 							}
 						}
 						try

@@ -3,6 +3,7 @@ using Game2.Assets.src.e;
 using Game2.Assets.src.f;
 using Game2.Assets.src.g;
 using Game2.Mod.XMAP;
+using NRO.Combat;
 using UnityEngine;
 
 namespace Game2
@@ -45,14 +46,14 @@ namespace Game2
 
 		public void onConnectionFail(bool isMain1)
 		{
-            if (isMain1) { AutoItem.Clear(); BossNoticeBoard.Reset(); }
+			if (isMain1) { AutoItem.Clear(); BossNoticeBoard.Reset(); MobAttackResultTracker.ClearFor(2); }
 			isMain = isMain1;
 			mSystem.onConnectionFail();
 		}
 
 		public void onDisconnected(bool isMain1)
 		{
-            if (isMain1) { AutoItem.Clear(); BossNoticeBoard.Reset(); }
+			if (isMain1) { AutoItem.Clear(); BossNoticeBoard.Reset(); MobAttackResultTracker.ClearFor(2); }
 			isMain = isMain1;
 			if (isMain1) Char.myCharz().stopUseChargeSkill();
 			mSystem.onDisconnected();
@@ -3351,6 +3352,35 @@ namespace Game2
 				case -58:
                     BossNoticeBoard.Receive(msg);
                     break;
+				case -48:
+				{
+					MobAttackResult result = new MobAttackResult();
+					result.Sequence = msg.reader().readInt();
+					result.Status = unchecked((byte)msg.reader().readByte());
+					result.PlayerX = msg.reader().readShort();
+					result.PlayerY = msg.reader().readShort();
+					result.MobId = (byte)msg.reader().readUnsignedByte();
+					result.MobX = msg.reader().readShort();
+					result.MobY = msg.reader().readShort();
+					result.RetryAfterMs = msg.reader().readInt();
+					MobAttackTrace.RecordResult(2, result);
+					if (!MobAttackResultTracker.ResolveFor(2, result, mSystem.currentTimeMillis())) break;
+					if (result.Status == MobAttackResultTracker.OutOfRange)
+					{
+						Char player = Char.myCharz();
+						player.cx = result.PlayerX;
+						player.cy = result.PlayerY;
+						player.cxSend = player.cx;
+						player.cySend = player.cy;
+						Mob mob = GameScr.findMobInMap(result.MobId);
+						if (mob != null && result.MobX >= 0 && result.MobY >= 0)
+						{
+							mob.x = mob.xFirst = result.MobX;
+							mob.y = mob.yFirst = result.MobY;
+						}
+					}
+					break;
+				}
 				case 50:
 				{
 					sbyte b37 = msg.reader().readByte();
@@ -4018,39 +4048,37 @@ namespace Game2
 					mob14.hp = msg.readLong();
 					mob14.updateHp_bar();
 					long num204 = msg.readLong();
-					if (num204 != 1)
+					MobAttackTrace.RecordHit(2, mob14.mobId, mob14.hp, num204);
+					if (num204 > 0)
 					{
-						if (num204 > 1)
-						{
-							mob14.setInjure();
-						}
-						bool flag7 = false;
-						try
-						{
-							flag7 = msg.reader().readBoolean();
-						}
-						catch (Exception)
-						{
-						}
-						sbyte b52 = msg.reader().readByte();
-						if (b52 != -1)
-						{
-							EffecMn.addEff(new Effect(b52, mob14.x, mob14.getY(), 3, 1, -1));
-						}
-						if (flag7)
-						{
-							GameScr.startFlyText("-" + num204, mob14.x, mob14.getY() - mob14.getH(), 0, -2, mFont.FATAL);
-						}
-						else if (num204 == 0L)
-						{
-							mob14.x = mob14.xFirst;
-							mob14.y = mob14.yFirst;
-							GameScr.startFlyText(mResources.miss, mob14.x, mob14.getY() - mob14.getH(), 0, -2, mFont.MISS);
-						}
-						else if (num204 > 1)
-						{
-							GameScr.startFlyText("-" + num204, mob14.x, mob14.getY() - mob14.getH(), 0, -2, mFont.ORANGE);
-						}
+						mob14.setInjure();
+					}
+					bool flag7 = false;
+					try
+					{
+						flag7 = msg.reader().readBoolean();
+					}
+					catch (Exception)
+					{
+					}
+					sbyte b52 = msg.reader().readByte();
+					if (b52 != -1)
+					{
+						EffecMn.addEff(new Effect(b52, mob14.x, mob14.getY(), 3, 1, -1));
+					}
+					if (flag7)
+					{
+						GameScr.startFlyText("-" + num204, mob14.x, mob14.getY() - mob14.getH(), 0, -2, mFont.FATAL);
+					}
+					else if (num204 == 0L)
+					{
+						mob14.x = mob14.xFirst;
+						mob14.y = mob14.yFirst;
+						GameScr.startFlyText(mResources.miss, mob14.x, mob14.getY() - mob14.getH(), 0, -2, mFont.MISS);
+					}
+					else if (num204 > 0)
+					{
+						GameScr.startFlyText("-" + num204, mob14.x, mob14.getY() - mob14.getH(), 0, -2, mFont.ORANGE);
 					}
 					break;
 				}

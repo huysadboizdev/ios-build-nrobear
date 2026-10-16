@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using NRO.Combat;
 
 namespace Game1.Mod.XMAP
 {
@@ -95,7 +96,7 @@ namespace Game1.Mod.XMAP
                 if (@char.mobFocus == null) @char.mobFocus = GetMobTanSat();
                 if (CanStartMassacreSkill(@char))
                 {
-                    Skill skillAttack = GetSkillAttack();
+                    Skill skillAttack = GetSkillAttack(mobTarget: true);
                     Mob target = @char.mobFocus;
                     bool needsTarget = skillAttack != null && !skillAttack.template.isBuffToPlayer() && !skillAttack.template.isUseAlone();
                     if (skillAttack != null && (!needsTarget || target != null))
@@ -164,7 +165,7 @@ namespace Game1.Mod.XMAP
 				}
                 if (CanStartMassacreSkill(@char))
 				{
-					Skill skillAttack2 = GetSkillAttack();
+					Skill skillAttack2 = GetSkillAttack(mobTarget: false);
 					bool needsTarget = skillAttack2 != null && !skillAttack2.template.isBuffToPlayer() && !skillAttack2.template.isUseAlone();
 					if (skillAttack2 != null && (!needsTarget || @char.charFocus != null))
 					{
@@ -200,19 +201,20 @@ namespace Game1.Mod.XMAP
 
         private static bool CanStartMassacreSkill(Char player)
         {
-            SkillInfoPaint[] animation = player.skillInfoPaint();
-            return animation == null || player.indexSkill >= animation.Length;
+            // Own-skill animation is suppressed during massacre, so indexSkill
+            // never advances. Throttle by local skill cooldown, never by ACK latency.
+            return player != null;
         }
 
         private static bool IsWithinMassacreSkillRange(Skill skill, int targetX, int targetY, int playerX, int playerY)
         {
-            return skill != null && Math.abs(targetX - playerX) <= skill.dx
-                && Math.abs(targetY - playerY) <= skill.dy;
+            return skill != null && NRO.Combat.MassacreAttackRange.IsWithinSkillRange(skill.template.id,
+                System.Math.Abs((long)targetX - playerX), System.Math.Abs((long)targetY - playerY), skill.dx, skill.dy);
         }
 
         private static int GetMassacreApproachX(Skill skill, int targetX, int playerX)
         {
-            int offset = System.Math.Max(0, skill.dx - 20);
+            int offset = NRO.Combat.MassacreAttackRange.GetApproachOffset(skill.template.id, skill.dx);
             return targetX + ((playerX > targetX) ? offset : -offset);
         }
 
@@ -423,7 +425,7 @@ namespace Game1.Mod.XMAP
 			return (current + 1) % count;
 		}
 
-		private static Skill GetSkillAttack()
+		private static Skill GetSkillAttack(bool mobTarget)
 		{
 			Char player = Char.myCharz();
 			int count = player.vSkill.size();
@@ -433,7 +435,8 @@ namespace Game1.Mod.XMAP
 			{
 				int index = (start + offset) % count;
 				Skill skill = (Skill)player.vSkill.elementAt(index);
-				if (!IsExcludedMassacreSkill(skill) && skill.template.type >= 1 && skill.template.type <= 4 && CanUseSkill(skill))
+				if (!IsExcludedMassacreSkill(skill) && skill.template.type >= 1 && skill.template.type <= 4 && CanUseSkill(skill, mobTarget)
+					&& MobAttackResultTracker.CanAttemptFor(1, (byte)skill.template.id, mSystem.currentTimeMillis()))
 				{
 					return skill;
 				}
@@ -457,11 +460,14 @@ namespace Game1.Mod.XMAP
 
 		private static bool TryUseMassacreSkill(Skill skill, Mob targetMob, Char targetChar)
 		{
-			if (skill == null || IsExcludedMassacreSkill(skill) || !CanUseSkill(skill)) return false;
+			if (skill == null || IsExcludedMassacreSkill(skill) || !CanUseSkill(skill, targetMob != null)) return false;
+			if (targetMob != null && targetChar == null
+				&& !MobAttackResultTracker.CanAttemptFor(1, (byte)skill.template.id, mSystem.currentTimeMillis())) return false;
 			Char player = Char.myCharz();
 			if (!skill.template.isBuffToPlayer() && !skill.template.isUseAlone() && targetMob == null && targetChar == null) return false;
 			if (!EnsurePositionSent() || !GameScr.gI().TrySelectSkillForAutoCombat(skill)) return false;
 			bool used;
+			long attackStartedAt = 0L;
 			if (skill.template.isBuffToPlayer())
 			{
 				MyVector targetPlayers = new MyVector();
@@ -479,12 +485,25 @@ namespace Game1.Mod.XMAP
 				MyVector targetPlayers = new MyVector();
 				if (targetMob != null) targetMobs.addElement(targetMob);
 				if (targetChar != null) targetPlayers.addElement(targetChar);
-				used = Service.gI().TrySendPlayerAttack(targetMobs, targetPlayers, (targetChar == null) ? 1 : 2);
+				if (targetMob != null && targetChar == null)
+				{
+					used = Service.gI().TrySendPlayerAttack(targetMobs, targetPlayers, 1, delegate(MobAttackResult result)
+					{
+						if (result.Status == MobAttackResultTracker.Accepted
+							|| skill.lastTimeUseThisSkill != attackStartedAt) return;
+						ModFunc.GI().SetUsedSkill(skill, result.Status == MobAttackResultTracker.OutOfRange ? 0 : result.RetryAfterMs);
+					});
+				}
+				else
+				{
+					used = Service.gI().TrySendPlayerAttack(targetMobs, targetPlayers, (targetChar == null) ? 1 : 2);
+				}
 			}
 			if (used)
 			{
 				AdvanceMassacreSkillCursor(skill);
 				ModFunc.GI().SetUsedSkill(skill);
+				attackStartedAt = skill.lastTimeUseThisSkill;
 			}
 			return used;
 		}
@@ -525,10 +544,11 @@ namespace Game1.Mod.XMAP
 			return skill.coolDown < SkillBetter.coolDown || flag;
 		}
 
-        private static bool CanUseSkill(Skill skill)
+        private static bool CanUseSkill(Skill skill, bool mobTarget = false)
         {
             if (skill == null || skill.template == null) return false;
-            if (mSystem.currentTimeMillis() - skill.lastTimeUseThisSkill <= (long)skill.coolDown + 25L) return false;
+            long cooldown = mobTarget ? System.Math.Max(0, skill.coolDown - 50L) : (long)skill.coolDown + 25L;
+            if (mSystem.currentTimeMillis() - skill.lastTimeUseThisSkill < cooldown) return false;
             Char player = Char.myCharz();
             if (skill.template.id == 9 && player.cHP <= player.cHPFull / 10) return false;
             skill.paintCanNotUseSkill = false;

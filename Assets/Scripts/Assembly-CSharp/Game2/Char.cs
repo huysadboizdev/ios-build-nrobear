@@ -658,6 +658,12 @@ namespace Game2
 		private long chargeStartTime;
 
 		private bool hasSendAttack;
+		private long skillPaintManaSpent;
+		private int skillPaintStaminaSpent;
+		private Skill pendingManualMobRetrySkill;
+		private Mob pendingManualMobRetryTarget;
+		private long pendingManualMobRetryAt;
+		private int pendingManualMobRetryMap;
 
 		public bool isMabuHold;
 
@@ -1385,8 +1391,43 @@ namespace Game2
 			}
 		}
 
+		private void cancelPendingManualMobRetry()
+		{
+			pendingManualMobRetrySkill = null;
+			pendingManualMobRetryTarget = null;
+			pendingManualMobRetryAt = 0L;
+		}
+
+		private void scheduleManualMobRetry(Skill skill, Mob target, int delayMs)
+		{
+			pendingManualMobRetrySkill = skill;
+			pendingManualMobRetryTarget = target;
+			pendingManualMobRetryAt = mSystem.currentTimeMillis() + System.Math.Max(0, delayMs);
+			pendingManualMobRetryMap = TileMap.mapID;
+		}
+
+		private void updatePendingManualMobRetry()
+		{
+			if (!me || pendingManualMobRetrySkill == null || pendingManualMobRetryTarget == null) return;
+			if (isLoadingMap || ischangingMap || Controller.isStopReadMessage
+				|| TileMap.mapID != pendingManualMobRetryMap || !Service.gI().IsCombatConnectionReady()
+				|| meDead || statusMe == 14 || statusMe == 5 || cHP <= 0
+				|| stone || sleepEff || blindEff || holdEffID != 0 || isTeleport || telePortSkill
+				|| myskill != pendingManualMobRetrySkill || mobFocus != pendingManualMobRetryTarget
+				|| pendingManualMobRetryTarget.status == 0 || pendingManualMobRetryTarget.status == 1
+				|| !GameScr.vMob.contains(pendingManualMobRetryTarget))
+			{
+				cancelPendingManualMobRetry();
+				return;
+			}
+			if (mSystem.currentTimeMillis() < pendingManualMobRetryAt || skillPaint != null) return;
+			cancelPendingManualMobRetry();
+			GameScr.gI().doFire(isFireByShortCut: false, skipWaypoint: true);
+		}
+
 		public virtual void update()
 		{
+			updatePendingManualMobRetry();
 			if (activeChargeSkill != null && !isWaitMonkey && !isStandAndCharge && !isFlyAndCharge && !isUseSkillAfterCharge && !isCreateDark) { activeChargeSkill = null; chargeMob = null; chargeChar = null; chargeOwnsMove = false; chargeOwnsAnimation = false; }
 			if (chargeOwnsAnimation && !chargeTargetIsValid()) stopUseChargeSkill();
 			if (isUseSkillAfterCharge && SkillCastTiming.NowMilliseconds() - chargeDeadline >= 10000) stopUseChargeSkill();
@@ -4259,7 +4300,6 @@ namespace Game2
 		public void setSkillPaint(SkillPaint skillPaint, int sType)
 		{
 			if (me && !finishingCharge && (isStandAndCharge || isFlyAndCharge || isWaitMonkey || isUseSkillAfterCharge)) return;
-			hasSendAttack = false;
 			if (stone || (me && myskill.template.id == 9 && cHP <= cHPFull / 10))
 			{
 				return;
@@ -4288,19 +4328,33 @@ namespace Game2
 				return;
 			}
 			long num = mSystem.currentTimeMillis();
+			int mobSkillCooldown = myskill.coolDown;
+			if (mobFocus != null && charFocus == null && myskill.template != null && (myskill.template.type == 1 || myskill.template.type == 4))
+				mobSkillCooldown = System.Math.Max(0, mobSkillCooldown - 50);
 			if (me)
 			{
 				if (isSelectingSkillBuffToPlayer() && charFocus == null)
 				{
 					return;
 				}
-				if (!finishingCharge && num - myskill.lastTimeUseThisSkill < myskill.coolDown)
+				if (!finishingCharge && num - myskill.lastTimeUseThisSkill < mobSkillCooldown)
 				{
 					myskill.paintCanNotUseSkill = true;
 					return;
 				}
-				if (!finishingCharge || num - myskill.lastTimeUseThisSkill >= myskill.coolDown)
+				if (!finishingCharge && mobFocus != null && myskill.template != null
+					&& (myskill.template.type == 1 || myskill.template.type == 4)
+					&& !NRO.Combat.MobAttackResultTracker.CanAttemptFor(2, (byte)myskill.template.id, num))
+				{
+					myskill.paintCanNotUseSkill = true;
+					return;
+				}
+				cancelPendingManualMobRetry();
+				hasSendAttack = false;
+				if (!finishingCharge || num - myskill.lastTimeUseThisSkill >= mobSkillCooldown)
 					myskill.lastTimeUseThisSkill = num;
+				long manaBeforeSkillPaint = cMP;
+				int staminaBeforeSkillPaint = cStamina;
 				if (myskill.template.manaUseType == 2)
 				{
 					cMP = 1L;
@@ -4320,6 +4374,8 @@ namespace Game2
 				{
 					cMP = 0L;
 				}
+				skillPaintManaSpent = System.Math.Max(0L, manaBeforeSkillPaint - cMP);
+				skillPaintStaminaSpent = System.Math.Max(0, staminaBeforeSkillPaint - cStamina);
 			}
 			if (me)
 			{
@@ -4825,10 +4881,40 @@ namespace Game2
 					{
 						return;
 					}
-					if (Service.gI().TrySendPlayerAttack(myVector, myVector2, type))
+					Skill attackSkill = myskill;
+					long attackStartedAt = attackSkill.lastTimeUseThisSkill;
+					Mob attackTarget = mobFocus;
+					long rejectedManaRefund = skillPaintManaSpent;
+					int rejectedStaminaRefund = skillPaintStaminaSpent;
+					bool sent = Service.gI().TrySendPlayerAttack(myVector, myVector2, type, delegate(NRO.Combat.MobAttackResult result)
 					{
-						hasSendAttack = true;
+						if (result.Status == NRO.Combat.MobAttackResultTracker.Accepted
+							|| attackSkill.lastTimeUseThisSkill != attackStartedAt) return;
+						long retryAfter = result.Status == NRO.Combat.MobAttackResultTracker.OutOfRange ? 0L : result.RetryAfterMs;
+						long retryAt = mSystem.currentTimeMillis() + retryAfter;
+						attackSkill.lastTimeUseThisSkill = retryAfter > 0
+							? retryAt - attackSkill.coolDown : 0L;
+						attackSkill.paintCanNotUseSkill = false;
+						if ((result.Status == NRO.Combat.MobAttackResultTracker.OutOfRange
+							|| result.Status == NRO.Combat.MobAttackResultTracker.Cooldown)
+							&& myskill == attackSkill && mobFocus == attackTarget
+							&& attackTarget != null && attackTarget.status != 0 && attackTarget.status != 1)
+						{
+							// Wait until both the server's retry time and this punch animation have finished.
+							int retryDelay = result.Status == NRO.Combat.MobAttackResultTracker.Cooldown ? result.RetryAfterMs : 0;
+							scheduleManualMobRetry(attackSkill, attackTarget, retryDelay);
+						}
+					});
+					if (!sent)
+					{
+						cMP = System.Math.Min(cMPFull, cMP + rejectedManaRefund);
+						cStamina = System.Math.Min(cMaxStamina, cStamina + rejectedStaminaRefund);
+						skillPaintManaSpent = 0L;
+						skillPaintStaminaSpent = 0;
+						attackSkill.lastTimeUseThisSkill = 0;
+						attackSkill.paintCanNotUseSkill = false;
 					}
+					else hasSendAttack = true;
 				}
 				return;
 			}
@@ -6173,7 +6259,10 @@ namespace Game2
 					int num17 = Math.abs(myCharz().cx - mob.x);
 					int num18 = Math.abs(myCharz().cy - mob.y);
 					int num19 = ((num17 <= num18) ? num18 : num17);
-					if (num2 <= mob.x && mob.x <= num3 && cmy <= mob.y && mob.y <= num4 && (mobFocus == null || num19 < array[0]))
+					if (num2 <= mob.x && mob.x <= num3 && cmy <= mob.y && mob.y <= num4
+						&& myskill != null && myskill.template != null
+						&& NRO.Combat.MassacreAttackRange.IsWithinSkillRange(myskill.template.id, num17, num18, getdxSkill(), getdySkill())
+						&& (mobFocus == null || num19 < array[0]))
 					{
 						mobFocus = mob;
 						array[0] = num19;
@@ -6182,7 +6271,9 @@ namespace Game2
 			}
 			else
 			{
-				if (mobFocus.status != 1 && mobFocus.status != 0 && num2 <= mobFocus.x && mobFocus.x <= num3 && cmy <= mobFocus.y && mobFocus.y <= num4)
+				if (mobFocus.status != 1 && mobFocus.status != 0 && num2 <= mobFocus.x && mobFocus.x <= num3 && cmy <= mobFocus.y && mobFocus.y <= num4
+					&& myskill != null && myskill.template != null
+					&& NRO.Combat.MassacreAttackRange.IsWithinSkillRange(myskill.template.id, Math.abs(myCharz().cx - mobFocus.x), Math.abs(myCharz().cy - mobFocus.y), getdxSkill(), getdySkill()))
 				{
 					ClearFocus(0);
 					return;
@@ -6194,7 +6285,10 @@ namespace Game2
 					int num20 = Math.abs(myCharz().cx - mob2.x);
 					int num21 = Math.abs(myCharz().cy - mob2.y);
 					int num22 = ((num20 <= num21) ? num21 : num20);
-					if (num2 <= mob2.x && mob2.x <= num3 && cmy <= mob2.y && mob2.y <= num4 && (mobFocus == null || num22 < array[0]))
+					if (num2 <= mob2.x && mob2.x <= num3 && cmy <= mob2.y && mob2.y <= num4
+						&& myskill != null && myskill.template != null
+						&& NRO.Combat.MassacreAttackRange.IsWithinSkillRange(myskill.template.id, num20, num21, getdxSkill(), getdySkill())
+						&& (mobFocus == null || num22 < array[0]))
 					{
 						mobFocus = mob2;
 						array[0] = num22;

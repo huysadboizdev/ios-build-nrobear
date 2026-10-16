@@ -1,5 +1,6 @@
-using System;
+﻿using System;
 using Game1.Assets.src.g;
+using NRO.Combat;
 
 namespace Game1
 {
@@ -1232,7 +1233,15 @@ namespace Game1
         public void sendPlayerAttack(MyVector vMob, MyVector vChar, int type) { TrySendPlayerAttack(vMob, vChar, type); }
 		public bool TrySendPlayerAttack(MyVector vMob, MyVector vChar, int type)
 		{
+			return TrySendPlayerAttack(vMob, vChar, type, null);
+		}
+
+		public bool TrySendPlayerAttack(MyVector vMob, MyVector vChar, int type, Action<MobAttackResult> resultCallback)
+		{
             if (!IsCombatConnectionReady() || vMob == null || vChar == null || (vMob.size() == 0 && vChar.size() == 0)) return false;
+			int pendingSequence = 0;
+			byte pendingSkillId = 0;
+			byte pendingMobId = 0;
 			try
 			{
 				Message message = null;
@@ -1295,15 +1304,32 @@ namespace Game1
 					}
 				}
 				message.writer().writeSByte((sbyte)Char.myCharz().cdir);
+				if (message != null && message.command == 54 && vMob.size() == 1 && vChar.size() == 0)
+				{
+					Mob targetMob = (Mob)vMob.elementAt(0);
+					Skill activeSkill = Char.myCharz().myskill;
+					if (targetMob != null && !targetMob.isMobMe && activeSkill != null && activeSkill.template != null)
+					{
+						pendingSequence = MobAttackResultTracker.BeginFor(1, (byte)activeSkill.template.id, (byte)targetMob.mobId, resultCallback);
+						if (pendingSequence == 0) { message.cleanup(); return false; }
+						pendingSkillId = (byte)activeSkill.template.id;
+						pendingMobId = (byte)targetMob.mobId;
+						message.writer().writeByte(0xA7);
+						message.writer().writeInt(pendingSequence);
+						message.writer().writeByte(activeSkill.template.id);
+					}
+				}
 				if (message != null)
 				{
 					session.sendMessage(message);
+					if (pendingSequence != 0) NRO.Combat.MobAttackTrace.RecordSend(1, pendingSequence, pendingSkillId, pendingMobId);
                     return true;
 				}
                 return false;
 			}
 			catch (Exception)
 			{
+				if (pendingSequence != 0) MobAttackResultTracker.CancelFor(1, pendingSequence);
                 return false;
 			}
 		}

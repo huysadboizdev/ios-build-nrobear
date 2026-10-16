@@ -2004,7 +2004,8 @@ namespace Game1
 				int num3 = Math.abs(Char.myCharz().cx - Char.myCharz().mobFocus.getX());
 				int num4 = Math.abs(Char.myCharz().cy - Char.myCharz().mobFocus.getY());
 				Char.myCharz().cvx = 0;
-				if (num3 > Char.myCharz().myskill.dx || num4 > Char.myCharz().myskill.dy)
+				if (!NRO.Combat.MassacreAttackRange.IsWithinSkillRange(Char.myCharz().myskill.template.id,
+					num3, num4, Char.myCharz().myskill.dx, Char.myCharz().myskill.dy))
 				{
 					bool flag = false;
 					if (Char.myCharz().mobFocus is BigBoss || Char.myCharz().mobFocus is BigBoss2)
@@ -2012,6 +2013,11 @@ namespace Game1
 						flag = true;
 					}
 					int num5 = (Char.myCharz().myskill.dx - ((!flag) ? 20 : 50)) * ((Char.myCharz().cx > Char.myCharz().mobFocus.getX()) ? 1 : (-1));
+					if (NRO.Combat.MassacreAttackRange.RequiresServerMeleeRange(Char.myCharz().myskill.template.id))
+					{
+						int offset = NRO.Combat.MassacreAttackRange.GetApproachOffset(Char.myCharz().myskill.template.id, Char.myCharz().myskill.dx);
+						num5 = offset * ((Char.myCharz().cx > Char.myCharz().mobFocus.getX()) ? 1 : (-1));
+					}
 					if (num3 <= Char.myCharz().myskill.dx)
 					{
 						num5 = 0;
