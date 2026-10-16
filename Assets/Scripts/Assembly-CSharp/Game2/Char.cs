@@ -4821,8 +4821,14 @@ namespace Game2
 				}
 				if (me && !isSelectingSkillUseAlone() && !hasSendAttack)
 				{
-					Service.gI().sendPlayerAttack(myVector, myVector2, type);
-					hasSendAttack = true;
+					if ((cx != cxSend || cy != cySend) && !Service.gI().TryCharMove())
+					{
+						return;
+					}
+					if (Service.gI().TrySendPlayerAttack(myVector, myVector2, type))
+					{
+						hasSendAttack = true;
+					}
 				}
 				return;
 			}
@@ -5747,15 +5753,11 @@ namespace Game2
 
 		public void paintCharWithSkill(mGraphics g)
 		{
-			SkillInfoPaint[] array = skillInfoPaint();
 			if (ShouldSuppressOwnSkillAnimation(me))
 			{
-				if (array != null && indexSkill >= 0 && indexSkill < array.Length)
-				{
-					indexSkill = array.Length;
-				}
 				return;
 			}
+			SkillInfoPaint[] array = skillInfoPaint();
 			ty = 0;
 			cf = array[indexSkill].status;
 			paintCharWithoutSkill(g);

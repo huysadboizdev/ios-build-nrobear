@@ -117,6 +117,8 @@ public static class HighSpeedSkillRegression
         {
             foreach (string ns in new[] { "Game1", "Game2" })
             {
+                SuppressedPaintKeepsAttackFrame(ns);
+                UnsentPositionDoesNotConsumeAttack(ns);
                 ExistingEffectsContinue(ns);
                 CancelAfterDeadline(ns); DeathLock(ns); TargetDiesDuringRelease(ns);
                 foreach (int speed in new[] { 1, 2, 5, 10, 20, 50, 100 })
@@ -127,6 +129,41 @@ public static class HighSpeedSkillRegression
             Debug.Log("HIGH_SPEED_SKILL_REGRESSION_PASS checks=" + checks);
         }
         finally { SkillCastTiming.NowMilliseconds = clock; }
+    }
+
+    static void SuppressedPaintKeepsAttackFrame(string ns)
+    {
+        var f = new Fixture(ns, 10, true);
+        var paint = Activator.CreateInstance(f.Type("SkillPaint"));
+        var frames = Array.CreateInstance(f.Type("SkillInfoPaint"), 2);
+        Set(paint.GetType(), paint, "skillStand", frames);
+        Set(f.CharacterType, f.Actor, "skillPaint", paint);
+        Set(f.CharacterType, f.Actor, "skillPaintRandomPaint", paint);
+        Set(f.CharacterType, f.Actor, "sType", 0);
+        Set(f.CharacterType, f.Actor, "indexSkill", 0);
+        Set(f.Type("Mod.XMAP.PickMob"), null, "tanSat", true);
+        try
+        {
+            Call(f.Actor, "paintCharWithSkill", (object)null);
+            Assert((int)Get(f.CharacterType, f.Actor, "indexSkill") == 0,
+                ns + " hiding own skill visuals must not consume the combat animation frame");
+        }
+        finally
+        {
+            Set(f.Type("Mod.XMAP.PickMob"), null, "tanSat", false);
+        }
+    }
+
+    static void UnsentPositionDoesNotConsumeAttack(string ns)
+    {
+        var f = new Fixture(ns, 0, true);
+        var paint = Activator.CreateInstance(f.Type("SkillPaint"));
+        Set(paint.GetType(), paint, "effectHappenOnMob", 1);
+        Set(f.CharacterType, f.Actor, "skillPaintRandomPaint", paint);
+        Set(f.CharacterType, f.Actor, "hasSendAttack", false);
+        Call(f.Actor, "setAttack");
+        Assert(!(bool)Get(f.CharacterType, f.Actor, "hasSendAttack"),
+            ns + " attack must remain retryable until movement and attack packets can be sent");
     }
 
     public static void RunReviewRegressions()
@@ -212,7 +249,7 @@ public static class HighSpeedSkillRegression
             Assert(f.Packets.Count == prepareCount + 1, ns + " exactly one no-focus release");
         else
         {
-            Assert((bool)Get(f.CharacterType, f.Actor, "hasSendAttack"), ns + " release animation is latched once");
+            Assert(!(bool)Get(f.CharacterType, f.Actor, "hasSendAttack"), ns + " failed combat send remains retryable");
             Assert(f.Packets.Count == prepareCount, ns + " disconnected fixture does not emit combat packets");
         }
         Assert((long)Get(f.CharacterType, f.Actor, "cMP") == 90L, ns + " mana debited once");
