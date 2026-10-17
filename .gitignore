@@ -19,6 +19,7 @@
 [Uu]serSettings/
 /MemoryCaptures/
 /Recordings/
+/.analysis/
 
 # New exports; previously tracked release artifacts remain tracked
 /Builds/
