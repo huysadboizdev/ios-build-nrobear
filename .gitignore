@@ -10,3 +10,15 @@
 # macOS metadata
 .DS_Store
 *.xcuserdata/
+
+# Unity-generated and user-local files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]serSettings/
+/MemoryCaptures/
+/Recordings/
+
+# New exports; previously tracked release artifacts remain tracked
+/Builds/

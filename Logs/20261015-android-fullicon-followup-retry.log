@@ -1,3 +1,0 @@
-[Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Connection to channel LicenseClient-Admin refused
-[Licensing::Module] Successfully launched the LicensingClient (PId: 9320)

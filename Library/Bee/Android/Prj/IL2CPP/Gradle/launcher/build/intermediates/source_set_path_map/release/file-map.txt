@@ -1,9 +1,0 @@
-com.DefaultCompany.DragonBoy002.launcher-pngs-0 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\build\generated\res\pngs\release
-com.DefaultCompany.DragonBoy002.launcher-resValues-1 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\build\generated\res\resValues\release
-com.DefaultCompany.DragonBoy002.launcher-rs-2 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\build\generated\res\rs\release
-com.DefaultCompany.DragonBoy002.launcher-mergeReleaseResources-3 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.DefaultCompany.DragonBoy002.launcher-mergeReleaseResources-4 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.DefaultCompany.DragonBoy002.launcher-merged_res-5 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\build\intermediates\merged_res\release
-com.DefaultCompany.DragonBoy002.launcher-main-6 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\main\res
-com.DefaultCompany.DragonBoy002.launcher-release-7 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\launcher\src\release\res
-com.DefaultCompany.DragonBoy002.launcher-packaged_res-8 C:\Users\Admin\Downloads\PRJ_2Tab_550K\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\packaged_res\release
