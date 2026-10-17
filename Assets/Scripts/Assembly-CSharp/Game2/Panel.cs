@@ -1943,6 +1943,32 @@ namespace Game2
             return (long)item.template.strRequire;
         }
 
+        private static string getSealSetBonusDetail(Item item)
+        {
+            if (item == null || item.itemOption == null)
+            {
+                return string.Empty;
+            }
+            for (int index = 0; index < item.itemOption.Length; index++)
+            {
+                ItemOption option = item.itemOption[index];
+                if (option == null || option.optionTemplate == null)
+                {
+                    continue;
+                }
+                switch (option.optionTemplate.id)
+                {
+                    case Item.OPT_STAR:
+                        return "Đủ 5 món Tinh Ấn: +15% sức đánh";
+                    case Item.OPT_MOON:
+                        return "Đủ 5 món Nguyệt Ấn: +15% KI tối đa";
+                    case Item.OPT_SUN:
+                        return "Đủ 5 món Nhật Ấn: +15% HP tối đa";
+                }
+            }
+            return string.Empty;
+        }
+
         public void addItemDetail(Item item)
         {
             try
@@ -2053,6 +2079,11 @@ namespace Game2
                             }
                         }
                     }
+                }
+                string sealSetBonusDetail = getSealSetBonusDetail(item);
+                if (!string.IsNullOrEmpty(sealSetBonusDetail))
+                {
+                    text = text + "\n|1|1|" + sealSetBonusDetail;
                 }
                 long powerRequirement = getItemPowerRequirement(currItem);
                 if (isEquipmentPowerItem(currItem))
