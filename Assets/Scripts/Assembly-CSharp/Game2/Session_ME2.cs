@@ -263,7 +263,7 @@ namespace Game2
 
 		private long timeWaitConnect;
 
-		public static MyVector recieveMsg = new MyVector();
+		public static readonly Queue<Message> recieveMsg = new Queue<Message>();
 
 		public void clearSendingMessage()
 		{
@@ -434,46 +434,45 @@ namespace Game2
 			return result;
 		}
 
-		public static void onRecieveMsg(Message msg)
-		{
-			if (Thread.CurrentThread.Name == Main.mainThreadName)
-			{
-				messageHandler.onMessage(msg);
-			}
-			else
-			{
-				lock (recieveMsg)
-				{
-					recieveMsg.addElement(msg);
-				}
-			}
-		}
+        private const int MaxReceiveMessagesPerFrame = 64;
+        private const int ReceiveBudgetMilliseconds = 2;
+        private static int lastReceiveFrame = -1;
 
-		public static void update()
-		{
-			Message[] messages;
-			lock (recieveMsg)
-			{
-				if (Controller.isStopReadMessage || recieveMsg.size() == 0)
-				{
-					return;
-				}
-				int count = recieveMsg.size();
-				messages = new Message[count];
-				for (int i = 0; i < count; i++)
-				{
-					messages[i] = (Message)recieveMsg.elementAt(i);
-				}
-				recieveMsg.removeAllElements();
-			}
-			for (int i = 0; i < messages.Length; i++)
-			{
-				if (messages[i] != null)
-				{
-					messageHandler.onMessage(messages[i]);
-				}
-			}
-		}
+        public static void onRecieveMsg(Message msg)
+        {
+            // Main-thread arrivals must obey the same FIFO and capsule pause.
+            lock (recieveMsg)
+            {
+                recieveMsg.Enqueue(msg);
+            }
+        }
+
+        public static void update()
+        {
+            int frame = Time.frameCount;
+            if (Controller.isStopReadMessage || lastReceiveFrame == frame) return;
+            lock (recieveMsg)
+            {
+                if (recieveMsg.Count == 0) return;
+            }
+            lastReceiveFrame = frame;
+            long started = System.Diagnostics.Stopwatch.GetTimestamp();
+            for (int processed = 0; processed < MaxReceiveMessagesPerFrame; processed++)
+            {
+                // A departure handler can suspend reads until Teleport finishes.
+                if (Controller.isStopReadMessage) return;
+                Message message;
+                lock (recieveMsg)
+                {
+                    if (recieveMsg.Count == 0) return;
+                    message = recieveMsg.Dequeue();
+                }
+                // Never hold the producer lock while loading map/image resources.
+                if (message != null) messageHandler.onMessage(message);
+                if ((System.Diagnostics.Stopwatch.GetTimestamp() - started) * 1000
+                    >= System.Diagnostics.Stopwatch.Frequency * ReceiveBudgetMilliseconds) return;
+            }
+        }
 
 		public void close()
 		{

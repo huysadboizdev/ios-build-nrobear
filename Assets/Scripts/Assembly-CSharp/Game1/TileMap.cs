@@ -307,7 +307,6 @@ namespace Game1
 							imgTile[j] = null;
 						}
 					}
-					mSystem.gcc();
 				}
 				imgTile = new Image[imageCount];
 				string empty = string.Empty;

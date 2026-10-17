@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Game1.Mod.XMAP
@@ -6,96 +7,87 @@ namespace Game1.Mod.XMAP
 	{
 		public static List<int> FindWay(int idMapStart, int idMapEnd)
 		{
-			List<int> wayPassedStart = GetWayPassedStart(idMapStart);
-			return FindWay(idMapEnd, wayPassedStart);
+			return FindWay(idMapStart, idMapEnd, GetNextMapIds);
 		}
 
-		private static List<int> FindWay(int idMapEnd, List<int> wayPassed)
+		// Keep route rules testable without depending on live map state.
+		public static List<int> FindWay(int idMapStart, int idMapEnd, Func<int, IEnumerable<int>> getNextMaps)
 		{
-			int num = wayPassed[wayPassed.Count - 1];
-			if (num == idMapEnd)
+			List<int> way = FindShortestWay(idMapStart, idMapEnd, getNextMaps, true);
+			return way ?? FindShortestWay(idMapStart, idMapEnd, getNextMaps, false);
+		}
+
+		private static IEnumerable<int> GetNextMapIds(int mapID)
+		{
+			if (XmapData.GI().CanGetMapNexts(mapID))
 			{
-				return wayPassed;
-			}
-			if (!XmapData.GI().CanGetMapNexts(num))
-			{
-				return null;
-			}
-			List<List<int>> list = new List<List<int>>();
-			foreach (MapNext mapNext in XmapData.GI().GetMapNexts(num))
-			{
-				List<int> list2 = null;
-				if (!wayPassed.Contains(mapNext.MapID))
+				foreach (MapNext next in XmapData.GI().GetMapNexts(mapID))
 				{
-					List<int> wayPassedNext = GetWayPassedNext(wayPassed, mapNext.MapID);
-					list2 = FindWay(idMapEnd, wayPassedNext);
-				}
-				if (list2 != null)
-				{
-					list.Add(list2);
+					yield return next.MapID;
 				}
 			}
-			return GetBestWay(list);
 		}
 
-		private static List<int> GetBestWay(List<List<int>> ways)
+		private static List<int> FindShortestWay(int start, int end, Func<int, IEnumerable<int>> getNextMaps, bool avoidBadWay)
 		{
-			if (ways.Count == 0)
+			if (getNextMaps == null)
 			{
-				return null;
+				throw new ArgumentNullException("getNextMaps");
 			}
-			List<int> list = ways[0];
-			for (int i = 1; i < ways.Count; i++)
+
+			List<int> initial = new List<int> { start };
+			if (start == end)
 			{
-				if (IsWayBetter(ways[i], list))
+				return initial;
+			}
+
+			Queue<List<int>> queue = new Queue<List<int>>();
+			HashSet<long> visited = new HashSet<long>();
+			queue.Enqueue(initial);
+			visited.Add(StateKey(-1, start));
+			while (queue.Count > 0)
+			{
+				List<int> way = queue.Dequeue();
+				int current = way[way.Count - 1];
+				IEnumerable<int> nextMaps = getNextMaps(current);
+				if (nextMaps == null)
 				{
-					list = ways[i];
+					continue;
+				}
+
+				foreach (int next in nextMaps)
+				{
+					int previous = way.Count > 1 ? way[way.Count - 2] : -1;
+					if (avoidBadWay && IsBadTransition(previous, current, next))
+					{
+						continue;
+					}
+
+					if (!visited.Add(StateKey(current, next)))
+					{
+						continue;
+					}
+
+					List<int> nextWay = new List<int>(way) { next };
+					if (next == end)
+					{
+						return nextWay;
+					}
+					queue.Enqueue(nextWay);
 				}
 			}
-			return list;
+
+			return null;
 		}
 
-		private static List<int> GetWayPassedStart(int idMapStart)
+		private static long StateKey(int previous, int current)
 		{
-			return new List<int> { idMapStart };
+			return ((long)(previous + 1) << 32) | (uint)current;
 		}
 
-		private static List<int> GetWayPassedNext(List<int> wayPassed, int idMapNext)
+		private static bool IsBadTransition(int previous, int current, int next)
 		{
-			return new List<int>(wayPassed) { idMapNext };
-		}
-
-		private static bool IsWayBetter(List<int> way1, List<int> way2)
-		{
-			bool flag = IsBadWay(way1);
-			bool flag2 = IsBadWay(way2);
-			if (!flag || flag2)
-			{
-				if (!(!flag && flag2))
-				{
-					return way1.Count < way2.Count;
-				}
-				return true;
-			}
-			return false;
-		}
-
-		private static bool IsBadWay(List<int> way)
-		{
-			return IsWayGoFutureAndBack(way);
-		}
-
-		private static bool IsWayGoFutureAndBack(List<int> way)
-		{
-			List<int> list = new List<int> { 27, 28, 29 };
-			for (int i = 1; i < way.Count - 1; i++)
-			{
-				if (way[i] == 102 && way[i + 1] == 24 && list.Contains(way[i - 1]))
-				{
-					return true;
-				}
-			}
-			return false;
+			return current == 102 && next == 24 && (previous == 27 || previous == 28 || previous == 29);
 		}
 	}
 }

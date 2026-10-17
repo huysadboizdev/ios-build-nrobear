@@ -4449,20 +4449,25 @@ namespace Game2
 			if (skillPaint.id >= 128 && skillPaint.id <= 134)
 			{
 				skillPaint = GameScr.sks[skillPaint.id - 65];
-				if (charFocus != null)
+				// Local position comes from the server's skill response (packet 123).
+				// Predicting it here prevents the attack's normal movement sync from sending.
+				if (!me)
 				{
-					cx = charFocus.cx;
-					cy = charFocus.cy;
-					currentMovePoint = null;
+					if (charFocus != null)
+					{
+						cx = charFocus.cx;
+						cy = charFocus.cy;
+						currentMovePoint = null;
+					}
+					if (mobFocus != null)
+					{
+						cx = mobFocus.x;
+						cy = mobFocus.y;
+						currentMovePoint = null;
+					}
+					ServerEffect.addServerEffect(60, cx, cy, 1);
+					telePortSkill = true;
 				}
-				if (mobFocus != null)
-				{
-					cx = mobFocus.x;
-					cy = mobFocus.y;
-					currentMovePoint = null;
-				}
-				ServerEffect.addServerEffect(60, cx, cy, 1);
-				telePortSkill = true;
 			}
 			if (skillPaint.id >= 107 && skillPaint.id <= 113)
 			{

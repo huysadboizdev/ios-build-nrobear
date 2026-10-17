@@ -2675,7 +2675,6 @@ namespace Game1
 					GameCanvas.endDlg();
 					TileMap.vGo.removeAllElements();
 					PopUp.vPopups.removeAllElements();
-					mSystem.gcc();
 					TileMap.mapID = msg.reader().readUnsignedByte();
 					TileMap.planetID = msg.reader().readByte();
 					TileMap.tileID = msg.reader().readByte();
@@ -4763,8 +4762,6 @@ namespace Game1
 						_ = waypoint.minX;
 					}
 				}
-				Resources.UnloadUnusedAssets();
-				GC.Collect();
 				num = msg.reader().readByte();
 				Mob.newMob.removeAllElements();
 				for (sbyte b = 0; b < num; b++)
@@ -5038,8 +5035,6 @@ namespace Game1
 				sbyte teleport = msg.reader().readByte();
 				loadCurrMap(teleport);
 				Char.isLoadingMap = false;
-				Resources.UnloadUnusedAssets();
-				GC.Collect();
 				ModFunc.GI().canUpdate = true;
 			}
 			catch (Exception)

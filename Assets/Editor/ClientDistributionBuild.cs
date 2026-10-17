@@ -15,6 +15,7 @@ public static class ClientDistributionBuild
         NpcImageDecodeCases.Run();
         HighSpeedSkillRegression.Run();
         ReceiveQueueBudgetRegression.Run();
+        XmapAlgorithmRegression.Run();
     }
     public static void PC() { Build(BuildTarget.StandaloneWindows64); }
     public static void Android() { Build(BuildTarget.Android); }

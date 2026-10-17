@@ -119,6 +119,7 @@ public static class HighSpeedSkillRegression
             {
                 SuppressedPaintKeepsAttackFrame(ns);
                 UnsentPositionDoesNotConsumeAttack(ns);
+                InstantTransmissionWaitsForServerPosition(ns);
                 ExistingEffectsContinue(ns);
                 CancelAfterDeadline(ns); DeathLock(ns); TargetDiesDuringRelease(ns);
                 foreach (int speed in new[] { 1, 2, 5, 10, 20, 50, 100 })
@@ -164,6 +165,33 @@ public static class HighSpeedSkillRegression
         Call(f.Actor, "setAttack");
         Assert(!(bool)Get(f.CharacterType, f.Actor, "hasSendAttack"),
             ns + " attack must remain retryable until movement and attack packets can be sent");
+    }
+
+    static void InstantTransmissionWaitsForServerPosition(string ns)
+    {
+        for (int paintId = 128; paintId <= 134; paintId++)
+        {
+            var f = new Fixture(ns, 20, true);
+            Set(f.CharacterType, f.Actor, "cx", 100);
+            Set(f.CharacterType, f.Actor, "cy", 100);
+            Set(f.CharacterType, f.Actor, "cxSend", 100);
+            Set(f.CharacterType, f.Actor, "cySend", 100);
+            object mob = Get(f.CharacterType, f.Actor, "mobFocus");
+            Set(mob.GetType(), mob, "x", 400);
+            Set(mob.GetType(), mob, "y", 100);
+            Array paints = (Array)Get(f.ScreenType, null, "sks");
+            object paint = paints.GetValue(paintId);
+            Set(paint.GetType(), paint, "id", paintId);
+            Call(f.Actor, "setSkillPaint", paint, 0);
+            Assert((int)Get(f.CharacterType, f.Actor, "cx") == 100
+                && (int)Get(f.CharacterType, f.Actor, "cy") == 100,
+                ns + " DCTT must keep authoritative origin until server reply, paint=" + paintId);
+            Assert(!f.Flag("telePortSkill"), ns + " local DCTT must not latch movement before sending");
+            Call(f.Actor, "setAttack"); // Fixture deliberately rejects combat sends.
+            Assert(!f.Flag("telePortSkill") && (int)Get(f.CharacterType, f.Actor, "cx") == 100,
+                ns + " failed DCTT send must not strand predicted coordinates");
+            Assert(!f.Flag("hasSendAttack"), ns + " failed DCTT send must remain retryable");
+        }
     }
 
     public static void RunReviewRegressions()
