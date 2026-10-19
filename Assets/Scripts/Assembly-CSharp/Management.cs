@@ -4,7 +4,7 @@ public class Management
 {
     public static bool isLogo = true;
 
-    public static string IpServer = "NRO Bear:127.0.0.1:14445:0,0,0";
+    public static string IpServer = "NRO Bear:160.191.245.239:14445:0,0,0";
 
     public static string LinkWeb = "@ngu";
 
