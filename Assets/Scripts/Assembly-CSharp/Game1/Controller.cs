@@ -40,20 +40,20 @@ namespace Game1
 		public void onConnectOK(bool isMain1)
 		{
 			isMain = isMain1;
-            if(isMain1) BossNoticeBoard.Reset();
+            if(isMain1) BossNoticeBoard.Reconnected();
 			mSystem.onConnectOK();
 		}
 
 		public void onConnectionFail(bool isMain1)
 		{
-			if (isMain1) { AutoItem.Clear(); BossNoticeBoard.Reset(); MobAttackResultTracker.ClearFor(1); }
+			if (isMain1) { AutoItem.Clear(); BossNoticeBoard.TransportDisconnected(); MobAttackResultTracker.ClearFor(1); }
 			isMain = isMain1;
 			mSystem.onConnectionFail();
 		}
 
 		public void onDisconnected(bool isMain1)
 		{
-			if (isMain1) { AutoItem.Clear(); BossNoticeBoard.Reset(); MobAttackResultTracker.ClearFor(1); }
+			if (isMain1) { AutoItem.Clear(); BossNoticeBoard.TransportDisconnected(); MobAttackResultTracker.ClearFor(1); }
 			isMain = isMain1;
 			if (isMain1) Char.myCharz().stopUseChargeSkill();
 			mSystem.onDisconnected();
@@ -95,6 +95,7 @@ namespace Game1
 				Char @char = null;
 				MyVector myVector = new MyVector();
 				int num = 0;
+				sbyte b47 = 0;
 				GameCanvas.timeLoading = 15;
                 if (msg.command == -125) AutoItem.PausePending();
                 Controller2.readMessage(msg);
@@ -4162,7 +4163,7 @@ namespace Game1
 					}
 					if (readCharInfo(char10, msg))
 					{
-						sbyte b47 = msg.reader().readByte();
+						b47 = msg.reader().readByte();
 						if (char10.cy <= 10 && b47 != 0 && b47 != 2)
 						{
 							Teleport p2 = new Teleport(char10.cx, char10.cy, char10.head, char10.cdir, 1, isMe: false, (b47 != 1) ? b47 : char10.cgender)
@@ -4171,10 +4172,6 @@ namespace Game1
 							};
 							char10.isTeleport = true;
 							Teleport.addTeleport(p2);
-						}
-						if (b47 == 2)
-						{
-							char10.show();
 						}
 						for (int num190 = 0; num190 < GameScr.vMob.size(); num190++)
 						{
@@ -4186,10 +4183,6 @@ namespace Game1
 								char10.mobMe.y = char10.cy - 40;
 								break;
 							}
-						}
-						if (GameScr.findCharInMap(char10.charID) == null)
-						{
-							GameScr.vCharInMap.addElement(char10);
 						}
 						char10.isMonkey = msg.reader().readByte();
 						num191 = msg.reader().readShort();
@@ -4413,6 +4406,20 @@ namespace Game1
 					}
 					char10.isTichXanh = msg.reader().readByte() == 1;
 					GameScr.gI().getFlagImage(char10.charID, char10.cFlag);
+					Char existingChar = GameScr.findCharInMap(char10.charID);
+					if (existingChar == null)
+					{
+						GameScr.vCharInMap.addElement(char10);
+						existingChar = char10;
+					}
+					else
+					{
+						existingChar.refreshServerInfo(char10);
+					}
+					if (b47 == 2)
+					{
+						existingChar.show();
+					}
 					break;
 				}
 			}
@@ -5296,7 +5303,6 @@ namespace Game1
 						GameCanvas.isLoading = true;
 						TileMap.maps = null;
 						TileMap.types = null;
-						mSystem.gcc();
 						GameCanvas.debug("SA99", 2);
 						TileMap.tmw = msg.reader().readByte();
 						TileMap.tmh = msg.reader().readByte();

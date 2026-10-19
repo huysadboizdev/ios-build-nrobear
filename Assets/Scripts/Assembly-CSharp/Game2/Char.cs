@@ -975,6 +975,76 @@ namespace Game2
 			statusMe = 6;
 		}
 
+		public void refreshServerInfo(Char source)
+		{
+			if (source == null || source == this)
+			{
+				return;
+			}
+			clanID = source.clanID;
+			isCopy = source.isCopy;
+			clevel = source.clevel;
+			isInvisiblez = source.isInvisiblez;
+			cTypePk = source.cTypePk;
+			nClass = source.nClass;
+			cgender = source.cgender;
+			head = source.head;
+			cName = source.cName;
+			cHP = source.cHP;
+			dHP = source.dHP;
+			cHPShow = source.cHP;
+			cHPFull = source.cHPFull;
+			body = source.body;
+			leg = source.leg;
+			bag = source.bag;
+			isShadown = source.isShadown;
+			cx = source.cx;
+			cy = source.cy;
+			xSd = source.xSd;
+			ySd = source.ySd;
+			eff5BuffHp = source.eff5BuffHp;
+			eff5BuffMp = source.eff5BuffMp;
+			vEff.removeAllElements();
+			for (int i = 0; i < source.vEff.size(); i++)
+			{
+				vEff.addElement(source.vEff.elementAt(i));
+			}
+			isFlyUp = source.isFlyUp;
+			isTeleport = source.isTeleport;
+			mobMe = source.mobMe;
+			isMonkey = source.isMonkey;
+			idMount = source.idMount;
+			isHaveMount = source.isHaveMount;
+			isMountVip = source.isMountVip;
+			isEventMount = source.isEventMount;
+			isSpeacialMount = source.isSpeacialMount;
+			cFlag = source.cFlag;
+			isNhapThe = source.isNhapThe;
+			idAuraEff = source.idAuraEff;
+			idEff_Set_Item = source.idEff_Set_Item;
+			idHat = source.idHat;
+			isTichXanh = source.isTichXanh;
+			if (cHP <= 0 || statusMe == 14 || statusMe == 5)
+			{
+				statusMe = source.statusMe;
+			}
+			if (bag >= 201 && bag < 255)
+			{
+				addEffChar(new Effect(bag, this, 2, -1, 10, 1)
+				{
+					typeEff = 5
+				});
+			}
+			else
+			{
+				for (int effectId = 201; effectId < 255; effectId++)
+				{
+					removeEffChar(0, effectId);
+				}
+			}
+			lastUpdateTime = mSystem.currentTimeMillis();
+		}
+
 		public void applyCharLevelPercent()
 		{
 			try
@@ -1609,6 +1679,11 @@ namespace Game2
 					}
 					tpos = 0;
 					isSetPos = false;
+					if (statusMe == 14 || statusMe == 5)
+					{
+						telePortSkill = false;
+						return;
+					}
 					cx = xPos;
 					cy = yPos;
 					cp1 = (cp2 = (cp3 = 0));
@@ -6954,11 +7029,11 @@ namespace Game2
 			tpos = 0;
 			if (me)
 			{
-				if (GameCanvas.panel != null)
+				if (GameCanvas.panel != null && GameCanvas.panel.isShow)
 				{
 					GameCanvas.panel.hide();
 				}
-				if (GameCanvas.panel2 != null)
+				if (GameCanvas.panel2 != null && GameCanvas.panel2.isShow)
 				{
 					GameCanvas.panel2.hide();
 				}
