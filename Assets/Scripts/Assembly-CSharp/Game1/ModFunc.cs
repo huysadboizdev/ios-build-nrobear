@@ -2049,43 +2049,107 @@ namespace Game1
 			}
 		}
 
+		private static int autoPointRunId;
+		private static readonly object autoPointLock = new object();
+		private static bool autoPointWaiting;
+		private static long autoPointLastValue;
+		private static long autoPointSentAt;
+
 		public void SetIncreasePoint(string strPoint)
 		{
-			if (int.TryParse(strPoint, out var result) && indexAutoPoint != -1 && result > 0)
+			int result;
+			int runId;
+			lock (autoPointLock)
 			{
+				if (!int.TryParse(strPoint, out result) || indexAutoPoint < 0 || indexAutoPoint > 4 || result <= 0)
+				{
+					GameScr.info1.addInfo("Có lỗi xảy ra (100)", 0);
+					return;
+				}
 				pointIncrease = result;
-				new Thread(DoAutoIncreasePoint).Start();
+				autoPointWaiting = false;
+				runId = ++autoPointRunId;
 				GameScr.info1.addInfo("Tự động tăng " + strPointTypes[indexAutoPoint] + " đến " + result, 0);
 			}
-			else
+			new Thread(() => DoAutoIncreasePoint(runId)).Start();
+		}
+
+		private static bool StopAutoIncreasePoint(string message)
+		{
+			lock (autoPointLock)
 			{
-				GameScr.info1.addInfo("Có lỗi xảy ra (100)", 0);
+				if (indexAutoPoint < 0 || pointIncrease <= 0) return false;
+				indexAutoPoint = -1;
+				pointIncrease = 0;
+				autoPointForPet = false;
+				autoPointWaiting = false;
+				++autoPointRunId;
+				GameScr.info1.addInfo(message, 0);
+				return true;
 			}
 		}
 
-		private void DoAutoIncreasePoint()
+		public static bool OnAutoPointNotice(string notice)
 		{
-			while (indexAutoPoint != -1 && pointIncrease > 0)
+			if (notice == "Vui lòng mở giới hạn sức mạnh")
+				return StopAutoIncreasePoint("Đã xong: chỉ số đã đạt hoặc gần giới hạn hiện tại.");
+			if (notice == "Bạn không đủ tiềm năng")
+				return StopAutoIncreasePoint("Đã dừng cộng chỉ số: không đủ tiềm năng.");
+			return false;
+		}
+
+		private static bool StepAutoIncreasePoint(int runId)
+		{
+			lock (autoPointLock)
 			{
-				Char @char = (autoPointForPet ? Char.myPetz() : Char.myCharz());
-				if (indexAutoPoint switch
+				if (runId != autoPointRunId || indexAutoPoint < 0 || pointIncrease <= 0) return false;
+				Char character = autoPointForPet ? Char.myPetz() : Char.myCharz();
+				if (character == null || indexAutoPoint > 4)
 				{
-					0 => @char.cHPGoc, 
-					1 => @char.cMPGoc, 
-					2 => @char.cDamGoc, 
-					3 => @char.cDefGoc, 
-					4 => @char.cCriticalGoc, 
-					_ => 0L, 
-				} >= pointIncrease)
-				{
-					indexAutoPoint = -1;
-					pointIncrease = 0;
-					GameScr.info1.addInfo("Đã đạt chỉ số yêu cầu", 0);
-					break;
+					StopAutoIncreasePoint("Đã dừng cộng chỉ số: không có nhân vật hoặc đệ tử.");
+					return false;
 				}
-				Service.gI().upPotential(autoPointForPet, indexAutoPoint, 100);
-				Thread.Sleep(500);
+				long current;
+				switch (indexAutoPoint)
+				{
+					case 0: current = character.cHPGoc; break;
+					case 1: current = character.cMPGoc; break;
+					case 2: current = character.cDamGoc; break;
+					case 3: current = character.cDefGoc; break;
+					default: current = character.cCriticalGoc; break;
+				}
+				long remaining = (long)pointIncrease - current;
+				int unit = indexAutoPoint < 2 ? 20 : 1;
+				if (remaining < unit)
+				{
+					StopAutoIncreasePoint("Đã xong: chỉ số đã đạt hoặc gần mốc yêu cầu.");
+					return false;
+				}
+				long now = mSystem.currentTimeMillis();
+				if (autoPointWaiting && current <= autoPointLastValue)
+				{
+					if (now - autoPointSentAt < 5000) return true;
+					StopAutoIncreasePoint("Đã dừng cộng chỉ số: chưa nhận được phản hồi tăng chỉ số từ máy chủ.");
+					return false;
+				}
+				if (character.cTiemNang <= 0)
+				{
+					StopAutoIncreasePoint("Đã dừng cộng chỉ số: không đủ tiềm năng.");
+					return false;
+				}
+				// Defense and critical are purchased one point at a time.
+				int points = indexAutoPoint >= 3 ? 1 : (int)System.Math.Min(100L, remaining / unit);
+				autoPointLastValue = current;
+				autoPointSentAt = now;
+				autoPointWaiting = true;
+				Service.gI().upPotential(autoPointForPet, indexAutoPoint, points);
+				return true;
 			}
+		}
+
+		private void DoAutoIncreasePoint(int runId)
+		{
+			while (StepAutoIncreasePoint(runId)) Thread.Sleep(500);
 		}
 
 		public void LoadAcc()

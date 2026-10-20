@@ -133,10 +133,11 @@ namespace Game2
 			}
 		}
 
-		public void combine(sbyte action, MyVector id)
+		public bool combine(sbyte action, MyVector id)
 		{
 			Res.outz("combine");
 			Message message = null;
+			bool sent = false;
 			try
 			{
 				message = new Message(-81);
@@ -151,14 +152,16 @@ namespace Game2
 					}
 				}
 				session.sendMessage(message);
+				sent = true;
 			}
 			catch (Exception)
 			{
 			}
 			finally
 			{
-				message.cleanup();
+				if (message != null) message.cleanup();
 			}
+			return sent;
 		}
 
 		public void giaodich(sbyte action, int playerID, int index, int num)

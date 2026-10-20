@@ -854,6 +854,19 @@ namespace Game1
 
         public sbyte combineSuccess = -1;
 
+        private readonly UpgradeBatchState upgradeBatch = new UpgradeBatchState();
+
+        private bool upgradeBatchMode;
+        private bool upgradeMenuProtection;
+        private bool upgradeBatchAwaitingMenu;
+        private long upgradeBatchRequestTime;
+
+        private bool upgradeBatchResponseDrainPending;
+
+        private string upgradeBatchItemSignature = string.Empty;
+
+        private const int UPGRADE_BATCH_ATTEMPTS = 100;
+
         public int idNPC;
 
         public int xS;
@@ -1635,6 +1648,8 @@ namespace Game1
 
         public void setTypeCombine()
         {
+            CancelUpgradeBatch();
+            upgradeMenuProtection = false;
             type = 12;
             if (GameCanvas.w > 2 * WIDTH_PANEL)
             {
@@ -1671,7 +1686,8 @@ namespace Game1
 
         public void setTabCombine()
         {
-            currentListLength = vItemCombine.size() + 1;
+            EnsureUpgradeProtectionSelected();
+            currentListLength = vItemCombine.size() + (IsUpgradeCombineRecipe() ? 2 : 1);
             ITEM_HEIGHT = 24;
             cmyLim = currentListLength * ITEM_HEIGHT - hScroll;
             if (cmyLim < 0)
@@ -1688,6 +1704,261 @@ namespace Game1
                 cmy = (cmtoY = cmyLim);
             }
             selected = (GameCanvas.isTouch ? (-1) : 0);
+        }
+
+        private bool IsUpgradeCombineRecipe()
+        {
+            if (type != 12 || currentTabIndex != 0 || vItemCombine.size() == 0)
+            {
+                return false;
+            }
+            int equipment = 0, stones = 0;
+            for (int i = 0; i < vItemCombine.size(); i++)
+            {
+                Item item = (Item)vItemCombine.elementAt(i);
+                if (item == null || item.template == null) return false;
+                if (item.template.type < 5) equipment++;
+                else if (item.template.type == 14) stones++;
+                else if (item.template.id != 987) return false;
+            }
+            return equipment == 1 && stones == 1 && vItemCombine.size() <= 3;
+        }
+
+        private void EnsureUpgradeProtectionSelected()
+        {
+            if (!IsUpgradeCombineRecipe()) return;
+            for (int i = 0; i < vItemCombine.size(); i++)
+                if (IsProtectionStone((Item)vItemCombine.elementAt(i)))
+                {
+                    upgradeMenuProtection = true;
+                    return;
+                }
+            Item[] bag = Char.myCharz().arrItemBag;
+            if (bag == null) return;
+            for (int i = 0; i < bag.Length; i++)
+            {
+                if (!IsProtectionStone(bag[i]) || bag[i].quantity <= 0) continue;
+                bag[i].isSelect = true;
+                vItemCombine.addElement(bag[i]);
+                upgradeMenuProtection = true;
+                return;
+            }
+        }
+
+        private bool HasUpgradeProtectionRequirement()
+        {
+            if (upgradeMenuProtection) return true;
+            for (int i = 0; i < vItemCombine.size(); i++)
+                if (IsProtectionStone((Item)vItemCombine.elementAt(i))) return true;
+            return false;
+        }
+
+        private bool IsProtectionStone(Item item)
+        {
+            return item != null && item.template != null && item.template.id == 987;
+        }
+
+        private bool CanStartUpgradeBatch()
+        {
+            return IsUpgradeCombineRecipe() &&
+                (!HasUpgradeProtectionRequirement() || CountUpgradeProtectionStones() >= UPGRADE_BATCH_ATTEMPTS);
+        }
+
+        private int CountUpgradeProtectionStones()
+        {
+            Item[] bag = Char.myCharz().arrItemBag;
+            int total = 0;
+            if (bag == null)
+            {
+                return 0;
+            }
+            for (int i = 0; i < bag.Length; i++)
+            {
+                if (IsProtectionStone(bag[i]))
+                {
+                    total += bag[i].quantity;
+                }
+            }
+            return total;
+        }
+
+        private string GetUpgradeBatchItemSignature()
+        {
+            string signature = string.Empty;
+            for (int i = 0; i < vItemCombine.size(); i++)
+            {
+                Item item = (Item)vItemCombine.elementAt(i);
+                if (item != null && item.template != null)
+                {
+                    signature += item.template.id + ":" + item.indexUI + ";";
+                }
+            }
+            return signature;
+        }
+
+        private MyVector GetUpgradeBatchItems()
+        {
+            EnsureUpgradeProtectionSelected();
+            return vItemCombine;
+        }
+
+        private void StartUpgradeBatch()
+        {
+            EnsureUpgradeProtectionSelected();
+            if (upgradeBatchResponseDrainPending || !Session_ME.gI().isConnected())
+            {
+                GameScr.info1.addInfo("Đang chờ kết quả lượt đập trước", 0);
+                return;
+            }
+            if (upgradeBatchMode || !isDoneCombine || !IsUpgradeCombineRecipe())
+            {
+                return;
+            }
+            if (HasUpgradeProtectionRequirement() && CountUpgradeProtectionStones() < UPGRADE_BATCH_ATTEMPTS)
+            {
+                GameScr.info1.addInfo("Cần đủ 100 đá bảo vệ để đập x100", 0);
+                return;
+            }
+            if (ModFunc.GI().isAutoPhaLe)
+            {
+                GameScr.info1.addInfo("Hãy tắt tự động pha lê trước khi đập x100", 0);
+                return;
+            }
+            upgradeBatch.Start(UPGRADE_BATCH_ATTEMPTS);
+            upgradeBatchMode = true;
+            upgradeBatchItemSignature = GetUpgradeBatchItemSignature();
+            InfoDlg.showWait();
+            SendNextUpgradeBatchAttempt();
+        }
+
+        private void SendNextUpgradeBatchAttempt()
+        {
+            if (!upgradeBatchMode || !upgradeBatch.IsActive || !isShow || !IsUpgradeCombineRecipe() ||
+                upgradeBatchItemSignature != GetUpgradeBatchItemSignature())
+            {
+                CancelUpgradeBatch();
+                return;
+            }
+            if (HasUpgradeProtectionRequirement() && CountUpgradeProtectionStones() < upgradeBatch.RemainingAttempts)
+            {
+                CancelUpgradeBatch();
+                GameScr.info1.addInfo("Không đủ đá bảo vệ để tiếp tục đập x100", 0);
+                return;
+            }
+            MyVector items = GetUpgradeBatchItems();
+            if (items == null || items.size() == 0 || !upgradeBatch.TryMarkRequestSent())
+            {
+                CancelUpgradeBatch();
+                return;
+            }
+            upgradeBatchAwaitingMenu = true;
+            upgradeBatchRequestTime = mSystem.currentTimeMillis();
+            if (!Service.gI().combine(1, items))
+            {
+                CancelUpgradeBatch();
+                upgradeBatchResponseDrainPending = false;
+                InfoDlg.hide();
+                GameScr.info1.addInfo("Không gửi được yêu cầu đập x100", 0);
+            }
+        }
+
+        public void HandleUpgradeBatchResponse(bool successful)
+        {
+            if (upgradeBatchResponseDrainPending)
+            {
+                upgradeBatchResponseDrainPending = false;
+                return;
+            }
+            if (!upgradeBatchMode || !upgradeBatch.OnResponse(successful))
+            {
+                return;
+            }
+            if (successful || !upgradeBatch.IsActive)
+            {
+                upgradeBatchMode = false;
+                upgradeBatchItemSignature = string.Empty;
+            }
+        }
+
+        private void ContinueUpgradeBatchAfterEffect()
+        {
+            if (!upgradeBatchMode || !upgradeBatch.OnEffectFinished())
+            {
+                return;
+            }
+            if (upgradeBatch.IsActive)
+            {
+                SendNextUpgradeBatchAttempt();
+            }
+            else
+            {
+                upgradeBatchMode = false;
+            }
+        }
+
+        private void CancelUpgradeBatch()
+        {
+            if (upgradeBatch.HasPendingRequest)
+            {
+                upgradeBatchResponseDrainPending = true;
+            }
+            upgradeBatch.Cancel();
+            upgradeBatchMode = false;
+            upgradeBatchItemSignature = string.Empty;
+        }
+
+        public void CancelUpgradeBatchFromServerSelection()
+        {
+            if (upgradeBatchMode && !upgradeBatch.HasPendingRequest && IsUpgradeCombineRecipe())
+                upgradeBatchItemSignature = GetUpgradeBatchItemSignature();
+            else CancelUpgradeBatch();
+        }
+
+        public bool HandleUpgradeBatchMenu(int npcId, string text, string[] captions)
+        {
+            bool upgradeMenu = npcId == 21 && IsUpgradeCombineRecipe() &&
+                text.IndexOf("Sau khi nâng cấp", StringComparison.OrdinalIgnoreCase) >= 0 &&
+                captions.Length >= 2 && captions[0].StartsWith("Nâng cấp", StringComparison.OrdinalIgnoreCase);
+            if (!upgradeMenu)
+            {
+                if (upgradeBatchMode && upgradeBatchAwaitingMenu)
+                {
+                    CancelUpgradeBatch();
+                    upgradeBatchResponseDrainPending = false;
+                }
+                return false;
+            }
+            bool menuHasProtection = captions[0].IndexOf("đá bảo vệ", StringComparison.OrdinalIgnoreCase) >= 0;
+            if (upgradeBatchMode && HasUpgradeProtectionRequirement() && !menuHasProtection)
+            {
+                CancelUpgradeBatch();
+                upgradeBatchResponseDrainPending = false;
+                GameScr.info1.addInfo("Đã dừng x100: server chưa xác nhận dùng đá bảo vệ", 0);
+                return false;
+            }
+            upgradeMenuProtection = upgradeMenuProtection || menuHasProtection;
+            if (upgradeBatchMode && upgradeBatchAwaitingMenu)
+            {
+                upgradeBatchAwaitingMenu = false;
+                if (upgradeMenuProtection && CountUpgradeProtectionStones() < upgradeBatch.RemainingAttempts + 1)
+                {
+                    CancelUpgradeBatch();
+                    upgradeBatchResponseDrainPending = false;
+                    return false;
+                }
+                GameCanvas.menu.showMenu = false;
+                ChatPopup.currChatPopup = null;
+                Service.gI().confirmMenu((short)npcId, 0);
+                upgradeBatchRequestTime = mSystem.currentTimeMillis();
+                return true;
+            }
+            GameCanvas.menu.menuItems.addElement(new Command(
+                "Nâng cấp x100", this, 987100, null));
+            ChatPopup popup = ChatPopup.currChatPopup;
+            GameCanvas.menu.showMenu = false;
+            GameCanvas.menu.startAt(GameCanvas.menu.menuItems, 2);
+            ChatPopup.currChatPopup = popup;
+            return false;
         }
 
         public void setTypeAuto()
@@ -2988,10 +3259,10 @@ namespace Game1
             {
                 updateKeyScrollView();
                 keyTouchCombine = -1;
-                if (selected == vItemCombine.size() && GameCanvas.isPointerClick)
+                if ((selected == vItemCombine.size() || selected == vItemCombine.size() + 1) && GameCanvas.isPointerClick)
                 {
                     GameCanvas.isPointerClick = false;
-                    keyTouchCombine = 1;
+                    keyTouchCombine = selected - vItemCombine.size() + 1;
                 }
             }
             if (currentTabIndex == 1)
@@ -6714,7 +6985,8 @@ else
                 }
                 return;
             }
-            for (int j = 0; j < vItemCombine.size() + 1; j++)
+            int extraRows = IsUpgradeCombineRecipe() ? 2 : 1;
+            for (int j = 0; j < vItemCombine.size() + extraRows; j++)
             {
                 int num = xScroll + 36;
                 int num2 = yScroll + j * ITEM_HEIGHT;
@@ -6728,7 +7000,7 @@ else
                 {
                     continue;
                 }
-                if (j == vItemCombine.size())
+                if (j == vItemCombine.size() || j == vItemCombine.size() + 1)
                 {
                     if (vItemCombine.size() > 0)
                     {
@@ -6737,15 +7009,27 @@ else
                             g.setColor(16383818);
                             g.fillRect(num5, num2, wScroll, num4 + 2);
                         }
-                        if ((j == selected && keyTouchCombine == 1) || (!GameCanvas.isTouch && j == selected))
+                        int rowAction = j - vItemCombine.size() + 1;
+                        bool actionEnabled = rowAction == 1 || CanStartUpgradeBatch();
+                        string actionText = (rowAction == 1) ? mResources.UPGRADE :
+                            "Nâng cấp x100";
+                        bool actionFocused = (j == selected && keyTouchCombine == rowAction) || (!GameCanvas.isTouch && j == selected);
+                        if (actionFocused && actionEnabled)
                         {
                             g.drawImage(GameScr.imgLbtnFocus, xScroll + wScroll / 2, num2 + num4 / 2 + 1, StaticObj.VCENTER_HCENTER);
-                            mFont.tahoma_7b_green2.drawString(g, mResources.UPGRADE, xScroll + wScroll / 2, num2 + num4 / 2 - 4, mFont.CENTER);
+                            mFont.tahoma_7b_green2.drawString(g, actionText, xScroll + wScroll / 2, num2 + num4 / 2 - 4, mFont.CENTER);
                         }
                         else
                         {
                             g.drawImage(GameScr.imgLbtn, xScroll + wScroll / 2, num2 + num4 / 2 + 1, StaticObj.VCENTER_HCENTER);
-                            mFont.tahoma_7b_dark.drawString(g, mResources.UPGRADE, xScroll + wScroll / 2, num2 + num4 / 2 - 4, mFont.CENTER);
+                            if (actionEnabled)
+                            {
+                                mFont.tahoma_7b_dark.drawString(g, actionText, xScroll + wScroll / 2, num2 + num4 / 2 - 4, mFont.CENTER);
+                            }
+                            else
+                            {
+                                mFont.tahoma_7_red.drawString(g, actionText, xScroll + wScroll / 2, num2 + num4 / 2 - 4, mFont.CENTER);
+                            }
                         }
                     }
                     continue;
@@ -8169,6 +8453,7 @@ paintScrollArrow(g);
 
         public void cleanCombine()
         {
+            CancelUpgradeBatch();
             for (int i = 0; i < vItemCombine.size(); i++)
             {
                 ((Item)vItemCombine.elementAt(i)).isSelect = false;
@@ -8186,6 +8471,7 @@ paintScrollArrow(g);
                 isClose = false;
                 return;
             }
+            CancelUpgradeBatch();
             if (isTypeShop())
             {
                 Char.myCharz().resetPartTemp();
@@ -8231,6 +8517,7 @@ paintScrollArrow(g);
                 isClose = false;
                 return;
             }
+            CancelUpgradeBatch();
             if (isTypeShop())
             {
                 Char.myCharz().resetPartTemp();
@@ -8907,7 +9194,20 @@ else
                     keyTouchCombine = -1;
                     selected = (GameCanvas.isTouch ? (-1) : 0);
                     InfoDlg.showWait();
+                    EnsureUpgradeProtectionSelected();
+                    if (IsUpgradeCombineRecipe() && HasUpgradeProtectionRequirement() && CountUpgradeProtectionStones() < 1)
+                    {
+                        InfoDlg.hide();
+                        GameScr.info1.addInfo("Không đủ đá bảo vệ", 0);
+                        return;
+                    }
                     Service.gI().combine(1, vItemCombine);
+                    return;
+                }
+                if (selected == vItemCombine.size() + 1 && IsUpgradeCombineRecipe())
+                {
+                    selected = (GameCanvas.isTouch ? (-1) : 0);
+                    StartUpgradeBatch();
                     return;
                 }
                 if (selected > vItemCombine.size() - 1)
@@ -10441,6 +10741,13 @@ else
 
         public void perform(int idAction, object p)
         {
+            if (idAction == 987100)
+            {
+                GameCanvas.menu.showMenu = false;
+                ChatPopup.currChatPopup = null;
+                StartUpgradeBatch();
+                return;
+            }
             switch (idAction)
             {
                 case 8011:
@@ -10488,6 +10795,8 @@ else
             }
             if (idAction == 6001)
             {
+                CancelUpgradeBatch();
+                upgradeMenuProtection = false;
                 Item item = (Item)p;
                 item.isSelect = false;
                 GameCanvas.panel.vItemCombine.removeElement(item);
@@ -10504,6 +10813,8 @@ else
             }
             if (idAction == 6000)
             {
+                CancelUpgradeBatch();
+                upgradeMenuProtection = false;
                 Item item2 = (Item)p;
                 for (int i = 0; i < GameCanvas.panel.vItemCombine.size(); i++)
                 {
@@ -11415,6 +11726,20 @@ else
 
         private void updateCombineEff()
         {
+            if (upgradeBatchMode && upgradeBatch.HasPendingRequest &&
+                mSystem.currentTimeMillis() - upgradeBatchRequestTime > 15000)
+            {
+                CancelUpgradeBatch();
+                InfoDlg.hide();
+                GameScr.info1.addInfo("Hết thời gian chờ, đã dừng đập x100", 0);
+            }
+            if (!Session_ME.gI().isConnected())
+            {
+                CancelUpgradeBatch();
+                upgradeBatchResponseDrainPending = false;
+                InfoDlg.hide();
+                GameScr.info1.addInfo("Mất kết nối, đã dừng đập x100", 0);
+            }
             countUpdate--;
             if (countUpdate < 0)
             {
@@ -11549,6 +11874,7 @@ else
                         }
                         combineSuccess = -1;
                         isDoneCombine = true;
+                        ContinueUpgradeBatchAfterEffect();
                         if (typeCombine == 4)
                         {
                             GameCanvas.panel.hideNow();
@@ -11592,6 +11918,7 @@ else
                         }
                         combineSuccess = -1;
                         isDoneCombine = true;
+                        ContinueUpgradeBatchAfterEffect();
                         if (typeCombine == 4)
                         {
                             GameCanvas.panel.hideNow();

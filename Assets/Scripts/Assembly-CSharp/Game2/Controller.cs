@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Game2.Assets.src.e;
 using Game2.Assets.src.f;
 using Game2.Assets.src.g;
@@ -911,10 +911,12 @@ namespace Game2
 						GameCanvas.panel.setTypeCombine();
 						GameCanvas.panel.combineInfo = mFont.tahoma_7b_blue.splitFontArray(src, Panel.WIDTH_PANEL);
 						GameCanvas.panel.combineTopInfo = mFont.tahoma_7.splitFontArray(src2, Panel.WIDTH_PANEL);
+						GameCanvas.panel.setTabCombine();
 						GameCanvas.panel.show();
 					}
 					if (b31 == 1)
 					{
+
 						GameCanvas.panel.vItemCombine.removeAllElements();
 						sbyte b32 = msg.reader().readByte();
 						for (int num117 = 0; num117 < b32; num117++)
@@ -934,14 +936,17 @@ namespace Game2
 						{
 							GameCanvas.panel.setTabCombine();
 						}
+                        GameCanvas.panel.CancelUpgradeBatchFromServerSelection();
 					}
 					if (b31 == 2)
 					{
+						GameCanvas.panel.HandleUpgradeBatchResponse(true);
 						GameCanvas.panel.combineSuccess = 0;
 						GameCanvas.panel.setCombineEff(0);
 					}
 					if (b31 == 3)
 					{
+						GameCanvas.panel.HandleUpgradeBatchResponse(false);
 						GameCanvas.panel.combineSuccess = 1;
 						GameCanvas.panel.setCombineEff(0);
 					}
@@ -2630,14 +2635,8 @@ namespace Game2
                     AutoItem.PausePending();
 					ServerListScreen.testConnect = 2;
 					string text7 = msg.reader().readUTF();
-					if (text7 == "Vui lòng mở giới hạn sức mạnh" || text7 == "")
-					{
-						ModFunc.indexAutoPoint = -1;
-						ModFunc.pointIncrease = 0;
-						ModFunc.autoPointForPet = false;
-						GameScr.info1.addInfo("Chỉ số đã đạt tối đa", 0);
-					}
-					GameCanvas.startOKDlg(text7);
+					if (!ModFunc.OnAutoPointNotice(text7))
+						GameCanvas.startOKDlg(text7);
 					InfoDlg.hide();
 					LoginScr.isContinueToLogin = false;
 					Char.isLoadingMap = false;
@@ -2655,7 +2654,8 @@ namespace Game2
                 {
                     string itemNotice = msg.reader().readUTF();
                     AutoItem.OnServerNotice(itemNotice);
-                    GameScr.info1.addInfo(itemNotice, 0);
+                    if (!ModFunc.OnAutoPointNotice(itemNotice))
+                        GameScr.info1.addInfo(itemNotice, 0);
                     break;
                 }
 				case -24:
@@ -3161,6 +3161,7 @@ namespace Game2
 							}
 							GameScr.gI().createMenu(array18, npc4);
 							ChatPopup.addChatPopup(text8, 100000, npc4);
+                            if (GameCanvas.panel.HandleUpgradeBatchMenu(num176, text8, array18)) return;
 							if (num176 == 21 && text8.Contains("tối đa"))
 							{
 								ModFunc.GI().maxPhale = ModFunc.GI().currPhale;
@@ -3184,6 +3185,7 @@ namespace Game2
 					}
 					GameScr.gI().createMenu(array19, npc5);
 					ChatPopup.addChatPopup(chat2, 100000, npc5);
+                    if (GameCanvas.panel.HandleUpgradeBatchMenu(num176, chat2, array19)) return;
 					break;
 				}
 				case 33:
