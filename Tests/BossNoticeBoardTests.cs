@@ -12,7 +12,7 @@ public static class BossNoticeBoardTests {
         Check((int)second.GetField("pending",Fields).GetValue(null)==100,"first account reset cannot modify second tab request");
         Check(!object.ReferenceEquals(first.GetField("entries",Fields).GetValue(null),second.GetField("entries",Fields).GetValue(null)),"two account tabs own separate row lists");
         second.GetMethod("Reset",Fields).Invoke(null,null);
-        foreach(string ns in new[]{"Game1","Game2"})Verify(ns);UnityEngine.Debug.Log("PASS both boss boards: lazy BOSS2 requests, categories/support/zone, stale category/page protection, push cache, reset, reconnect refresh, no periodic polling");}
+        foreach(string ns in new[]{"Game1","Game2"})Verify(ns);UnityEngine.Debug.Log("PASS both boss boards: lazy BOSS2 requests, categories/support/zone, stale category/page protection, push ignored, reset, user-only refresh, no periodic polling");}
     static void Verify(string ns){
         var assembly=typeof(Game1.Panel).Assembly;
         Type board=assembly.GetType(ns+".BossNoticeBoard",true),panelType=assembly.GetType(ns+".Panel",true),canvas=assembly.GetType(ns+".GameCanvas",true);
@@ -22,12 +22,13 @@ public static class BossNoticeBoardTests {
         reset();object oldPanel=canvas.GetField("panel").GetValue(null);
         var panel=FormatterServices.GetUninitializedObject(panelType);canvas.GetField("panel").SetValue(null,panel);
         try{
+            panelType.GetField("isShow").SetValue(panel,true);panelType.GetField("type").SetValue(panel,23);
             board.GetMethod("Receive",Fields).Invoke(null,new[]{Packet(ns,0,0,true,2,0)});
-            Check((bool)get("categoriesSupported"),"legacy bootstrap response updates capability only");
+            Check(!(bool)get("categoriesSupported"),"unsolicited bootstrap does not update the board");
             reset();
             set("mode",1);set("category",2);set("sentCategory",2);set("sentMode",1);set("pending",41);set("page",1);set("sentPage",0);
             Action<int,int> receive=(id,page)=>board.GetMethod("Receive",Fields).Invoke(null,new[]{Packet(ns,id,page)});
-            receive(41,0);Check((int)get("page")==1&&(bool)get("wants")&&(int)get("pending")==0,"superseded page response preserves requested page");
+            receive(41,0);Check((int)get("page")==1&&(int)get("pending")==0,"superseded page response preserves requested page");
             set("pending",42);set("sentPage",1);receive(41,0);Check((int)get("pending")==42,"stale request cannot replace pending request");
             receive(42,1);Check((int)get("pending")==0&&(int)get("page")==1,"valid response applies");
             var first=(BossNoticeEntry)((System.Collections.IList)get("entries"))[0];
@@ -49,19 +50,19 @@ public static class BossNoticeBoardTests {
             Check((int)get("pending")==0,"reading detail never starts queued request");
             set("Detail",first);set("pending",43);receive(43,1);
             Check(object.ReferenceEquals(get("Detail"),first),"late response cannot replace detail being read");
-            set("mode",0);set("category",1);set("sentCategory",1);set("sentMode",0);set("page",0);set("sentPage",0);set("pending",80);
+            panelType.GetField("type").SetValue(panel,23);set("mode",0);set("category",1);set("sentCategory",1);set("sentMode",0);set("page",0);set("sentPage",0);set("pending",80);
             board.GetMethod("Receive",Fields).Invoke(null,new[]{Packet(ns,79,0,true,2,0)});
             Check((int)get("pending")==80,"previous category response cannot cancel new pending request");
             board.GetMethod("Receive",Fields).Invoke(null,new[]{Packet(ns,80,0,true,1,0)});
             first=(BossNoticeEntry)((System.Collections.IList)get("entries"))[0];
             Check(first.Category==1&&first.Zone==7&&first.Support&&!first.Details(1240000).Contains("Khu:"),"BOSS2 semantic category support and public zone decoded");
             board.GetMethod("Receive",Fields).Invoke(null,new[]{Packet(ns,0,0,true,1,0,true,5)});
-            Check((long)get("revision")==5&&((System.Collections.IDictionary)get("cache")).Contains("1:0:0"),"push snapshot updates hidden query cache");
+            Check(((System.Collections.IList)get("entries"))[0]==first,"push does not replace current snapshot");
             board.GetMethod("Receive",Fields).Invoke(null,new[]{Packet(ns,0,0,true,1,0,true,4)});
-            Check((long)get("revision")==5,"stale push revision is ignored");
+            Check(((System.Collections.IList)get("entries"))[0]==first,"stale push is ignored");
             set("pending",81);set("category",2);set("page",0);set("sentPage",0);
             board.GetMethod("Receive",Fields).Invoke(null,new[]{Packet(ns,81,0,true,1,0)});
-            Check((bool)get("wants")&&((System.Collections.IList)get("entries"))[0]==first,"changed category rejects matching old request");
+            Check(((System.Collections.IList)get("entries"))[0]==first,"changed category rejects matching old request");
             int oldSequence=(int)get("sequence");reset();Check((int)get("sequence")==oldSequence,"account reset never reuses sequence IDs");
             Check(!(bool)get("categoriesSupported"),"account reset clears server capability");
             reset();Check((int)get("mode")==-1&&(int)get("pending")==0&&((System.Collections.IList)get("entries")).Count==0,"reconnect reset removes prior state");

@@ -4398,16 +4398,18 @@ namespace Game2
 					return;
 				}
 			}
-			if ((me && dart != null) || TileMap.isOfflineMap())
+			// Offline maps block local attacks, but still render server-driven actors.
+			if (me && (dart != null || TileMap.isOfflineMap()))
 			{
 				return;
 			}
 			long num = mSystem.currentTimeMillis();
-			int mobSkillCooldown = myskill.coolDown;
-			if (mobFocus != null && charFocus == null && myskill.template != null && (myskill.template.type == 1 || myskill.template.type == 4))
-				mobSkillCooldown = System.Math.Max(0, mobSkillCooldown - 50);
 			if (me)
 			{
+				// Remote actors (including disciples) have no local selected skill.
+				int mobSkillCooldown = myskill.coolDown;
+				if (mobFocus != null && charFocus == null && myskill.template != null && (myskill.template.type == 1 || myskill.template.type == 4))
+					mobSkillCooldown = System.Math.Max(0, mobSkillCooldown - 50);
 				if (isSelectingSkillBuffToPlayer() && charFocus == null)
 				{
 					return;

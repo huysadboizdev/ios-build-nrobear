@@ -420,7 +420,8 @@ namespace Game2.Mod.XMAP
 		private static bool IsExcludedMassacreSkill(Skill skill)
 		{
 			if (skill == null || skill.template == null) return true;
-			return skill.template.id == 7 || skill.template.id == 10 || skill.template.id == 11 || skill.template.id == 14;
+			return skill.template.id == 7 || skill.template.id == 10 || skill.template.id == 11 || skill.template.id == 14
+				|| skill.template.id == 24 || skill.template.id == 25 || skill.template.id == 26;
 		}
 
 		private static int NextMassacreSkillCursor(int current, int count)

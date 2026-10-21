@@ -2607,7 +2607,7 @@ namespace Game2
 
         public void show()
         {
-            if(type==23&&!isShow) BossNoticeBoard.Opened();
+            // Boss rows are requested by setTypeGameInfo when the user opens the list.
             homeBoxGeneration++;
             ResetHomeBoxInput();
             if (IsHomeBoxGrid()) ClampHomeBoxScroll();
